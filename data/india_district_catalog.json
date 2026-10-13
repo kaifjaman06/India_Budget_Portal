@@ -1,0 +1,3497 @@
+[
+  {
+    "code": "IN-AN-D-NICOBARS",
+    "name": "Nicobars",
+    "parent_code": "IN-AN"
+  },
+  {
+    "code": "IN-AN-D-NORTH-MIDDLE-ANDAMAN",
+    "name": "North  & Middle Andaman",
+    "parent_code": "IN-AN"
+  },
+  {
+    "code": "IN-AN-D-SOUTH-ANDAMAN",
+    "name": "South Andaman",
+    "parent_code": "IN-AN"
+  },
+  {
+    "code": "IN-AP-D-ANANTAPUR",
+    "name": "Anantapur",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-CHITTOOR",
+    "name": "Chittoor",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-EAST-GODAVARI",
+    "name": "East Godavari",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-GUNTUR",
+    "name": "Guntur",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-KADAPA-YSR",
+    "name": "Kadapa(YSR)",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-KRISHNA",
+    "name": "Krishna",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-KURNOOL",
+    "name": "Kurnool",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-PRAKASAM",
+    "name": "Prakasam",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-SRI-POTTI-SRIRAMULU-NELLORE",
+    "name": "Sri Potti Sriramulu Nellore",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-SRIKAKULAM",
+    "name": "Srikakulam",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-VISAKHAPATNAM",
+    "name": "Visakhapatnam",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-VIZIANAGARAM",
+    "name": "Vizianagaram",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-WEST-GODAVARI",
+    "name": "West Godavari",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AP-D-YANAM",
+    "name": "Yanam",
+    "parent_code": "IN-AP"
+  },
+  {
+    "code": "IN-AR-D-ANJAW",
+    "name": "Anjaw",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-CHANGLANG",
+    "name": "Changlang",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-DIBANG-VALLEY",
+    "name": "Dibang Valley",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-EAST-KAMENG",
+    "name": "East Kameng",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-EAST-SIANG",
+    "name": "East Siang",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-KAMLE",
+    "name": "Kamle",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-KRA-DAADI",
+    "name": "Kra Daadi",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-KURUNG-KUMEY",
+    "name": "Kurung Kumey",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-LEPARADA",
+    "name": "Leparada",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-LOHIT",
+    "name": "Lohit",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-LONGDING",
+    "name": "Longding",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-LOWER-DIBANG-VALLEY",
+    "name": "Lower Dibang Valley",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-LOWER-SIANG",
+    "name": "Lower Siang",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-LOWER-SUBANSIRI",
+    "name": "Lower Subansiri",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-NAMSAI",
+    "name": "Namsai",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-PAKKE-KESSANG",
+    "name": "Pakke Kessang",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-PAPUM-PARE",
+    "name": "Papum Pare",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-SHI-YOMI",
+    "name": "Shi Yomi",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-SIANG",
+    "name": "Siang",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-TAWANG",
+    "name": "Tawang",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-TIRAP",
+    "name": "Tirap",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-UPPER-SIANG",
+    "name": "Upper Siang",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-UPPER-SUBANSIRI",
+    "name": "Upper Subansiri",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-WEST-KAMENG",
+    "name": "West Kameng",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AR-D-WEST-SIANG",
+    "name": "West Siang",
+    "parent_code": "IN-AR"
+  },
+  {
+    "code": "IN-AS-D-BAKSA",
+    "name": "Baksa",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-BARPETA",
+    "name": "Barpeta",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-BISWANATH",
+    "name": "Biswanath",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-BONGAIGAON",
+    "name": "Bongaigaon",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-CACHAR",
+    "name": "Cachar",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-CHARAIDEO",
+    "name": "Charaideo",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-CHIRANG",
+    "name": "Chirang",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-DARRANG",
+    "name": "Darrang",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-DHEMAJI",
+    "name": "Dhemaji",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-DHUBRI",
+    "name": "Dhubri",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-DIBRUGARH",
+    "name": "Dibrugarh",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-DIMA-HASAO",
+    "name": "Dima Hasao",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-GOALPARA",
+    "name": "Goalpara",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-GOLAGHAT",
+    "name": "Golaghat",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-HAILAKANDI",
+    "name": "Hailakandi",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-HOJAI",
+    "name": "Hojai",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-JORHAT",
+    "name": "Jorhat",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-KAMRUP",
+    "name": "Kamrup",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-KARBI-ANGLONG-EAST",
+    "name": "Karbi Anglong East",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-KARBI-ANGLONG-WEST",
+    "name": "Karbi Anglong West",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-KARIMGANJ",
+    "name": "Karimganj",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-KOKRAJHAR",
+    "name": "Kokrajhar",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-LAKHIMPUR",
+    "name": "Lakhimpur",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-MAJULI",
+    "name": "Majuli",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-MORIGAON",
+    "name": "Morigaon",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-NAGAON",
+    "name": "Nagaon",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-NALBARI",
+    "name": "Nalbari",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-SIVASAGAR",
+    "name": "Sivasagar",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-SONITPUR",
+    "name": "Sonitpur",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-SOUTH-SALMARA-MANKACHAR",
+    "name": "South Salmara-Mankachar",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-TINSUKIA",
+    "name": "Tinsukia",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-AS-D-UDALGURI",
+    "name": "Udalguri",
+    "parent_code": "IN-AS"
+  },
+  {
+    "code": "IN-BR-D-ARARIA",
+    "name": "Araria",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-ARWAL",
+    "name": "Arwal",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-BANKA",
+    "name": "Banka",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-BEGUSARAI",
+    "name": "Begusarai",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-BHAGALPUR",
+    "name": "Bhagalpur",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-BHOJPUR",
+    "name": "Bhojpur",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-BUXAR",
+    "name": "Buxar",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-CHHATRAPATI-SAMBHAJINAGAR",
+    "name": "Chhatrapati Sambhajinagar",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-DARBHANGA",
+    "name": "Darbhanga",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-GAYA",
+    "name": "Gaya",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-GOPALGANJ",
+    "name": "Gopalganj",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-JAMUI",
+    "name": "Jamui",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-JEHANABAD",
+    "name": "Jehanabad",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-KAIMUR-BHABUA",
+    "name": "Kaimur (Bhabua)",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-KATIHAR",
+    "name": "Katihar",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-KHAGARIA",
+    "name": "Khagaria",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-KISHANGANJ",
+    "name": "Kishanganj",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-LAKHISARAI",
+    "name": "Lakhisarai",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-MADHEPURA",
+    "name": "Madhepura",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-MADHUBANI",
+    "name": "Madhubani",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-MUNGER",
+    "name": "Munger",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-MUZAFFARPUR",
+    "name": "Muzaffarpur",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-NALANDA",
+    "name": "Nalanda",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-NAWADA",
+    "name": "Nawada",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-PASHCHIM-CHAMPARAN",
+    "name": "Pashchim Champaran",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-PATNA",
+    "name": "Patna",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-PURBA-CHAMPARAN",
+    "name": "Purba Champaran",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-PURNIA",
+    "name": "Purnia",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-ROHTAS",
+    "name": "Rohtas",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-SAHARSA",
+    "name": "Saharsa",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-SAMASTIPUR",
+    "name": "Samastipur",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-SARAN",
+    "name": "Saran",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-SHEIKHPURA",
+    "name": "Sheikhpura",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-SHEOHAR",
+    "name": "Sheohar",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-SITAMARHI",
+    "name": "Sitamarhi",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-SIWAN",
+    "name": "Siwan",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-SUPAUL",
+    "name": "Supaul",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-BR-D-VAISHALI",
+    "name": "Vaishali",
+    "parent_code": "IN-BR"
+  },
+  {
+    "code": "IN-CG-D-BALOD",
+    "name": "Balod",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-BALODA-BAZAR",
+    "name": "Baloda Bazar",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-BALRAMPUR",
+    "name": "Balrampur",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-BASTAR",
+    "name": "Bastar",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-BEMETRA",
+    "name": "Bemetra",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-BIJAPUR",
+    "name": "Bijapur",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-BILASPUR",
+    "name": "Bilaspur",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-DAKSHIN-BASTAR-DANTEWADA",
+    "name": "Dakshin Bastar Dantewada",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-DHAMTARI",
+    "name": "Dhamtari",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-DURG",
+    "name": "Durg",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-GARIABAND",
+    "name": "Gariaband",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-GAURELLA-PENDRA-MARWAHI",
+    "name": "Gaurella Pendra Marwahi",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-JANJGIR-CHAMPA",
+    "name": "Janjgir-Champa",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-JASHPUR",
+    "name": "Jashpur",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-KABEERDHAM",
+    "name": "Kabeerdham",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-KONDAGAON",
+    "name": "Kondagaon",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-KORBA",
+    "name": "Korba",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-KORIYA",
+    "name": "Koriya",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-MAHASAMUND",
+    "name": "Mahasamund",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-MUNGELI",
+    "name": "Mungeli",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-NARAYANPUR",
+    "name": "Narayanpur",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-RAIGARH",
+    "name": "Raigarh",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-RAIPUR",
+    "name": "Raipur",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-RAJNANDGAON",
+    "name": "Rajnandgaon",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-SUKMA",
+    "name": "Sukma",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-SURAJPUR",
+    "name": "Surajpur",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-SURGUJA",
+    "name": "Surguja",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CG-D-UTTAR-BASTAR-KANKER",
+    "name": "Uttar Bastar Kanker",
+    "parent_code": "IN-CG"
+  },
+  {
+    "code": "IN-CH-D-CHANDIGARH",
+    "name": "Chandigarh",
+    "parent_code": "IN-CH"
+  },
+  {
+    "code": "IN-DL-D-CENTRAL",
+    "name": "Central",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-EAST",
+    "name": "East",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-NEW-DELHI",
+    "name": "New Delhi",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-NORTH",
+    "name": "North ",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-NORTH-EAST",
+    "name": "North East",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-NORTH-WEST",
+    "name": "North West",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-SHAHDARA",
+    "name": "Shahdara",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-SOUTH",
+    "name": "South",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-SOUTH-EAST",
+    "name": "South East",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-SOUTH-WEST",
+    "name": "South West",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DL-D-WEST",
+    "name": "West",
+    "parent_code": "IN-DL"
+  },
+  {
+    "code": "IN-DNHDD-D-DAMAN",
+    "name": "Daman",
+    "parent_code": "IN-DNHDD"
+  },
+  {
+    "code": "IN-DNHDD-D-DIU",
+    "name": "Diu",
+    "parent_code": "IN-DNHDD"
+  },
+  {
+    "code": "IN-GA-D-NORTH-GOA",
+    "name": "North Goa",
+    "parent_code": "IN-GA"
+  },
+  {
+    "code": "IN-GA-D-SOUTH-GOA",
+    "name": "South Goa",
+    "parent_code": "IN-GA"
+  },
+  {
+    "code": "IN-GJ-D-AHMADABAD",
+    "name": "Ahmadabad",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-AMRELI",
+    "name": "Amreli",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-ANAND",
+    "name": "Anand",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-ARAVALI",
+    "name": "Aravali",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-BANAS-KANTHA",
+    "name": "Banas Kantha",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-BATOD",
+    "name": "Batod",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-BHARUCH",
+    "name": "Bharuch",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-BHAVNAGAR",
+    "name": "Bhavnagar",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-CHHOTA-UDAIPUR",
+    "name": "Chhota Udaipur",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-DADRA-NAGAR-HAVELI",
+    "name": "Dadra & Nagar Haveli",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-DEVBHUMI-DWARKA",
+    "name": "Devbhumi Dwarka",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-DOHAD",
+    "name": "Dohad",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-GANDHINAGAR",
+    "name": "Gandhinagar",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-GIR-SOMNATH",
+    "name": "Gir Somnath",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-JAMNAGAR",
+    "name": "Jamnagar",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-JUNAGADH",
+    "name": "Junagadh",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-KACHCHH",
+    "name": "Kachchh",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-KHEDA",
+    "name": "Kheda",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-MAHESANA",
+    "name": "Mahesana",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-MAHISAGAR",
+    "name": "Mahisagar",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-MORBI",
+    "name": "Morbi",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-NARMADA",
+    "name": "Narmada",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-NAVSARI",
+    "name": "Navsari",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-PANCH-MAHALS",
+    "name": "Panch Mahals",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-PATAN",
+    "name": "Patan",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-PORBANDAR",
+    "name": "Porbandar",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-RAJKOT",
+    "name": "Rajkot",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-SABAR-KANTHA",
+    "name": "Sabar Kantha",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-SURAT",
+    "name": "Surat",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-SURENDRANAGAR",
+    "name": "Surendranagar",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-TAPI",
+    "name": "Tapi",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-THE-DANGS",
+    "name": "The Dangs",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-VADODARA",
+    "name": "Vadodara",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-GJ-D-VALSAD",
+    "name": "Valsad",
+    "parent_code": "IN-GJ"
+  },
+  {
+    "code": "IN-HP-D-BILASPUR",
+    "name": "Bilaspur",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-CHAMBA",
+    "name": "Chamba",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-HAMIRPUR",
+    "name": "Hamirpur",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-KANGRA",
+    "name": "Kangra",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-KINNAUR",
+    "name": "Kinnaur",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-KULLU",
+    "name": "Kullu",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-LAHUL-SPITI",
+    "name": "Lahul & Spiti",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-MANDI",
+    "name": "Mandi",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-SHIMLA",
+    "name": "Shimla",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-SIRMAUR",
+    "name": "Sirmaur",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-SOLAN",
+    "name": "Solan",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HP-D-UNA",
+    "name": "Una",
+    "parent_code": "IN-HP"
+  },
+  {
+    "code": "IN-HR-D-AMBALA",
+    "name": "Ambala",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-BHIWANI",
+    "name": "Bhiwani",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-FARIDABAD",
+    "name": "Faridabad",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-FATEHABAD",
+    "name": "Fatehabad",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-GURGAON",
+    "name": "Gurgaon",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-HISAR",
+    "name": "Hisar",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-JHAJJAR",
+    "name": "Jhajjar",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-JIND",
+    "name": "Jind",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-KAITHAL",
+    "name": "Kaithal",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-KARNAL",
+    "name": "Karnal",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-KURUKSHETRA",
+    "name": "Kurukshetra",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-MAHENDRAGARH",
+    "name": "Mahendragarh",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-MEWAT",
+    "name": "Mewat",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-PALWAL",
+    "name": "Palwal",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-PANCHKULA",
+    "name": "Panchkula",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-PANIPAT",
+    "name": "Panipat",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-REWARI",
+    "name": "Rewari",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-ROHTAK",
+    "name": "Rohtak",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-SIRSA",
+    "name": "Sirsa",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-SONIPAT",
+    "name": "Sonipat",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-HR-D-YAMUNANAGAR",
+    "name": "Yamunanagar",
+    "parent_code": "IN-HR"
+  },
+  {
+    "code": "IN-JH-D-BOKARO",
+    "name": "Bokaro",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-CHATRA",
+    "name": "Chatra",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-DEOGHAR",
+    "name": "Deoghar",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-DHANBAD",
+    "name": "Dhanbad",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-DUMKA",
+    "name": "Dumka",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-GARHWA",
+    "name": "Garhwa",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-GIRIDIH",
+    "name": "Giridih",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-GODDA",
+    "name": "Godda",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-GUMLA",
+    "name": "Gumla",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-HAZARIBAGH",
+    "name": "Hazaribagh",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-JAMTARA",
+    "name": "Jamtara",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-KHUNTI",
+    "name": "Khunti",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-KODARMA",
+    "name": "Kodarma",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-LATEHAR",
+    "name": "Latehar",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-LOHARDAGA",
+    "name": "Lohardaga",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-PAKUR",
+    "name": "Pakur",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-PALAMU",
+    "name": "Palamu",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-PASHCHIMI-SINGHBHUM",
+    "name": "Pashchimi Singhbhum",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-PURBI-SINGHBHUM",
+    "name": "Purbi Singhbhum",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-RAMGARH",
+    "name": "Ramgarh",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-RANCHI",
+    "name": "Ranchi",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-SAHIBGANJ",
+    "name": "Sahibganj",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-SARAIKELA-KHARSAWAN",
+    "name": "Saraikela-Kharsawan",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JH-D-SIMDEGA",
+    "name": "Simdega",
+    "parent_code": "IN-JH"
+  },
+  {
+    "code": "IN-JK-D-ANANTNAG",
+    "name": "Anantnag",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-BADGAM",
+    "name": "Badgam",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-BANDIPORE",
+    "name": "Bandipore",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-BARAMULA",
+    "name": "Baramula",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-DODA",
+    "name": "Doda",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-GANDERBAL",
+    "name": "Ganderbal",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-JAMMU",
+    "name": "Jammu",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-KATHUA",
+    "name": "Kathua",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-KISHTWAR",
+    "name": "Kishtwar",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-KULGAM",
+    "name": "Kulgam",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-KUPWARA",
+    "name": "Kupwara",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-PULWAMA",
+    "name": "Pulwama",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-PUNCH",
+    "name": "Punch",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-RAJOURI",
+    "name": "Rajouri",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-RAMBAN",
+    "name": "Ramban",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-REASI",
+    "name": "Reasi",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-SAMBA",
+    "name": "Samba",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-SHUPIYAN",
+    "name": "Shupiyan",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-SRINAGAR",
+    "name": "Srinagar",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-JK-D-UDHAMPUR",
+    "name": "Udhampur",
+    "parent_code": "IN-JK"
+  },
+  {
+    "code": "IN-KA-D-BAGALKOT",
+    "name": "Bagalkot",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-BANGALORE",
+    "name": "Bangalore",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-BANGALORE-RURAL",
+    "name": "Bangalore Rural",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-BELGAUM",
+    "name": "Belgaum",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-BELLARY",
+    "name": "Bellary",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-BIDAR",
+    "name": "Bidar",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-BIJAPUR",
+    "name": "Bijapur",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-CHAMARAJANAGAR",
+    "name": "Chamarajanagar",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-CHIKKABALLAPURA",
+    "name": "Chikkaballapura",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-CHIKMAGALUR",
+    "name": "Chikmagalur",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-CHITRADURGA",
+    "name": "Chitradurga",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-DAKSHINA-KANNADA",
+    "name": "Dakshina Kannada",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-DAVANAGERE",
+    "name": "Davanagere",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-DHARWAD",
+    "name": "Dharwad",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-GADAG",
+    "name": "Gadag",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-GULBARGA",
+    "name": "Gulbarga",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-HASSAN",
+    "name": "Hassan",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-HAVERI",
+    "name": "Haveri",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-KODAGU",
+    "name": "Kodagu",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-KOLAR",
+    "name": "Kolar",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-KOPPAL",
+    "name": "Koppal",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-MANDYA",
+    "name": "Mandya",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-MYSORE",
+    "name": "Mysore",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-RAICHUR",
+    "name": "Raichur",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-RAMANAGARA",
+    "name": "Ramanagara",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-SHIMOGA",
+    "name": "Shimoga",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-TUMKUR",
+    "name": "Tumkur",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-UDUPI",
+    "name": "Udupi",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-UTTARA-KANNADA",
+    "name": "Uttara Kannada",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KA-D-YADGIR",
+    "name": "Yadgir",
+    "parent_code": "IN-KA"
+  },
+  {
+    "code": "IN-KL-D-ALAPPUZHA",
+    "name": "Alappuzha",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-ERNAKULAM",
+    "name": "Ernakulam",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-IDUKKI",
+    "name": "Idukki",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-KANNUR",
+    "name": "Kannur",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-KASARAGOD",
+    "name": "Kasaragod",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-KOLLAM",
+    "name": "Kollam",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-KOTTAYAM",
+    "name": "Kottayam",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-KOZHIKODE",
+    "name": "Kozhikode",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-MALAPPURAM",
+    "name": "Malappuram",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-PALAKKAD",
+    "name": "Palakkad",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-PATHANAMTHITTA",
+    "name": "Pathanamthitta",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-THIRUVANANTHAPURAM",
+    "name": "Thiruvananthapuram",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-THRISSUR",
+    "name": "Thrissur",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-KL-D-WAYANAD",
+    "name": "Wayanad",
+    "parent_code": "IN-KL"
+  },
+  {
+    "code": "IN-LA-D-DATA-NOT-AVAILABLE",
+    "name": "DATA NOT AVAILABLE",
+    "parent_code": "IN-LA"
+  },
+  {
+    "code": "IN-LA-D-KARGIL",
+    "name": "Kargil",
+    "parent_code": "IN-LA"
+  },
+  {
+    "code": "IN-LA-D-LEH-LADAKH",
+    "name": "Leh(Ladakh)",
+    "parent_code": "IN-LA"
+  },
+  {
+    "code": "IN-LD-D-LAKSHADWEEP",
+    "name": "Lakshadweep",
+    "parent_code": "IN-LD"
+  },
+  {
+    "code": "IN-ML-D-EAST-GARO-HILLS",
+    "name": "East Garo Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-EAST-JAINTIA-HILLS",
+    "name": "East Jaintia Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-EAST-KHASI-HILLS",
+    "name": "East Khasi Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-KAMRUP-METROPOLITAN",
+    "name": "Kamrup Metropolitan",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-NORTH-GARO-HILLS",
+    "name": "North Garo Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-RIBHOI",
+    "name": "Ribhoi",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-SOUTH-GARO-HILLS",
+    "name": "South Garo Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-SOUTH-WEST-GARO-HILLS",
+    "name": "South West Garo Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-SOUTH-WEST-KHASI-HILLS",
+    "name": "South West Khasi Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-WEST-GARO-HILLS",
+    "name": "West Garo Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-WEST-JAINTIA-HILLS",
+    "name": "West Jaintia Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-ML-D-WEST-KHASI-HILLS",
+    "name": "West Khasi Hills",
+    "parent_code": "IN-ML"
+  },
+  {
+    "code": "IN-MN-D-BISHNUPUR",
+    "name": "Bishnupur",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-CHANDEL",
+    "name": "Chandel",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-CHURACHANDPUR",
+    "name": "Churachandpur",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-IMPHAL-EAST",
+    "name": "Imphal East",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-IMPHAL-WEST",
+    "name": "Imphal West",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-JIRIBAM",
+    "name": "Jiribam",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-KAKCHING",
+    "name": "Kakching",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-KAMJONG",
+    "name": "Kamjong",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-KANGPOKPI",
+    "name": "Kangpokpi",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-NONEY",
+    "name": "Noney",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-PHEK",
+    "name": "Phek",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-PHERZAWL",
+    "name": "Pherzawl",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-SENAPATI",
+    "name": "Senapati",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-TAMENGLONG",
+    "name": "Tamenglong",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-TENGNOUPAL",
+    "name": "Tengnoupal",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-THOUBAL",
+    "name": "Thoubal",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MN-D-UKHRUL",
+    "name": "Ukhrul",
+    "parent_code": "IN-MN"
+  },
+  {
+    "code": "IN-MP-D-AGAR",
+    "name": "Agar",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-ALIRAJPUR",
+    "name": "Alirajpur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-ANUPPUR",
+    "name": "Anuppur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-ASHOKNAGAR",
+    "name": "Ashoknagar",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-BALAGHAT",
+    "name": "Balaghat",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-BARWANI",
+    "name": "Barwani",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-BETUL",
+    "name": "Betul",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-BHIND",
+    "name": "Bhind",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-BHOPAL",
+    "name": "Bhopal",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-BURHANPUR",
+    "name": "Burhanpur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-CHHATARPUR",
+    "name": "Chhatarpur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-CHHINDWARA",
+    "name": "Chhindwara",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-DAMOH",
+    "name": "Damoh",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-DATIA",
+    "name": "Datia",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-DEWAS",
+    "name": "Dewas",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-DHAR",
+    "name": "Dhar",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-DINDORI",
+    "name": "Dindori",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-GUNA",
+    "name": "Guna",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-GWALIOR",
+    "name": "Gwalior",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-HARDA",
+    "name": "Harda",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-HOSHANGABAD",
+    "name": "Hoshangabad",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-INDORE",
+    "name": "Indore",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-JABALPUR",
+    "name": "Jabalpur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-JHABUA",
+    "name": "Jhabua",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-KATNI",
+    "name": "Katni",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-KHANDWA-EAST-NIMAR",
+    "name": "Khandwa (East Nimar)",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-KHARGONE-WEST-NIMAR",
+    "name": "Khargone (West Nimar)",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-MANDLA",
+    "name": "Mandla",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-MANDSAUR",
+    "name": "Mandsaur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-MORENA",
+    "name": "Morena",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-NARSIMHAPUR",
+    "name": "Narsimhapur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-NEEMUCH",
+    "name": "Neemuch",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-NIWARI",
+    "name": "Niwari",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-PANNA",
+    "name": "Panna",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-RAISEN",
+    "name": "Raisen",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-RAJGARH",
+    "name": "Rajgarh",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-RATLAM",
+    "name": "Ratlam",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-REWA",
+    "name": "Rewa",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SAGAR",
+    "name": "Sagar",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SATNA",
+    "name": "Satna",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SEHORE",
+    "name": "Sehore",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SEONI",
+    "name": "Seoni",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SHAHDOL",
+    "name": "Shahdol",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SHAJAPUR",
+    "name": "Shajapur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SHEOPUR",
+    "name": "Sheopur",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SHIVPURI",
+    "name": "Shivpuri",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SIDHI",
+    "name": "Sidhi",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-SINGRAULI",
+    "name": "Singrauli",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-TIKAMGARH",
+    "name": "Tikamgarh",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-UJJAIN",
+    "name": "Ujjain",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-UMARIA",
+    "name": "Umaria",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MP-D-VIDISHA",
+    "name": "Vidisha",
+    "parent_code": "IN-MP"
+  },
+  {
+    "code": "IN-MZ-D-AIZAWL",
+    "name": "Aizawl",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-CHAMPHAI",
+    "name": "Champhai",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-HNAHTHIAL",
+    "name": "Hnahthial",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-KHAWZAWL",
+    "name": "Khawzawl",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-KOLASIB",
+    "name": "Kolasib",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-LAWNGTLAI",
+    "name": "Lawngtlai",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-LUNGLEI",
+    "name": "Lunglei",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-MAMIT",
+    "name": "Mamit",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-SAIHA",
+    "name": "Saiha",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-SAITUAL",
+    "name": "Saitual",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-MZ-D-SERCHHIP",
+    "name": "Serchhip",
+    "parent_code": "IN-MZ"
+  },
+  {
+    "code": "IN-NL-D-DIMAPUR",
+    "name": "Dimapur",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-KIPHIRE",
+    "name": "Kiphire",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-KOHIMA",
+    "name": "Kohima",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-LONGLENG",
+    "name": "Longleng",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-MOKOKCHUNG",
+    "name": "Mokokchung",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-MON",
+    "name": "Mon",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-PEREN",
+    "name": "Peren",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-TUENSANG",
+    "name": "Tuensang",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-WOKHA",
+    "name": "Wokha",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-NL-D-ZUNHEBOTO",
+    "name": "Zunheboto",
+    "parent_code": "IN-NL"
+  },
+  {
+    "code": "IN-OD-D-ANUGUL",
+    "name": "Anugul",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-BALANGIR",
+    "name": "Balangir",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-BALESHWAR",
+    "name": "Baleshwar",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-BARGARH",
+    "name": "Bargarh",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-BAUDH",
+    "name": "Baudh",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-BHADRAK",
+    "name": "Bhadrak",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-CUTTACK",
+    "name": "Cuttack",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-DEBAGARH",
+    "name": "Debagarh",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-DHENKANAL",
+    "name": "Dhenkanal",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-GAJAPATI",
+    "name": "Gajapati",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-GANJAM",
+    "name": "Ganjam",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-JAGATSINGHAPUR",
+    "name": "Jagatsinghapur",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-JAJAPUR",
+    "name": "Jajapur",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-JHARSUGUDA",
+    "name": "Jharsuguda",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-KALAHANDI",
+    "name": "Kalahandi",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-KANDHAMAL",
+    "name": "Kandhamal",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-KENDRAPARA",
+    "name": "Kendrapara",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-KENDUJHAR",
+    "name": "Kendujhar",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-KHORDHA",
+    "name": "Khordha",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-KORAPUT",
+    "name": "Koraput",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-MALKANGIRI",
+    "name": "Malkangiri",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-MAYURBHANJ",
+    "name": "Mayurbhanj",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-NABARANGAPUR",
+    "name": "Nabarangapur",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-NAYAGARH",
+    "name": "Nayagarh",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-NUAPADA",
+    "name": "Nuapada",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-PURI",
+    "name": "Puri",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-RAYAGADA",
+    "name": "Rayagada",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-SAMBALPUR",
+    "name": "Sambalpur",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-SUBARNAPUR",
+    "name": "Subarnapur",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-OD-D-SUNDARGARH",
+    "name": "Sundargarh",
+    "parent_code": "IN-OD"
+  },
+  {
+    "code": "IN-PB-D-AMRITSAR",
+    "name": "Amritsar",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-BARNALA",
+    "name": "Barnala",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-BATHINDA",
+    "name": "Bathinda",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-FARIDKOT",
+    "name": "Faridkot",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-FATEHGARH-SAHIB",
+    "name": "Fatehgarh Sahib",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-FAZILKA",
+    "name": "Fazilka",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-FIROZPUR",
+    "name": "Firozpur",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-GURDASPUR",
+    "name": "Gurdaspur",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-HOSHIARPUR",
+    "name": "Hoshiarpur",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-JALANDHAR",
+    "name": "Jalandhar",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-KAPURTHALA",
+    "name": "Kapurthala",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-LUDHIANA",
+    "name": "Ludhiana",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-MANSA",
+    "name": "Mansa",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-MOGA",
+    "name": "Moga",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-MUKTSAR",
+    "name": "Muktsar",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-PATHANKOT",
+    "name": "Pathankot",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-PATIALA",
+    "name": "Patiala",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-RUPNAGAR",
+    "name": "Rupnagar",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-SAHIBZADA-AJIT-SINGH-NAGAR",
+    "name": "Sahibzada Ajit Singh Nagar",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-SANGRUR",
+    "name": "Sangrur",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-SHAHID-BHAGAT-SINGH-NAGAR",
+    "name": "Shahid Bhagat Singh Nagar",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PB-D-TARN-TARAN",
+    "name": "Tarn Taran",
+    "parent_code": "IN-PB"
+  },
+  {
+    "code": "IN-PY-D-KARAIKAL",
+    "name": "Karaikal",
+    "parent_code": "IN-PY"
+  },
+  {
+    "code": "IN-PY-D-MAHE",
+    "name": "Mahe",
+    "parent_code": "IN-PY"
+  },
+  {
+    "code": "IN-PY-D-PUDUCHERRY",
+    "name": "Puducherry",
+    "parent_code": "IN-PY"
+  },
+  {
+    "code": "IN-RJ-D-AJMER",
+    "name": "Ajmer",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-ALWAR",
+    "name": "Alwar",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-BANSWARA",
+    "name": "Banswara",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-BARAN",
+    "name": "Baran",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-BARMER",
+    "name": "Barmer",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-BHARATPUR",
+    "name": "Bharatpur",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-BHILWARA",
+    "name": "Bhilwara",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-BIKANER",
+    "name": "Bikaner",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-BUNDI",
+    "name": "Bundi",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-CHITTAURGARH",
+    "name": "Chittaurgarh",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-CHURU",
+    "name": "Churu",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-DAUSA",
+    "name": "Dausa",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-DHAULPUR",
+    "name": "Dhaulpur",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-DUNGARPUR",
+    "name": "Dungarpur",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-GANGANAGAR",
+    "name": "Ganganagar",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-HANUMANGARH",
+    "name": "Hanumangarh",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-JAIPUR",
+    "name": "Jaipur",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-JAISALMER",
+    "name": "Jaisalmer",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-JALOR",
+    "name": "Jalor",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-JHALAWAR",
+    "name": "Jhalawar",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-JHUNJHUNUN",
+    "name": "Jhunjhunun",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-JODHPUR",
+    "name": "Jodhpur",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-KARAULI",
+    "name": "Karauli",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-KOTA",
+    "name": "Kota",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-NAGAUR",
+    "name": "Nagaur",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-PALI",
+    "name": "Pali",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-PRATAPGARH",
+    "name": "Pratapgarh",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-RAJSAMAND",
+    "name": "Rajsamand",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-SAWAI-MADHOPUR",
+    "name": "Sawai Madhopur",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-SIKAR",
+    "name": "Sikar",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-SIROHI",
+    "name": "Sirohi",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-TONK",
+    "name": "Tonk",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-RJ-D-UDAIPUR",
+    "name": "Udaipur",
+    "parent_code": "IN-RJ"
+  },
+  {
+    "code": "IN-SK-D-EAST-DISTRICT",
+    "name": "East District",
+    "parent_code": "IN-SK"
+  },
+  {
+    "code": "IN-SK-D-NORTH-DISTRICT",
+    "name": "North District",
+    "parent_code": "IN-SK"
+  },
+  {
+    "code": "IN-SK-D-SOUTH-DISTRICT",
+    "name": "South District",
+    "parent_code": "IN-SK"
+  },
+  {
+    "code": "IN-SK-D-WEST-DISTRICT",
+    "name": "West District",
+    "parent_code": "IN-SK"
+  },
+  {
+    "code": "IN-TN-D-ARIYALUR",
+    "name": "Ariyalur",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-CHENGALPUTTU",
+    "name": "Chengalputtu",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-CHENNAI",
+    "name": "Chennai",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-COIMBATORE",
+    "name": "Coimbatore",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-CUDDALORE",
+    "name": "Cuddalore",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-DHARMAPURI",
+    "name": "Dharmapuri",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-DINDIGUL",
+    "name": "Dindigul",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-ERODE",
+    "name": "Erode",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-KALLAKURICHI",
+    "name": "Kallakurichi",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-KANCHEEPURAM",
+    "name": "Kancheepuram",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-KANNIYAKUMARI",
+    "name": "Kanniyakumari",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-KARUR",
+    "name": "Karur",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-KRISHNAGIRI",
+    "name": "Krishnagiri",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-MADURAI",
+    "name": "Madurai",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-MAYILADUTHURAI",
+    "name": "Mayiladuthurai",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-NAGAPATTINAM",
+    "name": "Nagapattinam",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-NAMAKKAL",
+    "name": "Namakkal",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-PERAMBALUR",
+    "name": "Perambalur",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-PUDUKKOTTAI",
+    "name": "Pudukkottai",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-RAMANATHAPURAM",
+    "name": "Ramanathapuram",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-RANIPET",
+    "name": "Ranipet",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-SALEM",
+    "name": "Salem",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-SIVAGANGA",
+    "name": "Sivaganga",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-TENKASI",
+    "name": "Tenkasi",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-THANJAVUR",
+    "name": "Thanjavur",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-THE-NILGIRIS",
+    "name": "The Nilgiris",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-THENI",
+    "name": "Theni",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-THIRUVALLUR",
+    "name": "Thiruvallur",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-THIRUVARUR",
+    "name": "Thiruvarur",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-THOOTHUKKUDI",
+    "name": "Thoothukkudi",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-TIRUCHIRAPPALLI",
+    "name": "Tiruchirappalli",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-TIRUNELVELI",
+    "name": "Tirunelveli",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-TIRUPATHUR",
+    "name": "Tirupathur",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-TIRUPPUR",
+    "name": "Tiruppur",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-TIRUVANNAMALAI",
+    "name": "Tiruvannamalai",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-VELLORE",
+    "name": "Vellore",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-VILUPPURAM",
+    "name": "Viluppuram",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TN-D-VIRUDHUNAGAR",
+    "name": "Virudhunagar",
+    "parent_code": "IN-TN"
+  },
+  {
+    "code": "IN-TR-D-DHALAI",
+    "name": "Dhalai",
+    "parent_code": "IN-TR"
+  },
+  {
+    "code": "IN-TR-D-GOMATI",
+    "name": "Gomati",
+    "parent_code": "IN-TR"
+  },
+  {
+    "code": "IN-TR-D-KHOWAI",
+    "name": "Khowai",
+    "parent_code": "IN-TR"
+  },
+  {
+    "code": "IN-TR-D-NORTH-TRIPURA",
+    "name": "North Tripura",
+    "parent_code": "IN-TR"
+  },
+  {
+    "code": "IN-TR-D-SIPAHIJULA",
+    "name": "Sipahijula",
+    "parent_code": "IN-TR"
+  },
+  {
+    "code": "IN-TR-D-SOUTH-TRIPURA",
+    "name": "South Tripura",
+    "parent_code": "IN-TR"
+  },
+  {
+    "code": "IN-TR-D-UNOKOTI",
+    "name": "Unokoti",
+    "parent_code": "IN-TR"
+  },
+  {
+    "code": "IN-TR-D-WEST-TRIPURA",
+    "name": "West Tripura",
+    "parent_code": "IN-TR"
+  },
+  {
+    "code": "IN-TS-D-ADILABAD",
+    "name": "Adilabad",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-BHADRADRI",
+    "name": "Bhadradri",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-HYDRABAD",
+    "name": "Hydrabad",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-JAGTIAL",
+    "name": "Jagtial",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-JANGAON",
+    "name": "Jangaon",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-JAYASHANKAR",
+    "name": "Jayashankar",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-JOGULAMBA",
+    "name": "Jogulamba",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-KAMAREDDY",
+    "name": "Kamareddy",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-KARIMNAGAR",
+    "name": "Karimnagar",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-KHAMMAM",
+    "name": "Khammam",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-KOMARAM-BHEEM",
+    "name": "Komaram Bheem",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-MAHABUBABAD",
+    "name": "Mahabubabad",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-MAHABUBNAGAR",
+    "name": "Mahabubnagar",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-MANCHERIAL",
+    "name": "Mancherial",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-MEDAK",
+    "name": "Medak",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-MEDCHAL",
+    "name": "Medchal",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-MULUGU",
+    "name": "Mulugu",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-NAGARKURNOOL",
+    "name": "Nagarkurnool",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-NALGONDA",
+    "name": "Nalgonda",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-NARAYANPET",
+    "name": "Narayanpet",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-NIRMAL",
+    "name": "Nirmal",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-NIZAMABAD",
+    "name": "Nizamabad",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-PEDDAPALLI",
+    "name": "Peddapalli",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-RAJANNA-SIRCILLA",
+    "name": "Rajanna Sircilla",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-RANGAREDDY",
+    "name": "Rangareddy",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-SANGAREDDY",
+    "name": "Sangareddy",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-SIDDIPET",
+    "name": "Siddipet",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-SURYAPET",
+    "name": "Suryapet",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-VIKARABAD",
+    "name": "Vikarabad",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-WANAPARTHY",
+    "name": "Wanaparthy",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-WARANGAL-R",
+    "name": "Warangal (R)",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-WARANGAL-U",
+    "name": "Warangal (U)",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-TS-D-YADADRI-BHONGIRI",
+    "name": "Yadadri Bhongiri",
+    "parent_code": "IN-TS"
+  },
+  {
+    "code": "IN-UK-D-ALMORA",
+    "name": "Almora",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-BAGESHWAR",
+    "name": "Bageshwar",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-CHAMOLI",
+    "name": "Chamoli",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-CHAMPAWAT",
+    "name": "Champawat",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-DEHRADUN",
+    "name": "Dehradun",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-GARHWAL",
+    "name": "Garhwal",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-HARDWAR",
+    "name": "Hardwar",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-NAINITAL",
+    "name": "Nainital",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-PITHORAGARH",
+    "name": "Pithoragarh",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-RUDRAPRAYAG",
+    "name": "Rudraprayag",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-TEHRI-GARHWAL",
+    "name": "Tehri Garhwal",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-UDHAM-SINGH-NAGAR",
+    "name": "Udham Singh Nagar",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UK-D-UTTARKASHI",
+    "name": "Uttarkashi",
+    "parent_code": "IN-UK"
+  },
+  {
+    "code": "IN-UP-D-AGRA",
+    "name": "Agra",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-ALIGARH",
+    "name": "Aligarh",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-ALLAHABAD",
+    "name": "Allahabad",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-AMBEDKAR-NAGAR",
+    "name": "Ambedkar Nagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-AMETHI",
+    "name": "Amethi",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-AURAIYA",
+    "name": "Auraiya",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-AZAMGARH",
+    "name": "Azamgarh",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BAGHPAT",
+    "name": "Baghpat",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BAHRAICH",
+    "name": "Bahraich",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BALLIA",
+    "name": "Ballia",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BALRAMPUR",
+    "name": "Balrampur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BANDA",
+    "name": "Banda",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BARA-BANKI",
+    "name": "Bara Banki",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BAREILLY",
+    "name": "Bareilly",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BASTI",
+    "name": "Basti",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BIJNOR",
+    "name": "Bijnor",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BUDAUN",
+    "name": "Budaun",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-BULANDSHAHR",
+    "name": "Bulandshahr",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-CHANDAULI",
+    "name": "Chandauli",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-CHITRAKOOT",
+    "name": "Chitrakoot",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-DEORIA",
+    "name": "Deoria",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-ETAH",
+    "name": "Etah",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-ETAWAH",
+    "name": "Etawah",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-FAIZABAD",
+    "name": "Faizabad",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-FARRUKHABAD",
+    "name": "Farrukhabad",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-FATEHPUR",
+    "name": "Fatehpur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-FIROZABAD",
+    "name": "Firozabad",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-GAUTAM-BUDDHA-NAGAR",
+    "name": "Gautam Buddha Nagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-GHAZIABAD",
+    "name": "Ghaziabad",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-GHAZIPUR",
+    "name": "Ghazipur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-GONDA",
+    "name": "Gonda",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-GORAKHPUR",
+    "name": "Gorakhpur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-HAMIRPUR",
+    "name": "Hamirpur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-HAPUR",
+    "name": "Hapur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-HARDOI",
+    "name": "Hardoi",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-JALAUN",
+    "name": "Jalaun",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-JAUNPUR",
+    "name": "Jaunpur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-JHANSI",
+    "name": "Jhansi",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-JYOTIBA-PHULE-NAGAR",
+    "name": "Jyotiba Phule Nagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-KANNAUJ",
+    "name": "Kannauj",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-KANPUR-DEHAT",
+    "name": "Kanpur Dehat",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-KANPUR-NAGAR",
+    "name": "Kanpur Nagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-KANSHIRAM-NAGAR",
+    "name": "Kanshiram Nagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-KAUSHAMBI",
+    "name": "Kaushambi",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-KHERI",
+    "name": "Kheri",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-KUSHINAGAR",
+    "name": "Kushinagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-LALITPUR",
+    "name": "Lalitpur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-LUCKNOW",
+    "name": "Lucknow",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MAHAMAYA-NAGAR",
+    "name": "Mahamaya Nagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MAHOBA",
+    "name": "Mahoba",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MAHRAJGANJ",
+    "name": "Mahrajganj",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MAINPURI",
+    "name": "Mainpuri",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MATHURA",
+    "name": "Mathura",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MAU",
+    "name": "Mau",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MEERUT",
+    "name": "Meerut",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MIRZAPUR",
+    "name": "Mirzapur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MORADABAD",
+    "name": "Moradabad",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-MUZAFFARNAGAR",
+    "name": "Muzaffarnagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-PILIBHIT",
+    "name": "Pilibhit",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-PRATAPGARH",
+    "name": "Pratapgarh",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-RAE-BARELI",
+    "name": "Rae Bareli",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-RAMPUR",
+    "name": "Rampur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SAHARANPUR",
+    "name": "Saharanpur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SAMBHAL",
+    "name": "Sambhal",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SAMLI",
+    "name": "Samli",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SANT-KABIR-NAGAR",
+    "name": "Sant Kabir Nagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SANT-RAVIDAS-NAGAR-BHADOHI",
+    "name": "Sant Ravidas Nagar (Bhadohi)",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SHAHJAHANPUR",
+    "name": "Shahjahanpur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SHRAWASTI",
+    "name": "Shrawasti",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SIDDHARTHNAGAR",
+    "name": "Siddharthnagar",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SITAPUR",
+    "name": "Sitapur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SONBHADRA",
+    "name": "Sonbhadra",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-SULTANPUR",
+    "name": "Sultanpur",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-UNNAO",
+    "name": "Unnao",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-UP-D-VARANASI",
+    "name": "Varanasi",
+    "parent_code": "IN-UP"
+  },
+  {
+    "code": "IN-WB-D-ALIPURDUAR",
+    "name": "Alipurduar",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-BANKURA",
+    "name": "Bankura",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-BARDDHAMAN",
+    "name": "Barddhaman",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-BIRBHUM",
+    "name": "Birbhum",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-DAKSHIN-DINAJPUR",
+    "name": "Dakshin Dinajpur",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-DARJILING",
+    "name": "Darjiling",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-HAORA",
+    "name": "Haora",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-HUGLI",
+    "name": "Hugli",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-JALPAIGURI",
+    "name": "Jalpaiguri",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-JHARGRAM",
+    "name": "Jhargram",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-KALIMPONG",
+    "name": "Kalimpong",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-KOCH-BIHAR",
+    "name": "Koch Bihar",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-KOLKATA",
+    "name": "Kolkata",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-MALDAH",
+    "name": "Maldah",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-MURSHIDABAD",
+    "name": "Murshidabad",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-NADIA",
+    "name": "Nadia",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-NORTH-TWENTY-FOUR-PARGANAS",
+    "name": "North Twenty Four Parganas",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-PASCHIM-BARDDHAMAN",
+    "name": "Paschim Barddhaman",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-PASCHIM-MEDINIPUR",
+    "name": "Paschim Medinipur",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-PURBA-MEDINIPUR",
+    "name": "Purba Medinipur",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-PURULIYA",
+    "name": "Puruliya",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-SOUTH-TWENTY-FOUR-PARGANAS",
+    "name": "South Twenty Four Parganas",
+    "parent_code": "IN-WB"
+  },
+  {
+    "code": "IN-WB-D-UTTAR-DINAJPUR",
+    "name": "Uttar Dinajpur",
+    "parent_code": "IN-WB"
+  }
+]

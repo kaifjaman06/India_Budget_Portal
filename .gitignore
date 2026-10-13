@@ -1,0 +1,7 @@
+# Generated Python cache files.
+__pycache__/
+*.py[cod]
+# Local SQLite database and its transient journal files.
+data/budget.db
+data/budget.db-shm
+data/budget.db-wal

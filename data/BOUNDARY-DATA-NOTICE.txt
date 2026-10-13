@@ -1,0 +1,30 @@
+India district map data attribution
+
+The bundled ../india-districts.js is an adapted derivative of the India
+ADM2 (district) and ADM1 (state/Union Territory) boundary data distributed
+by geoBoundaries: https://www.geoboundaries.org/
+
+ADM2 district boundaries:
+- Boundary ID: IND-ADM2-76128533
+- Boundary year: 2021
+- Source: Pathways Data Pvt. Ltd., Local Government Directory
+- License: Open Data Commons Open Database License (ODbL) 1.0
+- License text: https://opendatacommons.org/licenses/odbl/1-0/
+- Dataset: https://github.com/wmgeolab/geoBoundaries/tree/main/releaseData/gbOpen/IND/ADM2
+
+ADM1 state and Union Territory boundaries, used to associate ADM2 districts
+with their state or Union Territory:
+- Boundary ID: IND-ADM1-1811400
+- Boundary year: 2011
+- Source: DataMeet India community, Election Commission of India
+- License: Creative Commons Attribution 2.5 India (CC BY 2.5 IN)
+- License text: https://creativecommons.org/licenses/by/2.5/in/
+- Dataset: https://github.com/wmgeolab/geoBoundaries/tree/main/releaseData/gbOpen/IND/ADM1
+
+The source geometry was simplified upstream, projected to an SVG viewBox,
+and bundled as clickable paths. Maharashtra district labels are aligned with
+the budget catalogue, including Ahmadnagar/Ahilyanagar,
+Aurangabad/Chhatrapati Sambhajinagar, Bid/Beed, Buldana/Buldhana,
+Gondiya/Gondia, Mumbai/Mumbai City, Osmanabad/Dharashiv, and
+Raigarh/Raigad. Administrative boundaries are illustrative and do not
+represent budget data or legal determinations of boundaries.

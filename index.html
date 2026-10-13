@@ -1,0 +1,4091 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#df812b">
+  <title>India Budget Portal | Login</title>
+  <style>
+    :root {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #303238;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      --saffron: #df812b;
+      --deep-orange: #aa4816;
+      --green: #16713a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: #f5f5f2;
+    }
+    body.intro-active { overflow: hidden; }
+
+    /* Full-screen branded intro: the layered ribbons, emblem, and timed cards form a CSS-only video sequence. */
+    .intro-screen {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      max-width: none;
+      max-height: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      background: transparent;
+      color: #173d2b;
+    }
+    .intro-screen::backdrop { background: #fffdf8; }
+    .intro-scene {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(ellipse at 50% 47%, rgba(255, 255, 255, .97), rgba(255, 253, 247, .76) 49%, transparent 72%),
+        radial-gradient(circle at 13% 76%, rgba(34, 116, 61, .11), transparent 29%),
+        radial-gradient(circle at 88% 20%, rgba(239, 144, 53, .14), transparent 29%),
+        linear-gradient(135deg, #fff7e9, #fff 48%, #eff7ed);
+    }
+    .intro-scene::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      width: min(88vw, 760px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(42, 86, 141, .08);
+      border-radius: 50%;
+      background: repeating-conic-gradient(from 0deg, rgba(42, 86, 141, .04) 0deg 1deg, transparent 1deg 15deg);
+      mask-image: radial-gradient(circle, transparent 0 21%, #000 21.2% 22%, transparent 22.2% 34%, #000 34.2% 34.6%, transparent 34.8%);
+      transform: translate(-50%, -50%);
+      animation: intro-chakra-turn 100s linear infinite;
+      text-align: center;
+    }
+    .intro-ribbon {
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      width: 130%;
+      height: 15vh;
+      min-height: 76px;
+      border-radius: 50%;
+      opacity: .8;
+      filter: blur(1px);
+      animation: intro-ribbon-drift 9s ease-in-out infinite alternate;
+    }
+    .intro-ribbon.saffron { top: 9%; left: -17%; background: linear-gradient(90deg, transparent, rgba(232, 132, 42, .25), transparent); transform: rotate(-9deg); }
+    .intro-ribbon.green { right: -18%; bottom: 11%; left: auto; background: linear-gradient(90deg, transparent, rgba(22, 113, 58, .22), transparent); transform: rotate(-9deg); animation-delay: -4s; }
+    .intro-sparkles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background-image:
+        radial-gradient(circle, rgba(231, 138, 47, .42) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(36, 116, 66, .3) 1px, transparent 1.5px);
+      background-position: 0 0, 28px 34px;
+      background-size: 58px 58px, 73px 73px;
+      mask-image: linear-gradient(90deg, #000, transparent 42%, transparent 58%, #000);
+      opacity: .32;
+      animation: intro-sparkle-drift 16s linear infinite;
+    }
+    .intro-topline,
+    .intro-bottomline {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 7px;
+      transform: scaleX(0);
+      animation: intro-band 1s ease-out .2s forwards;
+    }
+    .intro-topline { top: 0; background: #e9822b; transform-origin: left; }
+    .intro-bottomline { bottom: 0; background: #16804a; transform-origin: right; }
+    .intro-skip {
+      position: absolute;
+      top: max(22px, env(safe-area-inset-top));
+      right: max(24px, env(safe-area-inset-right));
+      z-index: 1;
+      padding: 9px 15px;
+      border: 1px solid #b8c8ba;
+      border-radius: 22px;
+      background: rgba(255,255,255,.85);
+      color: #244a35;
+      font-size: 13px;
+    }
+    .intro-skip:hover, .intro-skip:focus-visible { background: #edf6ed; }
+    .intro-content {
+      position: relative;
+      width: min(100%, 850px);
+      padding: 35px 24px 58px;
+    }
+    .intro-brand-lockup {
+      width: 94px;
+      height: 94px;
+      margin: 0 auto 9px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(30, 81, 49, .13);
+      border-radius: 50%;
+      background: linear-gradient(145deg, rgba(255,255,255,.95), rgba(247,249,240,.83));
+      box-shadow: 0 10px 28px rgba(33, 79, 47, .11), inset 0 0 0 5px rgba(255,255,255,.72);
+      position: relative;
+    }
+    .intro-brand-lockup::before,
+    .intro-brand-lockup::after {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border: 2px solid transparent;
+      border-top-color: #e9822b;
+      border-bottom-color: #16804a;
+      border-radius: 50%;
+      animation: intro-seal-turn 14s linear infinite;
+    }
+    .intro-brand-lockup::after { inset: -10px; border-width: 1px; border-top-color: rgba(49,89,151,.42); border-bottom-color: transparent; animation-direction: reverse; animation-duration: 19s; }
+    .intro-emblem {
+      width: 53px;
+      height: 64px;
+      margin: 0;
+      object-fit: contain;
+      filter: drop-shadow(0 7px 12px rgba(50,65,45,.14));
+      animation: intro-emblem .9s cubic-bezier(.2,.75,.25,1) both;
+    }
+    .intro-kicker {
+      width: fit-content;
+      margin: 0 auto 11px;
+      padding: 6px 11px;
+      border: 1px solid rgba(31, 89, 52, .12);
+      border-radius: 20px;
+      background: rgba(255,255,255,.72);
+      color: #426047;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      animation: intro-tagline .7s ease-out .45s both;
+    }
+    .intro-title {
+      margin: 0;
+      color: #174a30;
+      font-size: clamp(25px, 4vw, 43px);
+      letter-spacing: .12em;
+      line-height: 1.15;
+      animation: intro-title .7s ease-out .7s both;
+    }
+    .intro-title span { color: #e47c25; text-shadow: 0 4px 16px rgba(226, 126, 37, .18); }
+    .intro-tagline {
+      margin: 10px 0 0;
+      color: #5b665c;
+      font-size: clamp(13px, 1.8vw, 16px);
+      letter-spacing: .04em;
+      animation: intro-tagline .7s ease-out 1s both;
+    }
+    .intro-values {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 13px 0 0;
+    }
+    .intro-values span {
+      padding: 5px 9px;
+      border: 1px solid rgba(30, 81, 49, .1);
+      border-radius: 15px;
+      background: rgba(255,255,255,.6);
+      color: #526554;
+      font-size: 10px;
+      letter-spacing: .02em;
+    }
+    .intro-values span::before { content: "✦"; margin-right: 5px; color: #e9822b; }
+    .intro-feature-stage {
+      position: relative;
+      width: min(100%, 650px);
+      min-height: 151px;
+      margin: 17px auto 0;
+    }
+    .intro-feature {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      align-content: center;
+      gap: 12px;
+      padding: 17px 20px;
+      border: 1px solid rgba(40, 97, 57, .12);
+      border-radius: 16px;
+      background: linear-gradient(125deg, rgba(255,255,255,.97), rgba(255,255,255,.76));
+      box-shadow: 0 18px 48px rgba(56, 75, 48, .12), inset 0 1px rgba(255,255,255,.95);
+      backdrop-filter: blur(9px);
+      opacity: 0;
+      animation: intro-feature-scene 4.8s ease-in-out both;
+    }
+    .intro-screen:not(.intro-is-playing) .intro-feature { animation-play-state: paused; }
+    .intro-feature:nth-child(2) { animation-delay: 3.8s; }
+    .intro-feature:nth-child(3) { animation-delay: 7.6s; }
+    .intro-feature:nth-child(4) { animation-delay: 11.4s; }
+    .intro-feature:nth-child(5) { animation-delay: 15.2s; }
+    .intro-feature h2 {
+      margin: 0;
+      color: #174a30;
+      font-size: clamp(18px, 2.5vw, 25px);
+    }
+    .intro-feature:nth-child(2) { padding-right: 120px; }
+    .intro-feature:nth-child(2) .intro-orbit { right: 27px; left: auto; }
+    .intro-feature p { margin: 0; color: #606b61; font-size: clamp(12px, 1.6vw, 14px); line-height: 1.5; }
+    .intro-feature-icon {
+      width: 37px;
+      height: 37px;
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(37, 86, 53, .17);
+      border-radius: 50%;
+      color: #174a30;
+      font-size: 18px;
+    }
+    .intro-feature-icon.coin {
+      width: 45px;
+      height: 45px;
+      border: 2px solid #d98532;
+      background: radial-gradient(circle at 34% 28%, white, #fff2d9);
+      box-shadow: 0 4px 13px rgba(196, 116, 38, .17), inset 0 0 0 3px white;
+      color: #9c5c1c;
+      font-size: 23px;
+      font-weight: 700;
+      animation: intro-coin-float 2s ease-in-out infinite alternate;
+    }
+    .intro-budget-flow { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+    .intro-budget-flow span {
+      padding: 8px 12px;
+      border-radius: 18px;
+      background: #fff3e5;
+      color: #8e4c17;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .intro-budget-flow span:nth-child(2) { background: #f0f3ff; color: #354e96; }
+    .intro-budget-flow span:nth-child(3) { background: #edf6ed; color: #24623a; }
+    .intro-budget-flow span { box-shadow: 0 4px 12px rgba(43, 76, 50, .08); }
+    .intro-bars { height: 48px; display: flex; align-items: end; justify-content: center; gap: 10px; }
+    .intro-bars span { width: 20px; height: var(--bar-height); border-radius: 4px 4px 0 0; background: linear-gradient(#f1a74f, #e57d27); }
+    .intro-bars span:nth-child(even) { background: linear-gradient(#59a870, #267546); }
+    .intro-orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 126px;
+      aspect-ratio: 1;
+      border: 1px solid rgba(31, 78, 141, .17);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .intro-orbit::before,
+    .intro-orbit::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid rgba(31, 78, 141, .11);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .intro-orbit::before { width: 88px; height: 88px; }
+    .intro-orbit::after { width: 9px; height: 9px; background: #315997; }
+    .intro-orbit-dot { position: absolute; width: 9px; height: 9px; border-radius: 50%; background: #e9822b; }
+    .intro-orbit-dot.one { top: 11px; left: 57px; }
+    .intro-orbit-dot.two { right: 10px; bottom: 28px; background: #16804a; }
+    .intro-orbit-dot.three { bottom: 23px; left: 18px; background: #315997; }
+    .intro-feature-last { gap: 7px; }
+    .intro-feature-last strong { color: #e9822b; font-size: clamp(18px, 2.6vw, 26px); letter-spacing: .04em; }
+    .intro-progress {
+      position: absolute;
+      right: 0;
+      bottom: 18px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #59665b;
+      font-size: 11px;
+    }
+    .intro-progress-label { font-weight: 700; letter-spacing: .1em; }
+    .intro-progress-track { height: 5px; flex: 1; overflow: hidden; border-radius: 5px; background: #e4e8df; }
+    .intro-progress-fill { width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #ed8b32 0 42%, #315997 42% 57%, #218047 57%); }
+    /* Keep the full intro visible on compact screens without shortening the sequence. */
+    @media (max-height: 760px) {
+      .intro-content { padding-top: 25px; padding-bottom: 48px; }
+      .intro-brand-lockup { width: 68px; height: 68px; margin-bottom: 6px; }
+      .intro-brand-lockup::after { inset: -7px; }
+      .intro-emblem { width: 42px; height: 49px; }
+      .intro-kicker { margin-bottom: 7px; padding: 5px 9px; }
+      .intro-values { margin-top: 8px; }
+      .intro-feature-stage { min-height: 135px; margin-top: 12px; }
+      .intro-feature { gap: 8px; padding: 12px 16px; }
+      .intro-progress { bottom: 12px; }
+    }
+    .intro-screen.is-leaving { opacity: 0; transition: opacity .45s ease; }
+    .intro-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @media (max-height: 620px) {
+      .intro-content { padding-top: 30px; padding-bottom: 51px; }
+      .intro-emblem { width: 53px; height: 59px; margin-bottom: 5px; }
+      .intro-tagline { margin-top: 5px; }
+      .intro-feature-stage { min-height: 120px; margin-top: 10px; }
+      .intro-feature { gap: 7px; padding: 10px 16px; }
+      .intro-orbit { width: 96px; }
+      .intro-orbit::before { width: 65px; height: 65px; }
+      .intro-orbit-dot.one { top: 7px; left: 44px; }
+      .intro-orbit-dot.two { right: 6px; bottom: 21px; }
+      .intro-orbit-dot.three { bottom: 17px; left: 13px; }
+    }
+    /* Preserve the intro's first message and remove motion for users who request reduced motion. */
+    @media (prefers-reduced-motion: reduce) {
+      .intro-ribbon, .intro-sparkles, .intro-scene::before, .intro-topline, .intro-bottomline,
+      .intro-brand-lockup::before, .intro-brand-lockup::after, .intro-emblem, .intro-title, .intro-tagline, .intro-feature, .intro-feature-icon.coin {
+        animation: none !important;
+      }
+      .intro-feature-stage { min-height: 0; display: grid; gap: 8px; }
+      .intro-feature { position: relative; inset: auto; min-height: 84px; opacity: 1; }
+      .intro-feature:not(:first-child) { display: none; }
+      .intro-orbit { opacity: .3; }
+    }
+    .intro-screen.is-leaving { opacity: 0; transition: opacity .45s ease; }
+
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+
+    .utility-bar {
+      height: 46px;
+      padding: 0 4%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0;
+      color: white;
+      background: var(--saffron);
+      border-top: 4px solid #b4481b;
+      position: relative;
+      z-index: 2;
+    }
+
+    .utility-bar::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 57%;
+      height: 46px;
+      background: white;
+      clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+      z-index: -1;
+    }
+
+    .utility-link, .utility-icon {
+      color: white;
+      text-decoration: none;
+      border-right: 1px solid rgba(255,255,255,.8);
+      padding: 0 12px;
+      font-size: 13px;
+      line-height: 26px;
+      white-space: nowrap;
+    }
+
+    .utility-icon { font-size: 19px; padding: 0 10px; }
+    .utility-link:hover { text-decoration: underline; }
+    .language-select-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+    .language-select {
+      max-width: 154px;
+      height: 32px;
+      margin: 0 4px;
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 3px;
+      padding: 3px 7px;
+      background: var(--saffron);
+      color: white;
+      font: inherit;
+    }
+    .language-select option { background: white; color: #222; }
+    .login-top {
+      border: 0;
+      border-radius: 4px;
+      margin-left: 12px;
+      padding: 10px 24px;
+      color: white;
+      background: var(--deep-orange);
+      font-size: 14px;
+    }
+
+    .masthead {
+      min-height: 108px;
+      background: #fff;
+      padding: 10px 3.7% 0;
+    }
+
+    .brand-row {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      border-bottom: 5px solid #d6d6d6;
+    }
+
+    .seal {
+      width: 110px;
+      height: 76px;
+      display: grid;
+      place-items: center;
+      color: #252525;
+      text-align: center;
+      flex: 0 0 auto;
+    }
+
+    .seal img { display: block; width: 39px; height: 48px; object-fit: contain; }
+    .seal small { font-size: 8px; font-weight: 700; line-height: 1; }
+    .brand-name {
+      font-size: clamp(22px, 2vw, 32px);
+      line-height: 1.38;
+      font-weight: 700;
+      color: #101010;
+      letter-spacing: .2px;
+      white-space: nowrap;
+    }
+    .brand-name span { display: block; }
+    .brand-name sup { color: #a84b18; font-size: 8px; }
+
+    .contact-block {
+      margin-left: auto;
+      display: flex;
+      align-items: end;
+      gap: 24px;
+      color: #555;
+      padding-bottom: 10px;
+      white-space: nowrap;
+    }
+    .contact-block div + div { border-left: 1px solid #ddd; padding-left: 24px; }
+    .contact-block label { display: block; color: #bd5b1e; font-size: 14px; margin-bottom: 5px; }
+    .contact-block strong { font-size: 17px; font-weight: 400; }
+    .campaign {
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.1;
+      font-weight: bold;
+      color: #555;
+      padding: 6px;
+      width: 78px;
+      flex: 0 0 78px;
+    }
+    .campaign b { display: block; font-size: 25px; color: #df812b; line-height: 1.05; }
+    .campaign.india { width: 120px; flex-basis: 120px; font-size: 12px; }
+    .campaign.india b { font-size: 21px; color: #27834b; }
+
+    .main-nav {
+      height: 66px;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      background: white;
+    }
+    .main-nav a { color: #171717; text-decoration: none; font-size: 16px; }
+
+    .announcement {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      background: #8d3000;
+      color: #fff;
+      overflow: hidden;
+    }
+    .announcement-label {
+      height: 100%;
+      min-width: 310px;
+      padding: 0 22px 0 3.7%;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      background: #5f2100;
+      clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
+      font-size: 22px;
+      position: relative;
+      z-index: 1;
+    }
+    .megaphone { font-size: 28px; color: #d8be67; }
+    .announcement-text {
+      padding: 0 18px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 15px;
+    }
+
+    .hero {
+      min-height: 640px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 36.5%;
+      background: #bdc9ad;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0 28% 0 0;
+      z-index: 0;
+      background:
+        linear-gradient(90deg, rgba(18, 62, 18, .30), rgba(18, 70, 20, .38)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1500 700' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3CradialGradient id='b'%3E%3Cstop stop-color='%2399bb46'/%3E%3Cstop offset='1' stop-color='%232f561c'/%3E%3C/radialGradient%3E%3ClinearGradient id='s' x2='0' y2='1'%3E%3Cstop stop-color='%233b7624'/%3E%3Cstop offset='1' stop-color='%23341d0b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1500' height='700' fill='url(%23b)'/%3E%3Cpath d='M0 490 Q210 445 390 500 T800 480 T1200 490 L1500 500 V700 H0Z' fill='url(%23s)'/%3E%3Cg fill='%237fae31' stroke='%23416f22' stroke-width='5'%3E%3Cpath d='M610 555Q632 415 600 280Q565 205 515 240Q562 302 603 304Q580 185 640 120Q675 220 626 305Q661 192 730 182Q713 275 628 321Q685 405 653 555Z'/%3E%3Cpath d='M900 558Q932 414 905 280Q872 199 822 234Q866 300 906 304Q882 172 947 105Q978 209 928 306Q963 193 1035 183Q1017 277 930 324Q985 401 949 558Z'/%3E%3Cpath d='M120 560Q146 445 120 360Q90 300 50 325Q85 375 121 380Q100 285 148 235Q177 310 142 382Q177 306 235 300Q220 370 144 399Q175 452 151 560Z'/%3E%3C/g%3E%3Cpath d='M0 570 Q270 540 500 573T1000 565T1500 575 V700H0Z' fill='%23412a16' opacity='.65'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 28%;
+      height: 100%;
+      width: 8.5%;
+      background: #bdc9ad;
+      clip-path: ellipse(100% 85% at 100% 50%);
+    }
+
+    .guidelines {
+      position: relative;
+      z-index: 1;
+      padding: 66px 7.2% 54px 6.1%;
+      color: white;
+    }
+    .carousel-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1050px;
+      margin-bottom: 23px;
+    }
+    .carousel-heading h1 {
+      margin: 0;
+      font-size: 29px;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+    .carousel-heading h1::after {
+      content: "";
+      display: block;
+      width: 63px;
+      border-bottom: 2px solid white;
+      margin-top: 4px;
+    }
+    .carousel-controls { display: flex; gap: 8px; }
+    .carousel-controls button {
+      border: 0;
+      color: white;
+      background: transparent;
+      font-size: 41px;
+      line-height: 1;
+      padding: 0 3px;
+    }
+    .guideline-panel {
+      max-width: 1050px;
+      min-height: 300px;
+      padding: 22px 24px;
+      border-radius: 3px;
+      background: rgba(0, 79, 37, .72);
+    }
+    .guideline-panel ul { list-style: none; padding: 0; margin: 0; }
+    .guideline-panel li {
+      position: relative;
+      padding-left: 18px;
+      margin: 4px 0 7px;
+      line-height: 1.44;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .inventory-card-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 7px; }
+    .inventory-card-actions select {
+      max-width: 120px;
+      border: 1px solid #e4e0dc;
+      border-radius: 4px;
+      padding: 5px 7px;
+      background: white;
+      color: #5d463b;
+      font: inherit;
+      font-weight: 400;
+    }
+    .inventory-card-actions button {
+      border: 0;
+      border-radius: 4px;
+      padding: 5px 8px;
+      background: #fff3cd;
+      color: #8c5b10;
+      font-size: 17px;
+    }
+    .guideline-panel li::before { content: "–"; position: absolute; left: 0; }
+
+    .login-area {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 38px 10% 38px 0;
+    }
+    .login-card {
+      width: min(100%, 416px);
+      min-height: 510px;
+      background: rgba(255,255,255,.95);
+      border-radius: 7px;
+      padding: 25px 26px 24px;
+      box-shadow: 0 2px 7px rgba(0,0,0,.12);
+    }
+    .login-card h2 {
+      margin: 0 0 15px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--green);
+    }
+    .login-card p { margin: 0 0 21px; font-size: 17px; line-height: 1.55; }
+    .login-card p.login-hint { margin-top: -12px; margin-bottom: 17px; color: #70513e; font-size: 12px; }
+    .login-card input {
+      width: 100%;
+      height: 49px;
+      border: 1px solid #e4e7ec;
+      border-radius: 9px;
+      background: #e8effc;
+      padding: 0 16px;
+      margin-bottom: 23px;
+      color: #20242a;
+      outline-color: #62bda0;
+    }
+    .password-wrap { position: relative; }
+    .password-wrap input { padding-right: 48px; }
+    .show-password {
+      position: absolute;
+      right: 12px;
+      top: 10px;
+      padding: 3px;
+      border: 0;
+      background: transparent;
+      color: #171717;
+    }
+    .captcha-row { display: flex; gap: 0; margin: 2px 0 16px; }
+    .captcha-row input {
+      min-width: 0;
+      height: 44px;
+      background: white;
+      margin: 0;
+      border-radius: 9px 0 0 9px;
+    }
+    .captcha-image {
+      height: 44px;
+      width: 115px;
+      border: 1px solid #e1e1e1;
+      object-fit: cover;
+      flex: 0 0 auto;
+    }
+    .refresh-captcha {
+      width: 42px;
+      border: 0;
+      border-radius: 0 5px 5px 0;
+      background: #d1d0d0;
+      font-size: 20px;
+      color: #292929;
+    }
+    .submit-button {
+      width: 100%;
+      height: 48px;
+      border: 0;
+      border-radius: 9px;
+      background: #63bea1;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .submit-button:hover { background: #4eab8e; }
+    .forgot {
+      display: block;
+      margin: 25px auto 0;
+      border: 0;
+      color: #e57c25;
+      background: transparent;
+      font-size: 17px;
+    }
+    .form-message {
+      min-height: 20px;
+      margin: 11px 0 0 !important;
+      color: #a53c22;
+      font-size: 13px !important;
+      line-height: 1.4 !important;
+      text-align: center;
+    }
+    .page-footer {
+      height: 65px;
+      background-color: #fafafa;
+      background-image:
+        linear-gradient(30deg, transparent 24%, #dededc 25%, #dededc 26%, transparent 27%, transparent 74%, #dededc 75%, #dededc 76%, transparent 77%),
+        linear-gradient(150deg, transparent 24%, #dededc 25%, #dededc 26%, transparent 27%, transparent 74%, #dededc 75%, #dededc 76%, transparent 77%);
+      background-size: 40px 70px;
+      border-top: 1px solid #ddd;
+    }
+    .skip-link {
+      position: fixed;
+      top: -50px;
+      left: 8px;
+      z-index: 10;
+      background: white;
+      color: #111;
+      padding: 10px;
+    }
+    .skip-link:focus { top: 8px; }
+
+    .state-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: grid;
+      place-items: start center;
+      padding: 3.2vh 16px 20px;
+      background: rgba(0, 0, 0, .34);
+    }
+    .state-modal-backdrop[hidden] { display: none; }
+    .state-modal {
+      width: min(790px, 100%);
+      min-height: 520px;
+      position: relative;
+      padding: 26px 38px 17px;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+      color: #303238;
+    }
+    .state-search-wrap { position: relative; }
+    .state-search-wrap::before {
+      content: "⌕";
+      position: absolute;
+      left: 13px;
+      top: 6px;
+      color: #777;
+      font-size: 25px;
+      line-height: 1;
+      transform: rotate(-20deg);
+    }
+    .state-search {
+      display: block;
+      width: 100%;
+      height: 41px;
+      padding: 0 42px 0 36px;
+      border: 1px solid #999;
+      border-radius: 13px;
+      box-shadow: 0 2px 4px rgba(0,0,0,.2);
+      font-size: 14px;
+      outline-color: #c96b35;
+    }
+    .state-modal-close {
+      position: absolute;
+      top: 11px;
+      right: 10px;
+      z-index: 2;
+      width: 29px;
+      height: 29px;
+      border: 0;
+      border-radius: 50%;
+      background: #ddd;
+      color: #777;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+    }
+    .state-modal h2 {
+      margin: 44px 0 8px;
+      text-align: center;
+      color: #36393d;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.18;
+    }
+    .state-picker {
+      position: relative;
+      min-height: 286px;
+    }
+    .state-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      align-content: start;
+      row-gap: 2px;
+    }
+    .state-option {
+      min-width: 0;
+      height: 91px;
+      padding: 2px 3px 4px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background: transparent;
+      color: #171717;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+    }
+    .state-option:hover, .state-option:focus-visible {
+      border-color: #df812b;
+      background: #fff8f2;
+      outline: none;
+    }
+    .state-emblem {
+      width: 58px;
+      height: 57px;
+      color: #242424;
+      flex: 0 0 auto;
+    }
+    .state-emblem-image {
+      width: 58px;
+      height: 57px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+    .state-emblem * {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .state-emblem .solid { fill: currentColor; stroke: none; }
+    .state-name {
+      max-width: 100%;
+      font-size: 12px;
+      line-height: 1.1;
+      text-align: center;
+    }
+    .state-page-button {
+      position: absolute;
+      top: 40%;
+      z-index: 1;
+      width: 28px;
+      height: 48px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #c96b3d;
+      font-size: 43px;
+      line-height: 1;
+    }
+    .state-page-button:disabled { visibility: hidden; }
+    .state-page-button.previous { left: -29px; }
+    .state-page-button.next { right: -29px; }
+    .state-empty { grid-column: 1 / -1; padding: 45px 0; text-align: center; color: #666; }
+    .central-authority-option {
+      display: block;
+      margin: 8px auto 0;
+      padding: 5px 10px;
+      border: 0;
+      background: transparent;
+      color: #161616;
+      font-size: 20px;
+    }
+    .central-authority-option:hover { color: #a84b18; }
+
+    body.dashboard-mode { overflow: hidden; }
+    body.dashboard-mode > header,
+    body.dashboard-mode > .announcement,
+    body.dashboard-mode > #main,
+    body.dashboard-mode > .page-footer { display: none; }
+    #inventory-dashboard[hidden] { display: none; }
+    #inventory-dashboard {
+      position: fixed;
+      inset: 0;
+      z-index: 15;
+      display: grid;
+      grid-template-rows: 56px 38px minmax(0, 1fr);
+      background: #f5f5f5;
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .inventory-topbar {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 0 20px;
+      color: white;
+      background: #953a19;
+    }
+    .inventory-brand { font-size: 21px; font-weight: 700; letter-spacing: .4px; }
+    .inventory-system { font-size: 15px; }
+    .dashboard-language-select {
+      max-width: 145px;
+      height: 32px;
+      border: 1px solid rgba(255,255,255,.65);
+      border-radius: 3px;
+      padding: 3px 7px;
+      background: #953a19;
+      color: white;
+      font: inherit;
+    }
+    .dashboard-language-select option { background: white; color: #222; }
+    .inventory-account {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+    }
+    .inventory-account button {
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 17px;
+      padding: 7px 12px;
+      background: rgba(255,255,255,.14);
+      color: white;
+    }
+    .inventory-notice {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 18px;
+      background: #d87906;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .inventory-workspace {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+    }
+    .inventory-sidebar {
+      padding: 12px 8px;
+      background: #eee7d9;
+      border-right: 1px solid #ddd4c6;
+    }
+    .inventory-nav-item {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+      border: 0;
+      border-radius: 4px;
+      padding: 12px 13px;
+      text-align: left;
+      color: #70513e;
+      background: transparent;
+    }
+    .inventory-nav-item[hidden] { display: none; }
+    .inventory-nav-item.active { background: #fff; font-weight: 700; }
+    .inventory-page[hidden] { display: none; }
+    .inventory-main {
+      min-width: 0;
+      overflow: auto;
+      padding: 18px 20px 30px;
+      background: #fff;
+    }
+    .inventory-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    .inventory-heading h1 { margin: 0; font-size: 22px; font-weight: 500; color: #54382c; }
+    .inventory-demo-note { color: #8a3900; font-size: 12px; font-weight: 700; }
+    .import-panel, .import-batch-card {
+      margin-bottom: 14px;
+      border: 1px solid #e2d9cd;
+      border-radius: 7px;
+      padding: 15px;
+      background: #fffdfa;
+    }
+    .import-panel h2, .import-batch-card h3 { margin: 0 0 8px; color: #54382c; }
+    .import-panel p, .import-batch-card p { color: #65584d; line-height: 1.45; }
+    .import-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .import-form-grid label, .import-correction label {
+      display: grid;
+      gap: 5px;
+      color: #493b31;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .import-form-grid input, .import-correction input, .import-review-notes {
+      width: 100%;
+      min-width: 0;
+      border: 1px solid #cfc5b9;
+      border-radius: 4px;
+      padding: 9px;
+      background: white;
+      color: #28231f;
+    }
+    .import-span-two { grid-column: 1 / -1; }
+    .import-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; }
+    .import-actions button, .import-actions a, .import-correction button {
+      display: inline-block;
+      border: 1px solid #9b5d32;
+      border-radius: 4px;
+      padding: 8px 12px;
+      background: #fff;
+      color: #69432d;
+      font: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .import-actions button[type="submit"] { background: #75431f; color: white; }
+    .import-status { min-height: 1.4em; margin: 10px 0 0; }
+    .import-status[role="alert"] { color: #a12020; }
+    .import-batch-list { display: grid; gap: 10px; }
+    .import-batch-summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .import-batch-status { color: #624b3b; font-weight: 700; text-transform: capitalize; }
+    .import-batch-meta { overflow-wrap: anywhere; color: #72675c; font-size: 12px; }
+    .import-row-list { display: grid; gap: 10px; padding: 0; list-style: none; }
+    .import-row { border-top: 1px solid #e9e2d9; padding-top: 10px; }
+    .import-row-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px 12px; font-size: 12px; }
+    .import-row-fields strong { color: #523c2d; }
+    .import-correction { display: grid; grid-template-columns: minmax(100px, 180px) minmax(160px, 1fr) auto; gap: 9px; align-items: end; margin-top: 9px; }
+    .import-review-notes { min-height: 62px; margin: 9px 0; resize: vertical; }
+    @media (max-width: 740px) {
+      .import-form-grid, .import-row-fields { grid-template-columns: minmax(0, 1fr); }
+      .import-correction { grid-template-columns: minmax(0, 1fr); }
+    }
+    .budget-coverage-panel {
+      margin: 0 0 16px;
+      border: 1px solid #e7e7e7;
+      border-radius: 7px;
+      padding: 12px;
+      background: #fbf8f3;
+    }
+    .budget-coverage-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .budget-coverage-heading h2 { margin: 0 0 4px; color: #67432f; font-size: 15px; }
+    .budget-coverage-heading p { margin: 0 0 10px; color: #766b60; font-size: 12px; line-height: 1.4; }
+    .budget-browse-path { display: flex; align-items: center; gap: 10px; margin: 4px 0 10px; color: #624b3b; font-size: 12px; font-weight: 600; }
+    .budget-browse-path button { border: 1px solid #d7cabe; border-radius: 4px; padding: 5px 8px; color: #67432f; background: white; }
+    .budget-browse-path input { min-width: 160px; margin-left: auto; border: 1px solid #dfd8cf; border-radius: 4px; padding: 6px 8px; font: inherit; font-weight: 400; }
+    .budget-coverage-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .coverage-jurisdiction {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #dfd8cf;
+      border-radius: 16px;
+      padding: 6px 9px;
+      background: white;
+      color: #493f37;
+      font: inherit;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .coverage-jurisdiction[aria-pressed="true"] { outline: 2px solid #67432f; }
+    .coverage-jurisdiction[data-status="source_data"]::after {
+      content: "Sourced";
+      border-radius: 8px;
+      padding: 2px 5px;
+      background: #e2f4e7;
+      color: #176b32;
+      font-size: 9px;
+      font-weight: 700;
+    }
+    .coverage-jurisdiction[data-status="catalog_only"]::after {
+      content: "Catalogue only";
+      border-radius: 8px;
+      padding: 2px 5px;
+      background: #f0ede8;
+      color: #64594e;
+      font-size: 9px;
+    }
+    .coverage-jurisdiction[data-status="source_and_child_data"]::after {
+      content: "State + district";
+      border-radius: 8px;
+      padding: 2px 5px;
+      background: #e2f4e7;
+      color: #176b32;
+      font-size: 9px;
+      font-weight: 700;
+    }
+    .coverage-jurisdiction[data-status="descendant_data"]::after {
+      content: "Child data";
+      border-radius: 8px;
+      padding: 2px 5px;
+      background: #fff0ce;
+      color: #79530b;
+      font-size: 9px;
+    }
+    .coverage-jurisdiction[data-status="illustrative_data"]::after,
+    .coverage-jurisdiction[data-status="illustrative_descendant_data"]::after,
+    .coverage-jurisdiction[data-status="source_and_illustrative_descendant_data"]::after {
+      content: "Illustrative demo";
+      border-radius: 8px;
+      padding: 2px 5px;
+      background: #ffebc2;
+      color: #8a3900;
+      font-size: 9px;
+      font-weight: 700;
+    }
+    .coverage-jurisdiction[data-status="user_provided_data"]::after,
+    .coverage-jurisdiction[data-status="user_provided_descendant_data"]::after,
+    .coverage-jurisdiction[data-status="source_and_user_descendant_data"]::after,
+    .coverage-jurisdiction[data-status="mixed_provenance_data"]::after {
+      content: "User-provided · unverified";
+      border-radius: 8px;
+      padding: 2px 5px;
+      background: #e8e9ff;
+      color: #34316e;
+      font-size: 9px;
+      font-weight: 700;
+    }
+    .coverage-jurisdiction[data-type="district"] { margin-left: 12px; border-style: dashed; }
+    .budget-filter-row { display: flex; flex-wrap: wrap; gap: 9px; padding: 10px 12px; border-bottom: 1px solid #eee; }
+    .budget-filter-row select, .budget-department-filter input {
+      max-width: 190px; border: 1px solid #e4e0dc; border-radius: 4px; padding: 6px 8px;
+      background: white; color: #5d463b; font: inherit; font-size: 12px;
+    }
+    .budget-department-filter { display: flex; align-items: center; gap: 8px; padding: 9px 12px; color: #67432f; font-size: 12px; }
+    .budget-department-filter input { flex: 1; max-width: none; }
+    .comparison-panel { margin-top: 18px; border: 1px solid #e7e7e7; border-radius: 7px; background: #fff; }
+    .comparison-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #eee; }
+    .comparison-heading h2 { margin: 0 0 4px; color: #67432f; font-size: 16px; }
+    .comparison-heading p { margin: 0; color: #766b60; font-size: 12px; }
+    .comparison-heading button, .comparison-download { border: 1px solid #c8b5a5; border-radius: 4px; padding: 7px 10px; color: #67432f; background: #fffaf5; }
+    .comparison-controls { display: grid; grid-template-columns: repeat(3, minmax(150px, 1fr)); gap: 8px 10px; align-items: start; padding: 12px 14px; color: #59483c; font-size: 12px; }
+    .comparison-multi-select { position: relative; min-width: 0; }
+    .comparison-multi-select summary { overflow: hidden; border: 1px solid #ddd2c9; border-radius: 4px; padding: 8px 10px; background: #fff; color: #59483c; cursor: pointer; list-style: none; text-overflow: ellipsis; white-space: nowrap; }
+    .comparison-multi-select summary::-webkit-details-marker { display: none; }
+    .comparison-multi-select summary::after { content: "▾"; float: right; margin-left: 8px; }
+    .comparison-multi-select[open] summary::after { content: "▴"; }
+    .comparison-dropdown-options { position: absolute; z-index: 30; top: calc(100% + 3px); left: 0; right: 0; max-height: 240px; overflow-y: auto; padding: 6px; border: 1px solid #c8b5a5; border-radius: 4px; background: #fff; box-shadow: 0 4px 12px #0002; }
+    .comparison-dropdown-options label { display: flex; align-items: center; gap: 7px; padding: 6px; border-radius: 3px; cursor: pointer; }
+    .comparison-dropdown-options label:hover { background: #fff5eb; }
+    .comparison-dropdown-options input { margin: 0; }
+    #compare-selection-help { grid-column: 1 / -1; color: #766b60; font-size: 11px; }
+    .comparison-chart { padding: 4px 14px 12px; }
+    .comparison-chart-intro { margin: 0 0 10px; color: #766b60; font-size: 11px; line-height: 1.5; }
+    .comparison-chart-panel { margin: 10px 0 16px; padding: 12px; border: 1px solid #eee6df; border-radius: 6px; background: #fffdfa; }
+    .comparison-chart-panel h3 { margin: 0 0 8px; color: #67432f; font-size: 13px; }
+    .comparison-pie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 12px; }
+    .comparison-pie-card { min-width: 0; padding: 10px; border: 1px solid #eee6df; border-radius: 5px; background: white; box-shadow: 0 2px 6px rgba(54, 38, 28, .05); }
+    .comparison-pie-card h4 { margin: 0; color: #67432f; font-size: 12px; text-align: center; }
+    .comparison-pie-chart { display: block; width: min(100%, 230px); height: auto; margin: 0 auto; transform-origin: center; }
+    @media (prefers-reduced-motion: no-preference) {
+      .comparison-pie-chart { animation: pie-enter .55s cubic-bezier(.2, .75, .25, 1) both; }
+      .inventory-chart-column { animation: card-enter .38s ease-out both; }
+      .inventory-chart-column:nth-child(2n) { animation-delay: .04s; }
+      .inventory-chart-column:nth-child(3n) { animation-delay: .08s; }
+      .inventory-chart-bar { transform-origin: center bottom; animation: bar-enter .45s cubic-bezier(.2, .75, .25, 1) both; }
+    }
+    @keyframes pie-enter {
+      from { opacity: .35; transform: perspective(500px) rotateY(-9deg) scale(.96); }
+      to { opacity: 1; transform: perspective(500px) rotateY(0) scale(1); }
+    }
+    @keyframes card-enter {
+      from { opacity: .4; transform: translateY(7px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bar-enter {
+      from { transform: scaleY(.08); }
+      to { transform: scaleY(1); }
+    }
+    @keyframes intro-band {
+      to { transform: scaleX(1); }
+    }
+    @keyframes intro-emblem {
+      from { opacity: 0; transform: translateY(16px) scale(.92); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes intro-title {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes intro-tagline {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes intro-ribbon-drift {
+      from { margin-top: -2vh; }
+      to { margin-top: 3vh; }
+    }
+    @keyframes intro-sparkle-drift {
+      from { background-position: 0 0, 28px 34px; }
+      to { background-position: 116px 116px, -118px 180px; }
+    }
+    @keyframes intro-chakra-turn {
+      to { rotate: 360deg; }
+    }
+    @keyframes intro-seal-turn {
+      to { rotate: 360deg; }
+    }
+    @keyframes intro-coin-float {
+      from { transform: translateY(2px) rotate(-5deg); }
+      to { transform: translateY(-3px) rotate(5deg); }
+    }
+    @keyframes intro-feature-scene {
+      0%, 100% { opacity: 0; transform: translateY(10px) scale(.98); }
+      12%, 82% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .comparison-pie-chart text { font: 10px Arial, Helvetica, sans-serif; }
+    .comparison-pie-empty { margin: 30px 0; color: #766b60; font-size: 11px; text-align: center; }
+    .comparison-chart-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 4px 2px 0; }
+    .comparison-chart-legend-item { display: inline-flex; align-items: center; gap: 6px; color: #59483c; font-size: 11px; }
+    .comparison-chart-legend-swatch { width: 10px; height: 10px; border-radius: 50%; }
+    .comparison-chart-caption { margin: 7px 0 0; color: #766b60; font-size: 10px; line-height: 1.4; }
+    .comparison-spent-chart { margin-top: 12px; padding-top: 10px; border-top: 1px solid #eee6df; }
+    .comparison-spent-chart h5 { margin: 0 0 8px; color: #67432f; font-size: 11px; }
+    .comparison-spent-row { display: grid; grid-template-columns: minmax(70px, .7fr) minmax(70px, 1fr) minmax(110px, 1.5fr); gap: 8px; align-items: center; margin: 7px 0; font-size: 10px; }
+    .comparison-spent-row-label { overflow-wrap: anywhere; }
+    .comparison-spent-track { height: 9px; overflow: hidden; border-radius: 5px; background: #eee9e3; }
+    .comparison-spent-bar { height: 100%; border-radius: inherit; background: #008c95; }
+    .comparison-spent-value { text-align: right; font-variant-numeric: tabular-nums; }
+    .comparison-table-wrap { overflow-x: auto; padding: 0 12px 10px; }
+    .comparison-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .comparison-table th, .comparison-table td { padding: 8px; border-bottom: 1px solid #eee; text-align: left; }
+    .comparison-table td.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+    .comparison-note { margin: 8px 14px 14px; color: #766b60; font-size: 11px; line-height: 1.5; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+    .inventory-map-and-results.is-no-map { grid-template-columns: minmax(0, 1fr); }
+    .inventory-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .inventory-tab {
+      min-height: 42px;
+      border: 1px solid #e0e2e8;
+      border-radius: 6px;
+      background: #fafafa;
+      color: #454545;
+    }
+    .inventory-tab[aria-selected="true"] {
+      border-color: #6479ec;
+      background: linear-gradient(110deg, #56c4ea, #6657e9);
+      color: white;
+      box-shadow: 0 2px 7px rgba(91,105,220,.3);
+    }
+    .inventory-map-and-results {
+      display: grid;
+      grid-template-columns: minmax(320px, .82fr) minmax(470px, 1.5fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .inventory-map-card, .inventory-results-card, .stock-sold-card {
+      min-width: 0;
+      border: 1px solid #e7e7e7;
+      border-radius: 7px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(54, 38, 28, .06);
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .comparison-panel, .comparison-chart-panel, .comparison-pie-card,
+    .import-panel, .import-batch-card {
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+      .inventory-map-card:hover, .inventory-results-card:hover, .stock-sold-card:hover,
+      .comparison-panel:hover, .comparison-chart-panel:hover, .comparison-pie-card:hover,
+      .import-panel:hover, .import-batch-card:hover {
+        transform: perspective(900px) translateY(-3px) rotateX(.35deg);
+        border-color: #d5bda8;
+        box-shadow: 0 9px 22px rgba(75, 48, 29, .12);
+      }
+      .district-shape:hover, .district-shape:focus {
+        transform: translateY(-1px) scale(1.025);
+        transform-box: fill-box;
+        transform-origin: center;
+        filter: brightness(.94) drop-shadow(0 2px 2px rgba(55, 42, 31, .35));
+      }
+    }
+    .inventory-card-heading {
+      min-height: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px 12px;
+      border-bottom: 1px solid #eee;
+      color: #8f3f22;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .inventory-results-card .inventory-card-heading { flex-wrap: wrap; }
+    .district-current { color: #555; font-size: 12px; font-weight: 400; }
+    .district-map-wrap { width: 100%; padding: 8px; }
+    .district-map {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 430px;
+      overflow: visible;
+    }
+    .district-shape {
+      stroke: #fff;
+      stroke-width: 1.2;
+      stroke-linejoin: round;
+      cursor: pointer;
+      transition: filter .16s ease, stroke-width .16s ease, transform .16s ease;
+    }
+    .district-shape:hover, .district-shape:focus {
+      filter: brightness(.94);
+      stroke: #6d4b3c;
+      stroke-width: 2.4;
+      outline: none;
+    }
+    .district-shape:not(.india-state-map-region):hover,
+    .district-shape:not(.india-state-map-region):focus {
+      stroke: #6d4b3c;
+    }
+    .india-state-map-region { cursor: pointer; stroke: var(--state-map-color); stroke-width: 1.2; }
+    .india-state-map-region:hover, .india-state-map-region:focus {
+      stroke: var(--state-map-color);
+      stroke-width: 1.8;
+      filter: brightness(.92);
+    }
+    .district-shape.is-selected { fill: #36c53c !important; stroke: #246e22; stroke-width: 2; }
+    .district-map-credit { padding: 0 12px 10px; font-size: 10px; color: #777; }
+    .district-map-credit a { color: inherit; }
+    .inventory-table-scroll { max-height: 354px; overflow: auto; }
+    .inventory-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .inventory-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      padding: 8px 7px;
+      background: #963b1d;
+      color: white;
+      text-align: left;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .inventory-table td { padding: 6px 7px; border: 1px solid #e4e4e4; }
+    .inventory-table tbody tr:nth-child(even) { background: #fafafa; }
+    .inventory-table tbody tr:hover { background: #eef5fd; }
+    .inventory-table .numeric { text-align: right; white-space: nowrap; }
+    .inventory-table-toolbar { padding: 9px 10px; border-bottom: 1px solid #eee; }
+    .inventory-table-search {
+      width: 100%;
+      min-height: 34px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 6px 9px;
+      font: inherit;
+    }
+    .budget-source-note {
+      margin: 0;
+      padding: 8px 10px;
+      border-top: 1px solid #eee;
+      color: #766b60;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .budget-source-note.is-illustrative {
+      border: 1px solid #f0bd63;
+      background: #fff6e5;
+      color: #783500;
+      font-weight: 700;
+    }
+    .budget-total {
+      padding: 9px 10px;
+      border-top: 1px solid #ddd;
+      background: #fbf8f3;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: right;
+    }
+    .inventory-chart {
+      box-sizing: border-box;
+      min-width: 0;
+      min-height: 245px;
+      padding: 22px 18px;
+      display: flex;
+      align-items: end;
+      justify-content: flex-start;
+      gap: 12px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      border-bottom: 1px solid #ddd;
+    }
+    .inventory-chart-legend { display: flex; flex-wrap: wrap; gap: 9px 16px; padding: 12px 16px 0; }
+    .inventory-chart-legend-item { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
+    .inventory-chart-legend-swatch { width: 12px; height: 12px; flex: 0 0 12px; border-radius: 2px; }
+    .inventory-chart-legend-swatch.spent { background: #008c95; }
+    .inventory-chart-column { height: 205px; min-width: 0; flex: 0 0 150px; display: flex; flex-direction: column; align-items: center; justify-content: end; gap: 5px; font-size: 11px; }
+    .inventory-chart-bar-group { height: 160px; flex: 0 0 160px; display: flex; align-items: end; justify-content: center; gap: 5px; }
+    .inventory-chart-bar { width: 34px; flex: 0 0 34px; min-height: 5px; border-radius: 2px 2px 0 0; background: #4969da; }
+    .inventory-chart-bar.spent { background: #008c95; }
+    .inventory-chart-column span { text-align: center; }
+    .inventory-empty { padding: 58px 20px; color: #955037; text-align: center; font-size: 14px; }
+    .stock-sold-card { margin-top: 17px; }
+    .stock-periods { display: flex; gap: 0; padding: 0 12px; border-bottom: 1px solid #eee; }
+    .stock-period {
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 10px 13px 8px;
+      background: transparent;
+      color: #5265c8;
+    }
+    .stock-period[aria-pressed="true"] { border-color: #d08b5e; color: #333; }
+    .stock-crop-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      padding: 14px;
+    }
+    .stock-crop-tile { min-height: 56px; border-radius: 4px; padding: 9px; color: white; font-size: 12px; }
+    .stock-crop-tile strong { display: block; margin-bottom: 5px; }
+    .dashboard-backdrop-close {
+      position: fixed;
+      right: 13px;
+      bottom: 12px;
+      border: 1px solid #b7b7b7;
+      border-radius: 4px;
+      padding: 7px 10px;
+      background: #fff;
+      color: #67442f;
+      z-index: 16;
+    }
+
+    @media (max-width: 1050px) {
+      .contact-block { gap: 12px; }
+      .contact-block div + div { padding-left: 12px; }
+      .campaign.india, .campaign { display: none; }
+      .hero { grid-template-columns: minmax(0, 1fr) 40%; }
+      .hero::before { right: 31%; }
+      .hero::after { right: 31%; }
+      .login-area { padding-right: 7%; }
+      .guidelines { padding-left: 5%; padding-right: 5%; }
+      .inventory-map-and-results { grid-template-columns: minmax(0, 1fr); }
+      .inventory-map-and-results:not(.is-no-map) .inventory-map-card { max-width: 650px; margin: 0 auto; }
+    }
+    @media (max-width: 740px) {
+      .utility-bar { height: 42px; padding: 0 10px; }
+      .utility-bar::before { display: none; }
+      .utility-link, .language-select-label { display: none; }
+      .utility-icon { padding: 0 8px; }
+      .language-select { max-width: 110px; }
+      .login-top { padding: 8px 15px; }
+      .masthead { padding: 8px 15px 0; min-height: 88px; }
+      .brand-row { min-height: 72px; gap: 10px; border-bottom-width: 3px; }
+      .seal { width: 58px; height: 62px; }
+      .seal img { width: 30px; height: 38px; }
+      .seal small { font-size: 6px; }
+      .brand-name { font-size: 20px; }
+      .contact-block { display: none; }
+      .main-nav { height: 48px; padding: 0 18px; }
+      .announcement { height: 48px; }
+      .announcement-label { min-width: 205px; font-size: 19px; padding-left: 18px; }
+      .announcement-text { font-size: 13px; }
+      .hero { display: block; min-height: initial; }
+      .hero::before { inset: 0; }
+      .hero::after { display: none; }
+      .guidelines { padding: 34px 18px 25px; }
+      .carousel-heading { margin-bottom: 16px; }
+      .carousel-heading h1 { font-size: 25px; }
+      .carousel-controls button { font-size: 36px; }
+      .guideline-panel { min-height: auto; padding: 17px 16px; }
+      .guideline-panel li { font-size: 15px; }
+      .login-area { padding: 12px 18px 35px; }
+      .login-card { width: min(100%, 416px); min-height: 0; padding: 23px 20px; }
+      .login-card h2 { font-size: 32px; }
+      .login-card p { font-size: 15px; }
+      .page-footer { height: 48px; }
+      .state-modal-backdrop { padding: 12px; overflow-y: auto; }
+      .state-modal { min-height: 0; padding: 45px 24px 16px; }
+      .state-modal-close { top: 8px; right: 8px; }
+      .state-modal h2 { margin: 28px 0 10px; font-size: 19px; }
+      .state-picker { min-height: 0; }
+      .state-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 0; }
+      .state-option { height: 84px; }
+      .state-emblem, .state-emblem-image { width: 52px; height: 49px; }
+      .state-page-button { top: 42%; }
+      .state-page-button.previous { left: -24px; }
+      .state-page-button.next { right: -24px; }
+      .central-authority-option { font-size: 17px; }
+      #inventory-dashboard { grid-template-rows: 52px 34px minmax(0, 1fr); }
+      .inventory-topbar { gap: 10px; padding: 0 10px; }
+      .inventory-brand { font-size: 17px; }
+      .inventory-system, .inventory-sidebar { display: none; }
+      .dashboard-language-select { max-width: 105px; }
+      .inventory-workspace { display: block; overflow: auto; }
+      .inventory-main { overflow: visible; padding: 12px; }
+      .inventory-heading { align-items: flex-start; flex-direction: column; }
+      .inventory-map-and-results { grid-template-columns: minmax(0, 1fr); }
+      .budget-coverage-list { max-height: 220px; overflow: auto; }
+      .inventory-map-card { max-width: 560px; margin: 0 auto; }
+      .inventory-table-scroll { max-height: 340px; }
+      .stock-crop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .inventory-demo-note { line-height: 1.4; }
+      .comparison-controls { grid-template-columns: minmax(0, 1fr); }
+      #compare-selection-help { grid-column: 1; }
+      .comparison-heading { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Keep the intro in a modal layer so the portal is revealed only when its timed sequence ends or is skipped. -->
+  <dialog class="intro-screen" id="intro-screen" open aria-labelledby="intro-title">
+    <div class="intro-scene">
+      <span class="intro-ribbon saffron" aria-hidden="true"></span>
+      <span class="intro-ribbon green" aria-hidden="true"></span>
+      <span class="intro-sparkles" aria-hidden="true"></span>
+      <span class="intro-topline" aria-hidden="true"></span>
+      <span class="intro-bottomline" aria-hidden="true"></span>
+      <button class="intro-skip" id="skip-intro" type="button">Skip intro</button>
+      <div class="intro-content">
+        <div class="intro-brand-lockup">
+          <img class="intro-emblem" src="national-emblem.png" alt="National Emblem of India">
+        </div>
+        <p class="intro-kicker">A CLEARER VIEW OF PUBLIC BUDGETS</p>
+        <h1 class="intro-title" id="intro-title">INDIA BUDGET <span>PORTAL</span></h1>
+        <p class="intro-tagline">Public budgets, made clear and accessible.</p>
+        <div class="intro-values" aria-hidden="true"><span>TRANSPARENCY</span><span>ACCESS</span><span>ACCOUNTABILITY</span></div>
+        <p class="intro-sr-only">A 20-second animated introduction to the India Budget Portal. It highlights transparent public budgets, planning, spending, and state-level information. Use Skip intro or press Escape to continue immediately.</p>
+        <div class="intro-feature-stage" aria-hidden="true">
+          <section class="intro-feature">
+            <span class="intro-feature-icon coin">₹</span>
+            <h2>Every rupee, easier to understand</h2>
+            <p>Explore public budget information through one clear, accessible portal.</p>
+          </section>
+          <section class="intro-feature">
+            <span class="intro-feature-icon">◎</span>
+            <h2>Budgets close to home</h2>
+            <p>Move from state-level information to local district details.</p>
+            <div class="intro-orbit"><i class="intro-orbit-dot one"></i><i class="intro-orbit-dot two"></i><i class="intro-orbit-dot three"></i></div>
+          </section>
+          <section class="intro-feature">
+            <h2>From plans to public services</h2>
+            <p>Follow the budget journey from allocation through reported spending.</p>
+            <div class="intro-budget-flow"><span>PLAN</span><span>ALLOCATE</span><span>TRACK</span></div>
+          </section>
+          <section class="intro-feature">
+            <h2>See the bigger picture</h2>
+            <p>Compare amounts and reported spending across sectors and years.</p>
+            <div class="intro-bars">
+              <span style="--bar-height: 34%"></span><span style="--bar-height: 65%"></span>
+              <span style="--bar-height: 48%"></span><span style="--bar-height: 90%"></span>
+              <span style="--bar-height: 72%"></span><span style="--bar-height: 56%"></span>
+              <span style="--bar-height: 82%"></span>
+            </div>
+          </section>
+          <section class="intro-feature intro-feature-last">
+            <span class="intro-feature-icon">✓</span>
+            <strong>Clear budgets. Stronger communities.</strong>
+            <p>Your journey into India’s public budgets starts here.</p>
+          </section>
+        </div>
+        <div class="intro-progress" role="timer" aria-label="Introduction progress">
+          <span class="intro-progress-label">PORTAL INTRO</span>
+          <span class="intro-progress-track" aria-hidden="true"><span class="intro-progress-fill" id="intro-progress-fill"></span></span>
+          <span id="intro-time-remaining">20 sec</span>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <!-- Public landing page and sign-in remain available underneath the dismissible intro. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <div class="utility-bar" aria-label="Utility navigation">
+      <a class="utility-link" href="#main">SKIP TO MAIN CONTENT</a>
+      <a class="utility-link" href="#login">SCREEN READER ACCESS</a>
+      <a class="utility-icon" href="#main" aria-label="Accessibility options">♿</a>
+      <a class="utility-icon" href="#main" aria-label="Sitemap">♟</a>
+      <label class="language-select-label" for="language-select">Language</label>
+      <select class="language-select" id="language-select" aria-label="Language">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="mr">मराठी</option>
+        <option value="bn">বাংলা</option>
+        <option value="ta">தமிழ்</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="te">తెలుగు</option>
+      </select>
+      <button class="login-top" id="open-state-picker" type="button" aria-haspopup="dialog" aria-controls="state-picker-modal">➜ &nbsp;LOGIN</button>
+    </div>
+    <div class="masthead">
+      <div class="brand-row">
+        <div class="seal" aria-label="National emblem">
+        <img src="national-emblem.png" alt="" aria-hidden="true">
+          <small>सत्यमेव जयते</small>
+        </div>
+        <div class="brand-name"><span>INDIA BUDGET</span><span>PORTAL<sup>.</sup></span></div>
+        <div class="contact-block">
+          <div><label>Call Us</label></div>
+          <div><label>Email</label><strong>indiabudgetportal@gov.in</strong></div>
+        </div>
+        <div class="campaign"><b>2026</b>International Year<br>of Cooperatives</div>
+        <div class="campaign india"><b>79 🇮🇳</b>Azadi Ka<br>Amrit Mahotsav</div>
+        <div class="seal" aria-hidden="true"><img src="national-emblem.png" alt=""><small>सत्यमेव जयते</small></div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation"><a href="#main">Home</a></nav>
+  </header>
+
+  <div class="announcement" aria-label="Announcements">
+    <div class="announcement-label"><span class="megaphone" aria-hidden="true">♬</span><strong>Announcement</strong></div>
+    <div class="announcement-text">Welcome to the India Budget Portal. Please follow the security guidelines while using this website.</div>
+  </div>
+
+  <main id="main" class="hero">
+    <section class="guidelines" aria-label="Security information">
+      <div class="carousel-heading">
+        <h1 id="slide-title">Security Guidelines</h1>
+        <div class="carousel-controls">
+          <button type="button" aria-label="Previous slide" id="previous-slide">‹</button>
+          <button type="button" aria-label="Next slide" id="next-slide">›</button>
+        </div>
+      </div>
+      <div class="guideline-panel">
+        <ul id="slide-content">
+          <li>Make sure the URL in your browser address bar begins with "https".</li>
+          <li>Never write your password on a Post-It and stick it on your monitor, your address rolodex, under your desk pad, or anywhere else where it can be easily found. If you must write it down, keep it where no one can find it except for the authorized user.</li>
+          <li>Always lock/logout your computer while leaving.</li>
+          <li>Never install unknown or unsolicited software in your computer.</li>
+          <li>Never download pirated or cracked software.</li>
+          <li>Always use a device firewall.</li>
+          <li>Don't click on popup windows that tell you that your computer is infected with a virus.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="login-area" id="login" aria-label="Login form">
+      <form class="login-card" id="login-form">
+        <h2>Login</h2>
+        <p>Log in to browse state and district budgets. Citizens can create an account; auditors and Central Admin use their assigned accounts.</p>
+        <p class="login-hint">Local demo access: Central Admin <strong>centraladminUN</strong> · State Auditor <strong>stadminmh</strong> · password <strong>india@</strong>.</p>
+        <label class="sr-only" for="username">Username or email</label>
+        <input id="username" name="username" type="text" autocomplete="username" placeholder="Username or email" required>
+        <div class="password-wrap">
+          <label class="sr-only" for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Password" maxlength="128" required>
+          <button class="show-password" id="toggle-password" type="button" aria-label="Show password">◉</button>
+        </div>
+        <div class="captcha-row">
+          <label class="sr-only" for="captcha-answer">Captcha code</label>
+          <input id="captcha-answer" name="captcha" type="text" autocomplete="off" placeholder="Enter captcha" required>
+          <img class="captcha-image" id="captcha-code" alt="CAPTCHA challenge">
+          <button class="refresh-captcha" id="refresh-captcha" type="button" aria-label="Refresh captcha">⟳</button>
+        </div>
+        <button class="submit-button" type="submit">Log In</button>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        <button class="forgot" type="button" id="toggle-account-mode">New citizen? Create account</button>
+        <button class="forgot" type="button" id="forgot-password">♙ &nbsp;Forgot Password?</button>
+      </form>
+    </section>
+  </main>
+  <footer class="page-footer" aria-hidden="true"></footer>
+
+  <!-- Public state/UT picker; authentication is requested only after a jurisdiction is selected. -->
+  <div class="state-modal-backdrop" id="state-picker-backdrop" hidden>
+    <section class="state-modal" id="state-picker-modal" role="dialog" aria-modal="true" aria-labelledby="state-picker-title">
+      <button class="state-modal-close" id="close-state-picker" type="button" aria-label="Close state selection">×</button>
+      <div class="state-search-wrap">
+        <label class="sr-only" for="state-search">Search state</label>
+        <input class="state-search" id="state-search" type="search" placeholder="Type to search state" autocomplete="off">
+      </div>
+      <h2 id="state-picker-title">Choose a state or union territory to explore public budgets and district-level figures.</h2>
+      <div class="state-picker">
+        <button class="state-page-button previous" id="previous-states" type="button" aria-label="Previous states">‹</button>
+        <div class="state-grid" id="state-grid"></div>
+        <button class="state-page-button next" id="next-states" type="button" aria-label="Next states">›</button>
+      </div>
+      <button class="central-authority-option" id="select-central-authority" type="button">+ INDIA BUDGET PORTAL</button>
+    </section>
+  </div>
+
+  <!-- Authenticated budget explorer, comparison, and audited import tools share this dashboard shell. -->
+  <section id="inventory-dashboard" aria-label="India Open Budget Portal dashboard" hidden>
+    <header class="inventory-topbar">
+      <span class="inventory-brand">◉ INDIA BUDGET</span>
+      <span class="inventory-system">Public Budget Explorer</span>
+      <select class="dashboard-language-select" id="dashboard-language-select" aria-label="Language">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="mr">मराठी</option>
+        <option value="bn">বাংলা</option>
+        <option value="ta">தமிழ்</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="te">తెలుగు</option>
+      </select>
+      <div class="inventory-account">
+        <span id="state-admin-label">STATE ADMIN · Maharashtra</span>
+        <button id="change-dashboard-state" type="button">Change state</button>
+        <button id="logout-dashboard" type="button">Sign out</button>
+      </div>
+    </header>
+    <div class="inventory-notice">
+      <span>Announcement</span>
+      <span>Browse source-backed public budget figures by jurisdiction, year, and stage</span>
+      <span>FAQ</span>
+    </div>
+    <div class="inventory-workspace">
+      <aside class="inventory-sidebar" aria-label="Dashboard navigation">
+        <button class="inventory-nav-item active" id="nav-budget-explorer" type="button" aria-controls="budget-explorer-page" aria-current="page">▦ &nbsp; Budget Explorer</button>
+        <button class="inventory-nav-item" id="nav-compare-budgets" type="button" aria-controls="compare-budget-page">◷ &nbsp; Compare Budgets</button>
+        <button class="inventory-nav-item" id="nav-import-budgets" type="button" aria-controls="import-budget-page" hidden>⇧ &nbsp; Import Budgets</button>
+      </aside>
+      <main class="inventory-main">
+        <section class="inventory-page" id="budget-explorer-page" aria-labelledby="budget-explorer-heading" tabindex="-1">
+        <div class="inventory-heading">
+          <h1 id="budget-explorer-heading">India Open Budget Portal</h1>
+          <span class="inventory-demo-note">Other-state/UT figures are synthetic demo data—not official government budgets.</span>
+        </div>
+        <section class="budget-coverage-panel" aria-labelledby="budget-coverage-heading">
+          <div class="budget-coverage-heading">
+            <div>
+              <h2 id="budget-coverage-heading">Explore India</h2>
+              <p id="budget-coverage-note" role="status">Loading the Union, state, UT and district catalogue…</p>
+            </div>
+            <button id="retry-coverage" type="button" hidden>Retry coverage</button>
+          </div>
+          <div class="budget-browse-path">
+            <button id="browse-india" type="button">← All India</button>
+            <span id="browse-location" aria-live="polite">States and Union Territories</span>
+            <label class="sr-only" for="coverage-search">Filter state or district list</label>
+            <input id="coverage-search" type="search" maxlength="120" placeholder="Find a state or district">
+          </div>
+          <div id="budget-coverage-list" class="budget-coverage-list"></div>
+        </section>
+        <div class="inventory-tabs" role="tablist" aria-label="Inventory view">
+          <button class="inventory-tab" type="button" role="tab" id="tab-stock" aria-selected="true" data-view="stock">BUDGET</button>
+          <button class="inventory-tab" type="button" role="tab" id="tab-activity" aria-selected="false" data-view="activity">Activity</button>
+        </div>
+        <div class="inventory-map-and-results">
+          <section class="inventory-map-card" aria-labelledby="district-map-heading">
+            <div class="inventory-card-heading">
+              <span id="district-map-heading">Maharashtra Districts</span>
+              <span class="district-current" id="selected-district-label">All Maharashtra districts</span>
+            </div>
+            <div class="district-map-wrap">
+              <svg class="district-map" id="district-map" viewBox="0 0 500 430" role="group" aria-label="Clickable map of Maharashtra districts"></svg>
+            </div>
+            <div class="district-map-credit">District boundaries: <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries</a>, based on Pathways Data Pvt. Ltd. district data (2021), adapted for this map under <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noreferrer">ODbL 1.0</a>. <span id="district-map-instruction">Select a district to filter the table.</span></div>
+          </section>
+          <section class="inventory-results-card" aria-live="polite" aria-labelledby="inventory-results-heading">
+            <div class="inventory-card-heading">
+              <span id="inventory-results-heading">Budget · Maharashtra</span>
+              <div class="inventory-card-actions">
+                <label class="sr-only" for="budget-fiscal-year">Fiscal year</label>
+                <select id="budget-fiscal-year" aria-label="Fiscal year">
+                  <option value="2026-27">2026–27</option>
+                  <option value="2025-26">2025–26</option>
+                  <option value="2024-25">2024–25</option>
+                  <option value="2023-24">2023–24</option>
+                </select>
+                <label class="sr-only" for="budget-stage">Budget stage</label>
+                <select id="budget-stage" aria-label="Budget stage">
+                  <option value="">All stages</option>
+                  <option value="budget_estimate">Budget Estimate</option>
+                  <option value="revised_estimate">Revised Estimate</option>
+                  <option value="actual">Actual</option>
+                  <option value="funds_received">Budget Received (source field)</option>
+                </select>
+                <label class="sr-only" for="budget-sector">Sector</label>
+                <select id="budget-sector" aria-label="Sector">
+                  <option value="">All sectors</option>
+                  <option value="education">Education</option>
+                  <option value="agriculture">Agriculture</option>
+                  <option value="roadways_transport">Roadways &amp; Transport</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="unclassified">Unclassified</option>
+                </select>
+                <button id="reset-district" type="button" aria-label="Show all districts">↻</button>
+              </div>
+            </div>
+            <div class="budget-department-filter">
+              <label for="budget-department">Department contains</label>
+              <input id="budget-department" type="search" maxlength="120" placeholder="Filter by original department name">
+            </div>
+            <div id="inventory-results"></div>
+          </section>
+        </div>
+        <section class="stock-sold-card" aria-labelledby="stock-sold-heading">
+          <div class="inventory-card-heading" id="stock-sold-heading">Budget figures by sector and stage</div>
+          <div class="stock-periods" role="group" aria-label="Fiscal year">
+            <button class="stock-period" type="button" aria-pressed="true" data-period="2026-27">2026–27</button>
+            <button class="stock-period" type="button" aria-pressed="false" data-period="2023-24">2023–24</button>
+            <button class="stock-period" type="button" aria-pressed="false" data-period="2024-25">2024–25</button>
+            <button class="stock-period" type="button" aria-pressed="false" data-period="2025-26">2025–26</button>
+          </div>
+          <div class="stock-crop-grid" id="stock-crop-grid"></div>
+        </section>
+        </section>
+        <!-- Comparisons use separate filters and chart panels so unlike budget categories are not combined. -->
+        <section class="inventory-page" id="compare-budget-page" aria-labelledby="comparison-heading" tabindex="-1" hidden>
+        <section class="comparison-panel" id="comparison-panel" aria-labelledby="comparison-heading" tabindex="-1">
+          <div class="comparison-heading">
+            <div>
+              <h2 id="comparison-heading">Compare budgets</h2>
+              <p>Compare Education, Transport, Agriculture, and Healthcare separately across selected states and fiscal years.</p>
+            </div>
+            <button id="run-comparison" type="button">Run comparison</button>
+          </div>
+          <div class="comparison-controls">
+            <div>
+              <label id="compare-jurisdictions-label">States / Union Territories</label>
+              <details id="compare-jurisdictions" class="comparison-multi-select" data-placeholder="Select states / UTs" aria-labelledby="compare-jurisdictions-label">
+                <summary>Select states / UTs</summary>
+                <div class="comparison-dropdown-options" role="group" aria-label="States and Union Territories"></div>
+              </details>
+            </div>
+            <div>
+              <label id="compare-years-label">Fiscal years</label>
+              <details id="compare-years" class="comparison-multi-select" data-placeholder="Select fiscal years" aria-labelledby="compare-years-label">
+                <summary>Select fiscal years</summary>
+                <div class="comparison-dropdown-options" role="group" aria-label="Fiscal years"></div>
+              </details>
+            </div>
+            <div>
+              <label id="compare-sectors-label">Sectors</label>
+              <details id="compare-sectors" class="comparison-multi-select" data-placeholder="Select sectors" aria-labelledby="compare-sectors-label">
+                <summary>Select sectors</summary>
+                <div class="comparison-dropdown-options" role="group" aria-label="Sectors">
+                  <label><input type="checkbox" value="education" checked>Education</label>
+                  <label><input type="checkbox" value="roadways_transport" checked>Transport</label>
+                  <label><input type="checkbox" value="agriculture" checked>Agriculture</label>
+                  <label><input type="checkbox" value="healthcare" checked>Healthcare</label>
+                </div>
+              </details>
+            </div>
+            <span id="compare-selection-help">Open the States / Union Territories dropdown and check every state to include (up to 12). You can select multiple states; account role does not limit this public-data comparison. Choose fiscal years and sectors the same way.</span>
+          </div>
+          <div id="comparison-results" aria-live="polite"></div>
+        </section>
+        </section>
+        <!-- Staged imports are reviewed and published separately from public budget browsing. -->
+        <section class="inventory-page" id="import-budget-page" aria-labelledby="import-budget-heading" tabindex="-1" hidden>
+          <div class="inventory-heading">
+            <h1 id="import-budget-heading">Import budget data</h1>
+            <span class="inventory-demo-note">Administrative tools · changes are audited</span>
+          </div>
+          <section class="import-panel" aria-labelledby="import-stage-heading">
+            <h2 id="import-stage-heading">Stage a UTF-8 CSV</h2>
+            <p id="import-scope-note">Imports are checked against your account permissions. Staged rows are not visible in the public budget explorer until a Central Admin reviews and publishes them.</p>
+            <p>Use the optional <code>spent_amount</code> CSV column to provide the amount spent; it is shown separately from Amount. Leave it blank when the source does not report spending.</p>
+            <p><strong>Samples:</strong> <a href="/sample-budget-import.csv" download>Generic sample CSV</a> · Rajasthan districts: <a href="/sample-rajasthan-ajmer-budget-import.csv" download>Ajmer</a> · <a href="/sample-rajasthan-jodhpur-budget-import.csv" download>Jodhpur</a>. Example amounts and sources are fictional; replace every sample value with verified source data before importing. Do not publish sample rows.</p>
+            <form id="import-stage-form">
+              <div class="import-form-grid">
+                <label>CSV file
+                  <input id="import-csv-file" name="csv_file" type="file" accept=".csv,text/csv" required>
+                </label>
+                <label>Source document name
+                  <input id="import-source-document" name="source_document" maxlength="250" placeholder="Official budget document name" required>
+                </label>
+                <label>Source URL (optional)
+                  <input id="import-source-url" name="source_url" type="url" maxlength="2000" placeholder="https://...">
+                </label>
+                <label>Dataset correction notes
+                  <input id="import-corrections" name="corrections" maxlength="1000" value="None declared.">
+                </label>
+              </div>
+              <div class="import-actions">
+                <button type="submit">Validate and stage CSV</button>
+                <button id="refresh-import-batches" type="button">Refresh imports</button>
+              </div>
+              <p class="import-status" id="import-form-status" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+          <section class="import-panel" aria-labelledby="import-batches-heading">
+            <h2 id="import-batches-heading">Your import batches</h2>
+            <p>Auditors can stage and correct batches only inside their assigned state and districts. Central Admin can stage across jurisdictions, review batches, and perform the final publication step. A different administrator must review a batch than the person who staged it.</p>
+            <div class="import-batch-list" id="import-batch-list" aria-live="polite"></div>
+            <section id="import-batch-detail" aria-live="polite"></section>
+          </section>
+        </section>
+      </main>
+    </div>
+  </section>
+
+  <!-- Load local map geometry and translations before the portal's application logic. -->
+  <script src="india-districts.js"></script>
+  <script src="translations.js"></script>
+  <script>
+    const introScreen = document.querySelector("#intro-screen");
+    const skipIntroButton = document.querySelector("#skip-intro");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let introDismissalStarted = false;
+
+    introScreen.removeAttribute("open");
+    introScreen.showModal();
+    document.body.classList.add("intro-active");
+    introScreen.classList.add("intro-is-playing");
+    const introProgressFill = document.querySelector("#intro-progress-fill");
+    const introTimeRemaining = document.querySelector("#intro-time-remaining");
+    const introDurationMs = 20000;
+    const introStartedAt = performance.now();
+    // Update the visual progress separately from the CSS-timed scenes, using one shared 20-second clock.
+    const introProgressTimer = window.setInterval(() => {
+      const elapsedMs = performance.now() - introStartedAt;
+      const progress = Math.min(1, elapsedMs / introDurationMs);
+      introProgressFill.style.width = `${progress * 100}%`;
+      introTimeRemaining.textContent = `${Math.ceil((introDurationMs - elapsedMs) / 1000)} sec`;
+    }, 100);
+
+    function dismissIntro() {
+      if (introDismissalStarted) return;
+      introDismissalStarted = true;
+      // Stop the timer once; the same dismissal path handles timeout, Escape, and the skip button.
+      window.clearInterval(introProgressTimer);
+      introScreen.classList.add("is-leaving");
+      window.setTimeout(() => {
+        introScreen.close();
+        document.body.classList.remove("intro-active");
+      }, reducedMotion ? 0 : 500);
+    }
+
+    skipIntroButton.addEventListener("click", dismissIntro);
+    introScreen.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      dismissIntro();
+    });
+    window.setTimeout(dismissIntro, introDurationMs);
+
+    const supportedLanguages = {
+      en: "en",
+      hi: "hi-IN",
+      mr: "mr-IN",
+      bn: "bn-IN",
+      ta: "ta-IN",
+      kn: "kn-IN",
+      te: "te-IN",
+    };
+    const textTranslations = window.PORTAL_TRANSLATIONS || {};
+    // Cache original text so switching languages never translates an already translated value.
+    const originalTextNodes = new WeakMap();
+    const originalAttributes = new WeakMap();
+    const languageSelects = document.querySelectorAll(".language-select, .dashboard-language-select");
+    let currentLanguage = "en";
+
+    try {
+      const savedLanguage = localStorage.getItem("india-budget-language");
+      if (savedLanguage && Object.hasOwn(supportedLanguages, savedLanguage)) {
+        currentLanguage = savedLanguage;
+      }
+    } catch {
+      currentLanguage = "en";
+    }
+    languageSelects.forEach((select) => { select.value = currentLanguage; });
+
+    function getTranslation(source) {
+      const translations = textTranslations[currentLanguage] || {};
+      if (Object.hasOwn(translations, source)) return translations[source];
+      const matchedKey = Object.keys(translations)
+        .filter((key) => source.length > key.length && source.endsWith(key)
+          && /\s/.test(source[source.length - key.length - 1]))
+        .sort((left, right) => right.length - left.length)[0];
+      return matchedKey
+        ? `${source.slice(0, -matchedKey.length)}${translations[matchedKey]}`
+        : source;
+    }
+
+    function translateTextNode(node) {
+      const currentText = node.nodeValue || "";
+      let original = originalTextNodes.get(node);
+      if (!original || currentText !== original.rendered) {
+        original = { source: currentText, rendered: currentText };
+      }
+      const match = original.source.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      if (!match) return;
+      const translated = `${match[1]}${getTranslation(match[2])}${match[3]}`;
+      original.rendered = translated;
+      originalTextNodes.set(node, original);
+      if (currentText !== translated) node.nodeValue = translated;
+    }
+
+    function translateElementAttributes(element) {
+      for (const attribute of ["aria-label", "aria-description", "placeholder", "title", "alt"]) {
+        if (!element.hasAttribute(attribute)) continue;
+        let originals = originalAttributes.get(element);
+        if (!originals) {
+          originals = new Map();
+          originalAttributes.set(element, originals);
+        }
+        const currentValue = element.getAttribute(attribute) || "";
+        let original = originals.get(attribute);
+        if (!original || currentValue !== original.rendered) {
+          original = { source: currentValue, rendered: currentValue };
+        }
+        const translated = getTranslation(original.source);
+        original.rendered = translated;
+        originals.set(attribute, original);
+        if (currentValue !== translated) element.setAttribute(attribute, translated);
+      }
+    }
+
+    function translateSubtree(root) {
+      if (root.nodeType === Node.TEXT_NODE) {
+        translateTextNode(root);
+        return;
+      }
+      if (!(root instanceof Element) || root.matches("script, style, noscript")) return;
+      translateElementAttributes(root);
+      // Translate visible text and accessible labels, but leave executable and styling content untouched.
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          return node.parentElement?.closest("script, style, noscript")
+            ? NodeFilter.FILTER_REJECT
+            : NodeFilter.FILTER_ACCEPT;
+        },
+      });
+      let textNode;
+      while ((textNode = walker.nextNode())) translateTextNode(textNode);
+      root.querySelectorAll("[aria-label],[aria-description],[placeholder],[title],[alt]")
+        .forEach(translateElementAttributes);
+    }
+
+    function applyLanguage(language) {
+      currentLanguage = Object.hasOwn(supportedLanguages, language) ? language : "en";
+      languageSelects.forEach((select) => { select.value = currentLanguage; });
+      document.documentElement.lang = supportedLanguages[currentLanguage];
+      try {
+        localStorage.setItem("india-budget-language", currentLanguage);
+      } catch {
+        currentLanguage = "en";
+        languageSelects.forEach((select) => { select.value = "en"; });
+        document.documentElement.lang = "en";
+      }
+      document.title = `${getTranslation("India Budget Portal")} | ${getTranslation("Login")}`;
+      translateSubtree(document.body);
+    }
+
+    languageSelects.forEach((select) => {
+      select.addEventListener("change", () => applyLanguage(select.value));
+    });
+    new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === "characterData") {
+          translateTextNode(mutation.target);
+          continue;
+        }
+        mutation.addedNodes.forEach(translateSubtree);
+        if (mutation.type === "attributes" && mutation.target instanceof Element) {
+          translateElementAttributes(mutation.target);
+        }
+      }
+    }).observe(document.body, {
+      subtree: true,
+      childList: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: ["aria-label", "aria-description", "placeholder", "title", "alt"],
+    });
+    applyLanguage(currentLanguage);
+
+    const slides = [
+      {
+        title: "Security Guidelines",
+        items: [
+          'Make sure the URL in your browser address bar begins with "https".',
+          "Never write your password on a Post-It and stick it on your monitor, your address rolodex, under your desk pad, or anywhere else where it can be easily found. If you must write it down, keep it where no one can find it except for the authorized user.",
+          "Always lock/logout your computer while leaving.",
+          "Never install unknown or unsolicited software in your computer.",
+          "Never download pirated or cracked software.",
+          "Always use a device firewall.",
+          "Don't click on popup windows that tell you that your computer is infected with a virus."
+        ]
+      },
+      {
+        title: "Using the Portal",
+        items: [
+          "Keep your account details private and never share your password.",
+          "Sign out of your account when using a shared or public computer.",
+          "Check that the website address is correct before entering your details.",
+          "Contact the help desk if you notice unusual activity on your account."
+        ]
+      }
+    ];
+    let currentSlide = 0;
+    const title = document.querySelector("#slide-title");
+    const content = document.querySelector("#slide-content");
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      title.textContent = slides[currentSlide].title;
+      content.replaceChildren(...slides[currentSlide].items.map((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        return li;
+      }));
+    }
+    document.querySelector("#previous-slide").addEventListener("click", () => showSlide(currentSlide - 1));
+    document.querySelector("#next-slide").addEventListener("click", () => showSlide(currentSlide + 1));
+
+    document.querySelector("#toggle-password").addEventListener("click", (event) => {
+      const password = document.querySelector("#password");
+      const show = password.type === "password";
+      password.type = show ? "text" : "password";
+      event.currentTarget.setAttribute("aria-label", show ? "Hide password" : "Show password");
+    });
+
+    document.querySelector("#refresh-captcha").addEventListener("click", async () => {
+      try {
+        await refreshCaptcha();
+        showFormMessage("");
+      } catch (error) {
+        showFormMessage(`CAPTCHA could not be refreshed: ${error.message}`, true);
+      }
+    });
+
+    document.querySelector("#toggle-account-mode").addEventListener("click", () => {
+      setAccountCreationMode(!accountCreationMode);
+    });
+
+    document.querySelector("#login-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!captchaChallengeId) {
+        showFormMessage("CAPTCHA is not ready. Refresh the challenge and try again.", true);
+        return;
+      }
+      const username = document.querySelector("#username").value.trim();
+      const password = document.querySelector("#password").value;
+      const captcha = document.querySelector("#captcha-answer").value.trim();
+      const endpoint = accountCreationMode ? "/api/auth/register" : "/api/auth/login";
+      const body = {
+        challenge_id: captchaChallengeId,
+        captcha,
+        password,
+      };
+      body[accountCreationMode ? "email" : "username"] = username;
+      showFormMessage(accountCreationMode ? "Creating account…" : "Signing in…");
+      try {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          credentials: "same-origin",
+          body: JSON.stringify(body),
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || `Request failed (${response.status}).`);
+        authenticatedUser = result.user;
+        updateImportToolsVisibility();
+        document.querySelector("#password").value = "";
+        if (accountCreationMode) setAccountCreationMode(false);
+        showFormMessage("Account ready. You can now browse public budget data.");
+        const requestedPortal = pendingPortalName;
+        pendingPortalName = "";
+        if (requestedPortal) {
+          await selectPortal(requestedPortal);
+        } else {
+          await openSavedDashboardForUser(authenticatedUser);
+        }
+      } catch (error) {
+        showFormMessage(error.message, true);
+      } finally {
+        try {
+          await refreshCaptcha();
+        } catch (error) {
+          showFormMessage(`Request complete, but CAPTCHA could not be refreshed: ${error.message}`, true);
+        }
+      }
+    });
+    document.querySelector("#forgot-password").addEventListener("click", () => {
+      showFormMessage("Demo password reset is not available. Contact the portal administrator.");
+    });
+    document.querySelector("#import-stage-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const file = document.querySelector("#import-csv-file").files[0];
+      if (!file) {
+        setImportStatus("Choose a CSV file to import.", true);
+        return;
+      }
+      if (file.size > 5 * 1024 * 1024) {
+        setImportStatus("CSV files must be 5 MB or smaller.", true);
+        return;
+      }
+      setImportStatus("Validating and staging CSV…");
+      const submit = event.currentTarget.querySelector('button[type="submit"]');
+      submit.disabled = true;
+      try {
+        const result = await importApi("/api/import/batches", {
+          method: "POST",
+          body: JSON.stringify({
+            csv_text: await file.text(),
+            source_document: document.querySelector("#import-source-document").value.trim(),
+            source_url: document.querySelector("#import-source-url").value.trim(),
+            corrections: document.querySelector("#import-corrections").value.trim(),
+          }),
+        });
+        document.querySelector("#import-stage-form").reset();
+        document.querySelector("#import-corrections").value = "None declared.";
+        setImportStatus(`Staged ${result.row_count} rows. Batch ID: ${result.batch_id}. Rows are not published yet.`);
+        await refreshImportView(result.batch_id);
+      } catch (error) {
+        setImportStatus(`CSV could not be staged: ${error.message}`, true);
+      } finally {
+        submit.disabled = false;
+      }
+    });
+    document.querySelector("#refresh-import-batches").addEventListener("click", () => {
+      refreshImportView().catch((error) => setImportStatus(error.message, true));
+    });
+    document.querySelector("#import-batch-list").addEventListener("click", (event) => {
+      const button = event.target.closest('button[data-import-action="inspect"]');
+      if (button) loadImportBatch(button.dataset.batchId);
+    });
+    document.querySelector("#import-batch-detail").addEventListener("click", async (event) => {
+      const button = event.target.closest('button[data-import-action="publish"]');
+      if (!button || !window.confirm("Publish this reviewed budget batch? Published figures become visible in budget queries.")) return;
+      button.disabled = true;
+      try {
+        await importApi(`/api/import/batches/${encodeURIComponent(button.dataset.batchId)}/publish`, {
+          method: "POST",
+          body: JSON.stringify({ confirm_batch: button.dataset.batchId }),
+        });
+        setImportStatus("Reviewed batch published successfully.");
+        await refreshImportView(button.dataset.batchId);
+      } catch (error) {
+        setImportStatus(`Batch could not be published: ${error.message}`, true);
+        button.disabled = false;
+      }
+    });
+    document.querySelector("#import-batch-detail").addEventListener("submit", async (event) => {
+      const correctionForm = event.target.closest("form[data-correction-form]");
+      const reviewForm = event.target.closest("form[data-review-form]");
+      if (!correctionForm && !reviewForm) return;
+      event.preventDefault();
+      const form = correctionForm || reviewForm;
+      const submit = form.querySelector('button[type="submit"]');
+      submit.disabled = true;
+      try {
+        if (correctionForm) {
+          const values = new FormData(correctionForm);
+          await importApi(
+            `/api/import/batches/${encodeURIComponent(correctionForm.dataset.batchId)}/rows/${correctionForm.dataset.lineNumber}/correct`,
+            {
+              method: "POST",
+              body: JSON.stringify({
+                amount: values.get("amount"),
+                spent_amount: values.get("spent_amount"),
+                correction_note: values.get("correction_note"),
+              }),
+            }
+          );
+          setImportStatus(`Corrected staged CSV line ${correctionForm.dataset.lineNumber}.`);
+        } else {
+          const values = new FormData(reviewForm);
+          await importApi(
+            `/api/import/batches/${encodeURIComponent(reviewForm.dataset.batchId)}/review`,
+            {
+              method: "POST",
+              body: JSON.stringify({ notes: values.get("notes") }),
+            }
+          );
+          setImportStatus("Review recorded. Central Admin can now publish this batch.");
+        }
+        await refreshImportView(form.dataset.batchId);
+      } catch (error) {
+        setImportStatus(`Import update failed: ${error.message}`, true);
+        submit.disabled = false;
+      }
+    });
+    refreshCaptcha().catch((error) => {
+      showFormMessage(`CAPTCHA could not be loaded: ${error.message}`, true);
+    });
+    loadAuthenticatedSession();
+
+    const statePages = [
+      [
+        ["Odisha", "odisha-image"], ["Jammu and Kashmir", "jammu-image"], ["Assam", "assam-image"],
+        ["Himachal Pradesh", "himachal-image"], ["Bihar", "bihar-image"], ["Manipur", "manipur-image"],
+        ["Punjab", "punjab-image"], ["Chhattisgarh", "chhattisgarh-image"], ["Maharashtra", "maharashtra-image"],
+        ["Gujarat", "gujarat-image"], ["Jharkhand", "jharkhand-image"], ["Kerala", "kerala-image"],
+        ["Meghalaya", "meghalaya-image"], ["Uttarakhand", "uttarakhand-image"], ["West Bengal", "palace"],
+        ["Rajasthan", "rajasthan-image"], ["Goa", "goa-image"], ["Karnataka", "karnataka-image"]
+      ],
+      [
+        ["Madhya Pradesh", "madhya-image"], ["Mizoram", "mizoram-image"], ["Nagaland", "nagaland-image"],
+        ["Tamil Nadu", "tamil-nadu-image"], ["Uttar Pradesh", "arch"], ["Andhra Pradesh", "andhra-image"],
+        ["Ladakh", "ladakh-image"], ["Arunachal Pradesh", "arunachal-image"], ["Telangana", "telangana-image"],
+        ["Haryana", "palace"], ["Dadra and Nagar Haveli and Daman and Diu", "dadra-image"],
+        ["Lakshadweep", "lakshadweep-image"], ["Chandigarh", "chandigarh-image"], ["Sikkim", "buddha"],
+        ["Tripura", "tripura-image"], ["Puducherry", "puducherry-image"], ["Delhi (NCT)", "delhi-image"],
+        ["Andaman and Nicobar Islands", "andaman-image"]
+      ]
+    ];
+    const stateImages = {
+      "odisha-image": "odisha-temple.png",
+      "national-emblem-image": "national-emblem.png",
+      "gujarat-image": "gujarat.png",
+      "tamil-nadu-image": "tamil-nadu.png",
+      "tripura-image": "tripura.png",
+      "uttarakhand-image": "uttarakhand.png",
+      "andaman-image": "andaman-nicobar.png",
+      "andhra-image": "andhra-pradesh.png",
+      "arunachal-image": "arunachal-pradesh.png",
+      "assam-image": "assam.png",
+      "bihar-image": "bihar.png",
+      "chandigarh-image": "chandigarh.png",
+      "chhattisgarh-image": "chhattisgarh.png",
+      "dadra-image": "dadra-nagar-haveli-daman-diu.png",
+      "delhi-image": "delhi.png",
+      "goa-image": "goa.png",
+      "telangana-image": "telangana.png",
+      "himachal-image": "himachal-pradesh.png",
+      "jammu-image": "jammu.png",
+      "jharkhand-image": "jharkhand.png",
+      "karnataka-image": "karnataka.png",
+      "kashmir-image": "kashmir.png",
+      "kerala-image": "kerala.png",
+      "ladakh-image": "ladakh.png",
+      "lakshadweep-image": "lakshadweep.png",
+      "madhya-image": "madhya-pradesh.png",
+      "maharashtra-image": "maharashtra.png",
+      "manipur-image": "manipur.png",
+      "meghalaya-image": "meghalaya.png",
+      "mizoram-image": "mizoram.png",
+      "nagaland-image": "nagaland.png",
+      "puducherry-image": "puducherry.png",
+      "punjab-image": "punjab.png",
+      "rajasthan-image": "rajasthan.png"
+    };
+    const stateArt = {
+      temple: '<path d="M9 53h54M15 53V31h42v22M11 31h50L36 12 11 31ZM18 27h36M21 31v22m10-22v22m10-22v22m10-22v22M31 12l5-7 5 7M36 5v7"/>',
+      shrine: '<path d="M9 53h54M16 53V33h40v20M12 33h48L36 10 12 33ZM21 29h30M25 33v20m22-20v20M36 10V4m-4 4h8"/>',
+      pillar: '<path d="M22 53h28M26 49h20l-3-36H29l-3 36ZM28 19h16M30 25h12M31 31h10M32 38h8M36 13V5m-4 4h8"/>',
+      hut: '<path d="M10 53h52M17 53V32l19-17 19 17v21M12 32h48M22 29V21m28 8V21M31 53V38h10v15M15 24l21-19 21 19M36 5v10"/>',
+      cathedral: '<path d="M9 53h54M15 53V26h42v27M11 26h50M18 26V12h7v14m-9-14h11M32 53V33h8v20M44 26V10h7v16m-9-16h11M36 33V6m-4 7 4-7 4 7M23 33v6m26-6v6"/>',
+      buddha: '<path d="M10 53h52M15 48h42l-5 5H20l-5-5ZM20 44h32l-4 4H24l-4-4ZM23 42c0-6 6-10 13-10s13 4 13 10H23ZM28 31c0-7 4-11 8-11s8 4 8 11M31 18c0-4 2-7 5-7s5 3 5 7M36 6v5M27 24h18M29 39h14"/>',
+      pagoda: '<path d="M12 53h48M20 53V38h32v15M15 38h42L36 30 15 38ZM19 29h34L36 22 19 29ZM24 21h24l-12-7-12 7ZM31 14h10M36 14V5m-3 4h6M28 43v10m16-10v10"/>',
+      palace: '<path d="M8 53h56M13 53V29h46v24M10 29h52L36 13 10 29ZM18 26v-8h8v8m20 0v-8h8v8M19 35h6v7h-6zm14 0h6v7h-6zm14 0h6v7h-6zM30 53V44h12v9M36 13V7"/>',
+      stupa: '<path d="M10 53h52M16 49h40l-4 4H20l-4-4ZM20 45h32l-5 4H25l-5-4ZM24 42c0-12 5-20 12-20s12 8 12 20H24ZM31 22V16h10v6M34 16V9h4v7M36 9V5"/>',
+      fort: '<path d="M9 53h54M14 53V23h44v30M11 23h50M18 23v-8h9v8m18 0v-8h9v8M22 31h7v8h-7zm19 0h7v8h-7zM31 53V42h10v11M14 44h44M32 15V9h8v6"/>',
+      stepwell: '<path d="M10 53h52M15 53l5-8h32l5 8M20 45l5-8h22l5 8M25 37l4-7h14l4 7M29 30l3-7h8l3 7M32 23l4-8 4 8M21 45h30M25 37h22M29 30h14M36 15V8"/>',
+      boat: '<path d="M10 40h52l-8 10H19l-9-10ZM16 40l5-10h30l6 10M26 30V15h19v15M23 18h25M31 15l4-8 4 8M36 7V4M17 53c4-3 8-3 12 0 4-3 8-3 12 0 4-3 8-3 12 0"/>',
+      obelisk: '<path d="M10 53h52M28 53l3-31 5-13 5 13 3 31M31 25h10M32 34h8M31 43h10M36 9V4M27 53h18"/>',
+      arch: '<path d="M10 53h52M16 53V20h40v33M12 20h48M21 53V33c0-8 5-13 15-13s15 5 15 13v20M31 53V35c0-4 2-6 5-6s5 2 5 6v18M20 15h32M25 15l3-7h16l3 7M32 8V4h8v4"/>',
+      lighthouse: '<path d="M13 53h46M27 53l4-34h10l4 34M29 29h14M30 20h12M28 19h16l-3-7h-10l-3 7ZM33 12l3-7 3 7M22 53l-5 4m36-4 5 4M36 5V2"/>',
+      church: '<path d="M9 53h54M15 53V28h42v25M11 28h50M22 28V15h8v13m14 0V15h8v13M24 15l2-8 2 8m14 0 3-8 3 8M31 53V37h10v16M36 37v16M18 34h6m24 0h6"/>',
+      palm: '<path d="M10 53h52M36 25v28M36 25c-8-11-18-10-25-7 8 0 13 4 18 9-11-3-17 2-21 8 9-4 17-4 26-4m2-6c8-11 18-10 25-7-8 0-13 4-18 9 11-3 17 2 21 8-9-4-17-4-26-4M36 25c-1-11 4-16 10-20-2 7-2 12-5 17 8-7 15-5 21-1-8 1-13 4-20 8M36 25c1-11-4-16-10-20 2 7 2 12 5 17-8-7-15-5-21-1 8 1 13 4 20 8"/>'
+    };
+    const stateBackdrop = document.querySelector("#state-picker-backdrop");
+    const stateSearch = document.querySelector("#state-search");
+    const stateGrid = document.querySelector("#state-grid");
+    const inventoryDashboard = document.querySelector("#inventory-dashboard");
+    const districtMap = document.querySelector("#district-map");
+    const inventoryResults = document.querySelector("#inventory-results");
+    const inventoryResultsHeading = document.querySelector("#inventory-results-heading");
+    const selectedDistrictLabel = document.querySelector("#selected-district-label");
+    const districtMapHeading = document.querySelector("#district-map-heading");
+    let selectedDistrict = "";
+    let selectedJurisdictionCode = "IN-MH";
+    let browseParentCode = "IN-UNION";
+    const coverageByCode = new Map();
+    const coverageCodeByName = new Map();
+    let inventoryView = "stock";
+    let stockPeriod = "2025-26";
+    const statesPerPage = 21;
+    let statePage = 0;
+    let lastFocusedElement = null;
+    let authenticatedUser = null;
+    let captchaChallengeId = "";
+    let accountCreationMode = false;
+    let pendingPortalName = "";
+
+    async function refreshCaptcha() {
+      const response = await fetch("/api/captcha", { headers: { Accept: "application/json" } });
+      const challenge = await response.json();
+      if (!response.ok) throw new Error(challenge.error || `CAPTCHA request failed (${response.status}).`);
+      captchaChallengeId = challenge.challenge_id;
+      document.querySelector("#captcha-code").src =
+        `/api/auth/captcha-image?challenge_id=${encodeURIComponent(captchaChallengeId)}`;
+      document.querySelector("#captcha-answer").value = "";
+    }
+
+    function showFormMessage(text, isError = false) {
+      const message = document.querySelector("#form-message");
+      message.textContent = text;
+      message.setAttribute("role", isError ? "alert" : "status");
+    }
+
+    function updateImportToolsVisibility() {
+      const importNavigation = document.querySelector("#nav-import-budgets");
+      const canManageImports =
+        authenticatedUser?.role === "central_admin" ||
+        (authenticatedUser?.role === "state_auditor" &&
+          isJurisdictionWithinState(selectedJurisdictionCode, authenticatedUser.jurisdiction_code));
+      const canSeeImportTools = ["central_admin", "state_auditor"].includes(authenticatedUser?.role);
+      importNavigation.hidden = !canSeeImportTools;
+      importNavigation.disabled = canSeeImportTools && !canManageImports;
+      importNavigation.title = importNavigation.disabled
+        ? "You can import budgets only for your assigned state and its districts."
+        : "";
+      importNavigation.setAttribute("aria-disabled", String(importNavigation.disabled));
+      document.querySelector("#import-scope-note").textContent =
+        authenticatedUser?.role === "state_auditor"
+          ? `Imports are limited to ${authenticatedUser.jurisdiction_code} and its districts. Select a jurisdiction within your assigned state to enable importing. Staged rows stay private until Central Admin reviews and publishes them.`
+          : "Central Admin can import across states and districts. Staged rows stay private until they are reviewed and published.";
+      if (!canManageImports && document.querySelector("#import-budget-page").hidden === false) {
+        document.querySelector("#import-budget-page").hidden = true;
+        document.querySelector("#budget-explorer-page").hidden = false;
+        document.querySelectorAll(".inventory-nav-item[aria-controls]").forEach((navButton) => {
+          const isActive = navButton.id === "nav-budget-explorer";
+          navButton.classList.toggle("active", isActive);
+          if (isActive) navButton.setAttribute("aria-current", "page");
+          else navButton.removeAttribute("aria-current");
+        });
+      }
+    }
+
+    async function importApi(path, options = {}) {
+      const response = await fetch(path, {
+        credentials: "same-origin",
+        headers: { Accept: "application/json", ...(options.body ? { "Content-Type": "application/json" } : {}) },
+        ...options,
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || `Import request failed (${response.status}).`);
+      return result;
+    }
+
+    function setImportStatus(text, isError = false) {
+      const status = document.querySelector("#import-form-status");
+      status.textContent = text;
+      status.setAttribute("role", isError ? "alert" : "status");
+    }
+
+    async function loadImportBatches() {
+      const list = document.querySelector("#import-batch-list");
+      list.textContent = "Loading import batches…";
+      try {
+        const result = await importApi("/api/import/batches");
+        if (result.batches.length === 0) {
+          list.textContent = "No import batches are available for this account.";
+          return;
+        }
+        list.replaceChildren(...result.batches.map((batch) => {
+          const card = document.createElement("article");
+          card.className = "import-batch-card";
+          const summary = document.createElement("div");
+          summary.className = "import-batch-summary";
+          const title = document.createElement("h3");
+          title.textContent = batch.source_document;
+          const status = document.createElement("span");
+          status.className = "import-batch-status";
+          status.textContent = batch.status;
+          summary.append(title, status);
+          const meta = document.createElement("p");
+          meta.className = "import-batch-meta";
+          meta.textContent = `${batch.row_count} rows · staged by ${batch.staged_by} · ${batch.imported_at} · Batch ${batch.id}`;
+          const inspect = document.createElement("button");
+          inspect.type = "button";
+          inspect.dataset.batchId = batch.id;
+          inspect.dataset.importAction = "inspect";
+          inspect.textContent = "Inspect rows";
+          card.append(summary, meta, inspect);
+          return card;
+        }));
+      } catch (error) {
+        list.textContent = "";
+        const failure = document.createElement("p");
+        failure.className = "import-status";
+        failure.setAttribute("role", "alert");
+        failure.textContent = `Import batches could not be loaded: ${error.message}`;
+        list.append(failure);
+      }
+    }
+
+    function appendImportRow(parent, batch, row) {
+      const item = document.createElement("li");
+      item.className = "import-row";
+      const fields = document.createElement("div");
+      fields.className = "import-row-fields";
+      const values = [
+        ["CSV line", row.line_number],
+        ["Jurisdiction", `${row.jurisdiction_code} · ${coverageByCode.get(row.jurisdiction_code)?.name || row.jurisdiction_code}`],
+        ["Fiscal year", row.fiscal_year],
+        ["Budget stage", row.budget_stage],
+        ["Department", row.department_name_original || "—"],
+        ["Sector", row.sector_name_original || "—"],
+        ["Amount", `${row.amount} ${row.currency_code} · ${row.amount_unit}`],
+        ["Spent", row.spent_amount == null ? "—" : `${row.spent_amount} ${row.currency_code} · ${row.amount_unit}`],
+        ["Source table", row.source_page_or_table],
+        ["Source locator", row.source_locator],
+        ["Correction notes", row.correction_notes || "—"],
+      ];
+      for (const [label, value] of values) {
+        const entry = document.createElement("span");
+        const name = document.createElement("strong");
+        name.textContent = `${label}: `;
+        entry.append(name, document.createTextNode(String(value)));
+        fields.append(entry);
+      }
+      item.append(fields);
+      if (batch.status === "staged") {
+        const correction = document.createElement("form");
+        correction.className = "import-correction";
+        correction.dataset.correctionForm = "true";
+        correction.dataset.batchId = batch.id;
+        correction.dataset.lineNumber = row.line_number;
+        const amountLabel = document.createElement("label");
+        amountLabel.textContent = "Correct amount";
+        const amountInput = document.createElement("input");
+        amountInput.name = "amount";
+        amountInput.type = "number";
+        amountInput.min = "0";
+        amountInput.step = "any";
+        amountInput.required = true;
+        amountInput.value = row.amount;
+        amountLabel.append(amountInput);
+        const spentLabel = document.createElement("label");
+        spentLabel.textContent = "Correct spent amount (optional)";
+        const spentInput = document.createElement("input");
+        spentInput.name = "spent_amount";
+        spentInput.type = "number";
+        spentInput.min = "0";
+        spentInput.step = "any";
+        spentInput.value = row.spent_amount ?? "";
+        spentLabel.append(spentInput);
+        const noteLabel = document.createElement("label");
+        noteLabel.textContent = "Reason for correction";
+        const noteInput = document.createElement("input");
+        noteInput.name = "correction_note";
+        noteInput.required = true;
+        noteInput.maxLength = 1000;
+        noteInput.placeholder = "Explain the source-based correction";
+        noteLabel.append(noteInput);
+        const correct = document.createElement("button");
+        correct.type = "submit";
+        correct.textContent = "Save correction";
+        correction.append(amountLabel, spentLabel, noteLabel, correct);
+        item.append(correction);
+      }
+      parent.append(item);
+    }
+
+    async function loadImportBatch(batchId) {
+      const detail = document.querySelector("#import-batch-detail");
+      detail.textContent = "Loading batch details…";
+      try {
+        const result = await importApi(`/api/import/batches/${encodeURIComponent(batchId)}`);
+        const { batch, rows } = result;
+        detail.replaceChildren();
+        const heading = document.createElement("h3");
+        heading.textContent = `Batch details · ${batch.id}`;
+        const scope = document.createElement("p");
+        const scopes = JSON.parse(batch.scope_json);
+        scope.textContent = `Jurisdictions and years: ${scopes.join(", ") || "none"}`;
+        const rowList = document.createElement("ul");
+        rowList.className = "import-row-list";
+        rows.forEach((row) => appendImportRow(rowList, batch, row));
+        const card = document.createElement("article");
+        card.className = "import-batch-card";
+        card.append(heading, scope, rowList);
+        if (rows.length === 0) {
+          const note = document.createElement("p");
+          note.textContent = "This batch has no staged rows to edit.";
+          card.append(note);
+        }
+        if (authenticatedUser?.role === "central_admin" && batch.status === "staged") {
+          const reviewForm = document.createElement("form");
+          reviewForm.dataset.reviewForm = "true";
+          reviewForm.dataset.batchId = batch.id;
+          const reviewLabel = document.createElement("label");
+          reviewLabel.textContent = "Independent review notes (reviewer must differ from the person who staged the batch)";
+          const notes = document.createElement("textarea");
+          notes.className = "import-review-notes";
+          notes.name = "notes";
+          notes.required = true;
+          notes.maxLength = 2000;
+          notes.placeholder = "Record checks performed against the cited official source.";
+          reviewLabel.append(notes);
+          const reviewButton = document.createElement("button");
+          reviewButton.type = "submit";
+          reviewButton.textContent = "Approve after review";
+          if (batch.staged_by.toLowerCase() === authenticatedUser.username.toLowerCase()) {
+            reviewButton.disabled = true;
+            const note = document.createElement("p");
+            note.textContent = "Another Central Admin account must independently review this batch.";
+            reviewForm.append(note);
+          }
+          reviewForm.append(reviewLabel, reviewButton);
+          card.append(reviewForm);
+        }
+        if (authenticatedUser?.role === "central_admin" && batch.status === "reviewed") {
+          const publish = document.createElement("button");
+          publish.type = "button";
+          publish.dataset.importAction = "publish";
+          publish.dataset.batchId = batch.id;
+          publish.textContent = "Publish reviewed batch";
+          card.append(publish);
+        }
+        detail.append(card);
+      } catch (error) {
+        detail.textContent = "";
+        const failure = document.createElement("p");
+        failure.setAttribute("role", "alert");
+        failure.textContent = `Batch details could not be loaded: ${error.message}`;
+        detail.append(failure);
+      }
+    }
+
+    async function refreshImportView(batchId = "") {
+      await loadImportBatches();
+      if (batchId) await loadImportBatch(batchId);
+    }
+
+    function setAccountCreationMode(enabled) {
+      accountCreationMode = enabled;
+      const username = document.querySelector("#username");
+      const password = document.querySelector("#password");
+      const submit = document.querySelector("#login-form .submit-button");
+      const toggle = document.querySelector("#toggle-account-mode");
+      document.querySelector("#login-form h2").textContent = enabled ? "Create Citizen Account" : "Login";
+      username.type = enabled ? "email" : "text";
+      username.autocomplete = enabled ? "email" : "username";
+      username.placeholder = enabled ? "Email address" : "Username or email";
+      username.setAttribute("aria-label", enabled ? "Email address" : "Username or email");
+      password.autocomplete = enabled ? "new-password" : "current-password";
+      password.minLength = enabled ? 8 : 1;
+      password.placeholder = enabled ? "Choose a password (8+ characters)" : "Password";
+      submit.textContent = enabled ? "Create Account" : "Log In";
+      toggle.textContent = enabled ? "Already have an account? Log in" : "New citizen? Create account";
+      document.querySelector("#forgot-password").hidden = enabled;
+      showFormMessage("");
+    }
+    setAccountCreationMode(false);
+
+    async function loadAuthenticatedSession() {
+      try {
+        const response = await fetch("/api/auth/session", { headers: { Accept: "application/json" } });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || `Session request failed (${response.status}).`);
+        if (result.authenticated) {
+          authenticatedUser = result.user;
+          updateImportToolsVisibility();
+          await openSavedDashboardForUser(result.user);
+        }
+      } catch (error) {
+        showFormMessage(`Session could not be loaded: ${error.message}`, true);
+      }
+    }
+
+    async function openSavedDashboardForUser(user) {
+      const savedCode = new URLSearchParams(window.location.search).get("jurisdiction_code");
+      if (user.role === "citizen" && !savedCode) return;
+      if (coverageByCode.size === 0) await loadBudgetCoverage();
+
+      const savedJurisdiction = coverageByCode.get(savedCode);
+      const canRestoreSavedJurisdiction =
+        savedJurisdiction?.type === "state" ||
+        savedJurisdiction?.type === "union_territory" ||
+        savedJurisdiction?.type === "union";
+      const jurisdictionCode = user.role === "state_auditor"
+        ? user.jurisdiction_code || "IN-UNION"
+        : canRestoreSavedJurisdiction
+          ? savedJurisdiction.code
+          : user.jurisdiction_code || "IN-UNION";
+
+      if (user.role === "citizen" && !canRestoreSavedJurisdiction) {
+        persistDashboardJurisdiction("");
+        return;
+      }
+      openInventoryDashboard(jurisdictionCode);
+    }
+
+    function isJurisdictionWithinState(code, stateCode) {
+      let currentCode = code;
+      while (currentCode) {
+        if (currentCode === stateCode) return true;
+        currentCode = coverageByCode.get(currentCode)?.parent_code || "";
+      }
+      return false;
+    }
+
+    function renderStates() {
+      const query = stateSearch.value.trim().toLowerCase();
+      const pageStates = statePages[statePage];
+      const matches = pageStates.filter(([name]) => name.toLowerCase().includes(query));
+      // Search both pages and de-duplicate labels so a result appears only once.
+      const visibleStates = query
+        ? statePages.flat().filter(([name], index, all) =>
+            name.toLowerCase().includes(query) && all.findIndex(([other]) => other === name) === index
+          ).slice(0, statesPerPage)
+        : matches;
+      stateGrid.replaceChildren();
+      if (visibleStates.length === 0) {
+        const empty = document.createElement("p");
+        empty.className = "state-empty";
+        empty.textContent = "No matching states found.";
+        stateGrid.append(empty);
+      } else {
+        visibleStates.forEach(([name, illustration]) => {
+          const option = document.createElement("button");
+          option.className = "state-option";
+          option.type = "button";
+          option.setAttribute("aria-label", name);
+          let icon;
+          if (stateImages[illustration]) {
+            icon = document.createElement("img");
+            icon.className = "state-emblem-image";
+            icon.src = stateImages[illustration];
+            icon.alt = "";
+            icon.setAttribute("aria-hidden", "true");
+          } else {
+            icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            icon.classList.add("state-emblem");
+            icon.setAttribute("viewBox", "0 0 72 60");
+            icon.setAttribute("aria-hidden", "true");
+            const art = document.createRange().createContextualFragment(
+              `<svg xmlns="http://www.w3.org/2000/svg">${stateArt[illustration]}</svg>`
+            );
+            icon.append(...art.querySelector("svg").childNodes);
+          }
+          const label = document.createElement("span");
+          label.className = "state-name";
+          label.textContent = name;
+          option.append(icon, label);
+          option.addEventListener("click", () => selectPortal(name));
+          stateGrid.append(option);
+        });
+      }
+      document.querySelector("#previous-states").disabled = statePage === 0 || query.length > 0;
+      document.querySelector("#next-states").disabled = statePage === statePages.length - 1 || query.length > 0;
+    }
+
+    function openStatePicker() {
+      lastFocusedElement = document.activeElement;
+      stateBackdrop.hidden = false;
+      document.body.style.overflow = "hidden";
+      stateSearch.value = "";
+      statePage = 0;
+      renderStates();
+      stateSearch.focus();
+    }
+    function closeStatePicker() {
+      stateBackdrop.hidden = true;
+      document.body.style.overflow = "";
+      if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
+    }
+    async function selectPortal(name) {
+      closeStatePicker();
+      if (!authenticatedUser) {
+        pendingPortalName = name;
+        showFormMessage(`Please log in or create a citizen account to view ${name}.`);
+        const loginSection = document.querySelector("#login");
+        loginSection.scrollIntoView({ behavior: "smooth", block: "center" });
+        document.querySelector("#username").focus({ preventScroll: true });
+        return;
+      }
+      // Map picker labels to the backend's canonical jurisdiction names and codes.
+      const canonicalName = name === "Delhi (NCT)"
+        ? "National Capital Territory of Delhi"
+        : name;
+      if (coverageByCode.size === 0) {
+        try {
+          await loadBudgetCoverage();
+        } catch (error) {
+          document.querySelector("#form-message").textContent =
+            `Budget coverage could not be loaded: ${error.message}`;
+          return;
+        }
+      }
+      const jurisdictionCode = coverageCodeByName.get(canonicalName.toLowerCase())
+        || (canonicalName === "Central Authority" ? "IN-UNION" : "");
+      if (jurisdictionCode) {
+        openInventoryDashboard(jurisdictionCode);
+        return;
+      }
+      const message = document.querySelector("#form-message");
+      message.textContent = `Budget catalogue data for ${name} is not available from the backend.`;
+    }
+
+    const sectorColors = {
+      education: "#0879e7",
+      agriculture: "#20b854",
+      roadways_transport: "#edbd00",
+      healthcare: "#d5244c",
+      unclassified: "#64748b",
+    };
+    const numberFormat = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2 });
+    let budgetRequestId = 0;
+    let activeBudgetController = null;
+    let tableSearchTimer = 0;
+    let stockRequestId = 0;
+    let activeStockController = null;
+
+    function downloadCsv(filename, headers, rows) {
+      const escapeCell = (value) => {
+        let text = value == null ? "" : String(value);
+        // Prevent spreadsheet formulas from running when exported user-controlled values are opened.
+        if (/^[=+\-@\t\r]/.test(text) && !/^-?\d+(?:\.\d+)?$/.test(text)) {
+          text = `'${text}`;
+        }
+        return `"${text.replaceAll('"', '""')}"`;
+      };
+      const csv = [headers, ...rows].map((row) => row.map(escapeCell).join(",")).join("\r\n");
+      const blob = new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.append(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    async function fetchBudgetData(fiscalYear, district = "", search = "", signal) {
+      // The AbortSignal lets newer filters cancel this request instead of rendering stale results.
+      const parameters = new URLSearchParams({
+        fiscal_year: fiscalYear,
+        jurisdiction_code: selectedJurisdictionCode,
+        budget_stage: document.querySelector("#budget-stage").value,
+        sector: document.querySelector("#budget-sector").value,
+        department: document.querySelector("#budget-department").value.trim()
+      });
+      if (district) parameters.set("district", district);
+      if (search) parameters.set("q", search);
+      const response = await fetch(`/api/budget?${parameters}`, {
+        headers: { Accept: "application/json" },
+        signal
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || `Request failed (${response.status}).`);
+      return result;
+    }
+
+    function updateComparisonDropdownSummary(dropdown, placeholder) {
+      const selected = Array.from(
+        dropdown.querySelectorAll('input[type="checkbox"]:checked'),
+        (checkbox) => checkbox.closest("label").textContent.trim()
+      );
+      const summary = dropdown.querySelector("summary");
+      summary.textContent = selected.length === 0
+        ? placeholder
+        : selected.length <= 2
+          ? selected.join(", ")
+          : `${selected.length} selected`;
+    }
+
+    function populateComparisonDropdown(dropdownId, items, selectedValues, placeholder) {
+      const dropdown = document.querySelector(`#${dropdownId}`);
+      const options = dropdown.querySelector(".comparison-dropdown-options");
+      options.replaceChildren(...items.map((item) => {
+        const label = document.createElement("label");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = item.value;
+        checkbox.checked = selectedValues.includes(item.value);
+        label.append(checkbox, document.createTextNode(item.label));
+        return label;
+      }));
+      updateComparisonDropdownSummary(dropdown, placeholder);
+    }
+
+    async function loadBudgetCoverage() {
+      const response = await fetch("/api/coverage", { headers: { Accept: "application/json" } });
+      const coverage = await response.json();
+      if (!response.ok) throw new Error(coverage.error || `Request failed (${response.status}).`);
+      coverageByCode.clear();
+      coverageCodeByName.clear();
+      const flat = [];
+      function visit(entries) {
+        entries.forEach((entry) => {
+          coverageByCode.set(entry.code, entry);
+          coverageCodeByName.set(entry.name.toLowerCase(), entry.code);
+          flat.push(entry);
+          visit(entry.children);
+        });
+      }
+      visit(coverage.jurisdictions);
+      coverageCodeByName.set("central authority", "IN-UNION");
+      const fiscalYearSelect = document.querySelector("#budget-fiscal-year");
+      fiscalYearSelect.replaceChildren(...coverage.fiscal_years.slice().reverse().map((year) => {
+        const option = document.createElement("option");
+        option.value = year;
+        option.textContent = year.replace("-", "–");
+        return option;
+      }));
+      if (!coverage.fiscal_years.includes(fiscalYearSelect.value)) {
+        fiscalYearSelect.value = coverage.fiscal_years[coverage.fiscal_years.length - 1];
+      }
+      stockPeriod = fiscalYearSelect.value;
+      const comparableJurisdictions = flat
+        .filter((entry) => entry.type === "state" || entry.type === "union_territory")
+        .sort((left, right) => left.name.localeCompare(right.name));
+      populateComparisonDropdown(
+        "compare-jurisdictions",
+        comparableJurisdictions.map((entry) => ({ value: entry.code, label: entry.name })),
+        ["IN-MH", "IN-BR"],
+        "Select states / UTs"
+      );
+      populateComparisonDropdown(
+        "compare-years",
+        coverage.fiscal_years.slice().reverse().map((year) => ({
+          value: year,
+          label: year.replace("-", "–"),
+        })),
+        ["2025-26", "2026-27"],
+        "Select fiscal years"
+      );
+      updateComparisonDropdownSummary(
+        document.querySelector("#compare-sectors"),
+        "Select sectors"
+      );
+      if (coverageByCode.has(selectedJurisdictionCode)) {
+        const selected = coverageByCode.get(selectedJurisdictionCode);
+        browseParentCode = selected.type === "district" ? selected.parent_code :
+          selected.type === "state" || selected.type === "union_territory" ? selected.code : "IN-UNION";
+      }
+      renderCoverageDirectory();
+      const counts = coverage.counts_by_type;
+      document.querySelector("#budget-coverage-note").textContent =
+        `${counts.state} states, ${counts.union_territory} Union Territories, and ${counts.district} mapped districts. Choose a state or UT to browse its districts. ${coverage.districts_with_figures} Maharashtra districts have sourced figures; demo data elsewhere is labelled illustrative, not official.`;
+      document.querySelector("#retry-coverage").hidden = true;
+      return coverage;
+    }
+
+    function renderCoverageDirectory() {
+      const list = document.querySelector("#budget-coverage-list");
+      const parent = coverageByCode.get(browseParentCode);
+      const query = document.querySelector("#coverage-search").value.trim().toLowerCase();
+      const isIndiaView = browseParentCode === "IN-UNION";
+      const entries = isIndiaView
+        ? [parent, ...(parent?.children || [])].filter(Boolean)
+        : parent?.children || [];
+      entries.sort((left, right) => left.name.localeCompare(right.name));
+      const filteredEntries = entries.filter((entry) => entry.name.toLowerCase().includes(query));
+      document.querySelector("#browse-location").textContent =
+        isIndiaView ? "States and Union Territories" : `${parent?.name || "India"} districts`;
+      document.querySelector("#browse-india").hidden = isIndiaView;
+      list.replaceChildren(...filteredEntries.map((entry) => {
+        const button = document.createElement("button");
+        button.className = "coverage-jurisdiction";
+        button.type = "button";
+        button.dataset.code = entry.code;
+        button.dataset.type = entry.type;
+        button.dataset.status = entry.data_status;
+        button.setAttribute("aria-pressed", String(entry.code === selectedJurisdictionCode));
+        button.setAttribute(
+          "aria-label",
+          `${entry.name}, ${entry.type.replaceAll("_", " ")}, ${
+            entry.source_figure_count_including_descendants
+          } sourced, ${
+            entry.user_provided_figure_count_including_descendants
+          } user-provided/unverified, ${
+            entry.illustrative_figure_count_including_descendants
+          } illustrative demo figures`
+        );
+        button.textContent = entry.name;
+        button.addEventListener("click", () => selectCoverageJurisdiction(entry.code));
+        return button;
+      }));
+      if (filteredEntries.length === 0) {
+        const empty = document.createElement("p");
+        empty.className = "inventory-empty";
+        empty.textContent = `No ${isIndiaView ? "states or Union Territories" : "districts"} match that search.`;
+        list.append(empty);
+      }
+    }
+
+    function selectCoverageJurisdiction(code) {
+      selectedJurisdictionCode = code;
+      const selected = coverageByCode.get(code);
+      persistDashboardJurisdiction(selected?.type === "district" ? selected.parent_code : code);
+      selectedDistrict = selected?.type === "district" ? selected.name : "";
+      browseParentCode = selected?.type === "district"
+        ? selected.parent_code
+        : selected?.type === "state" || selected?.type === "union_territory"
+          ? selected.code
+          : "IN-UNION";
+      renderCoverageDirectory();
+      updateDistrictMap();
+      document.querySelector("#state-admin-label").textContent =
+        authenticatedUser
+          ? `${authenticatedUser.role.replaceAll("_", " ").toUpperCase()} · ${authenticatedUser.username}`
+          : `${selected?.type === "union" ? "UNION ADMIN" : selected?.type === "union_territory" ? "UT ADMIN" : selected?.type === "district" ? "DISTRICT VIEW" : "STATE ADMIN"} · ${selected?.name || code}`;
+      document.querySelectorAll(".coverage-jurisdiction").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.code === code));
+      });
+      updateImportToolsVisibility();
+      renderInventoryResults();
+      renderStockSold();
+    }
+
+    function renderBudgetError(container, error, retry) {
+      const message = document.createElement("p");
+      message.className = "inventory-empty";
+      message.setAttribute("role", "alert");
+      message.textContent = `Budget data could not be loaded: ${error.message}`;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = "Retry";
+      button.addEventListener("click", retry);
+      container.replaceChildren(message, button);
+    }
+
+    function budgetStageLabel(stage, illustrative = false, userProvided = false) {
+      const label = stage === "budget_estimate"
+        ? "Budget Estimate"
+        : stage === "revised_estimate"
+          ? "Revised Estimate"
+          : stage === "funds_received"
+            ? "Budget Received"
+            : "Actual";
+      if (illustrative) return `Illustrative ${label}`;
+      if (userProvided) return `User-provided ${label}`;
+      return stage === "funds_received" ? `${label} (source report)` : label;
+    }
+
+    function amountUnitLabel(unit) {
+      return unit === "source_unit_not_stated" ? "unit not stated by source" : unit;
+    }
+
+    function renderInventoryTable(data) {
+      inventoryResults.replaceChildren();
+      const toolbar = document.createElement("div");
+      toolbar.className = "inventory-table-toolbar";
+      const search = document.createElement("input");
+      search.className = "inventory-table-search";
+      search.type = "search";
+      search.placeholder = "Search department, sector, or jurisdiction...";
+      search.setAttribute("aria-label", "Search budget records");
+      toolbar.append(search);
+      const downloadButton = document.createElement("button");
+      downloadButton.type = "button";
+      downloadButton.className = "comparison-download";
+      downloadButton.textContent = "Download filtered CSV";
+      toolbar.append(downloadButton);
+      let currentResult = data;
+      downloadButton.addEventListener("click", () => {
+        const rows = currentResult.records.map((record) => [
+          record.fiscal_year,
+          record.budget_stage,
+          record.jurisdiction,
+          record.department_name_original,
+          record.sector_name_original,
+          record.sector_category_slug,
+          record.amount,
+          record.spent_amount ?? "",
+          record.currency_code,
+          record.amount_unit,
+          record.source_document || record.source,
+          record.source_url || "",
+          record.source_page_or_table,
+          record.source_locator,
+          record.correction_notes,
+          record.import_status,
+        ]);
+        downloadCsv(
+          `budget-${selectedJurisdictionCode}-${document.querySelector("#budget-fiscal-year").value}.csv`,
+          [
+            "fiscal_year", "budget_stage", "jurisdiction", "department_name_original",
+            "sector_name_original", "sector_category_slug", "amount", "spent_amount",
+            "currency_code", "amount_unit", "source", "source_url", "source_page_or_table",
+            "source_locator", "correction_notes", "import_status",
+          ],
+          rows
+        );
+      });
+      const table = document.createElement("table");
+      table.className = "inventory-table";
+      const thead = document.createElement("thead");
+      const headerRow = document.createElement("tr");
+      const headers = [
+        "Fiscal Year", "Budget Stage", "Jurisdiction", "Original Department",
+        "Original Sector", "Standardized Sector", "Amount", "Spent", "Unit", "Source", "Source Locator"
+      ];
+      headers.forEach((header) => {
+        const cell = document.createElement("th");
+        cell.textContent = header;
+        headerRow.append(cell);
+      });
+      thead.append(headerRow);
+      const tbody = document.createElement("tbody");
+      const total = document.createElement("div");
+      total.className = "budget-total";
+      const sourceNote = document.createElement("p");
+      sourceNote.className = "budget-source-note";
+      const searchError = document.createElement("p");
+      searchError.setAttribute("role", "alert");
+      function updateTable(result) {
+        currentResult = result;
+        downloadButton.disabled = result.records.length === 0;
+        const hasIllustrativeFigures = result.illustrative_figure_count > 0;
+        sourceNote.classList.toggle("is-illustrative", hasIllustrativeFigures);
+        tbody.replaceChildren(...result.records.map((record) => {
+          const tr = document.createElement("tr");
+          const isIllustrative = record.source.startsWith("Illustrative demo dataset");
+          const stageLabel = budgetStageLabel(
+            record.budget_stage, isIllustrative, record.import_batch_id !== null
+          );
+          const values = [
+            record.fiscal_year,
+            stageLabel,
+            record.jurisdiction,
+            record.department_name_original || "Not stated or broken out by source",
+            record.sector_name_original || "Not broken out by source",
+            record.sector_category_slug
+              ? `${record.sector_category_name} (${record.sector_category_slug})`
+              : "Unclassified aggregate",
+            `${numberFormat.format(record.amount)} ${record.currency_code}`,
+            record.spent_amount == null
+              ? "—"
+              : `${numberFormat.format(record.spent_amount)} ${record.currency_code}${
+                  record.source.startsWith("Illustrative demo dataset")
+                    || (record.correction_notes || "").includes("FICTIONAL SAMPLE SPENT AMOUNT")
+                    ? " (demo)"
+                    : ""
+                }`,
+            amountUnitLabel(record.amount_unit),
+            record.source_document || record.source,
+            [
+              record.source_page_or_table ? `Page/table: ${record.source_page_or_table}` : "",
+              record.source_locator,
+              record.imported_at ? `Imported: ${record.imported_at}` : "",
+              record.dataset_corrections ? `Dataset corrections: ${record.dataset_corrections}` : "",
+              record.correction_notes ? `Row corrections: ${record.correction_notes}` : ""
+            ].filter(Boolean).join(" · ")
+          ];
+          values.forEach((value, columnIndex) => {
+            const td = document.createElement("td");
+            const sourceUrl = record.source_url
+              || (record.source.startsWith("https://") ? record.source : "");
+            if (columnIndex === 9 && sourceUrl) {
+              const sourceLink = document.createElement("a");
+              sourceLink.href = sourceUrl;
+              sourceLink.target = "_blank";
+              sourceLink.rel = "noreferrer";
+              sourceLink.textContent = value;
+              td.append(sourceLink);
+            } else {
+              td.textContent = value;
+            }
+            if (columnIndex === 6 || columnIndex === 7) td.className = "numeric";
+            tr.append(td);
+          });
+          return tr;
+        }));
+        if (result.records.length === 0) {
+          const tr = document.createElement("tr");
+          const message = document.createElement("td");
+          message.colSpan = 11;
+          message.textContent = result.message || "No rows match this search.";
+          tr.append(message);
+          tbody.append(tr);
+        }
+        const totalDescription = hasIllustrativeFigures
+          ? "Totals are separated by type; demo values are illustrative, not official"
+          : "Totals may include user-provided data that is not independently verified";
+        total.textContent = result.totals_by_stage.length
+          ? `${totalDescription} · ${result.totals_by_stage.map((item) =>
+              `${budgetStageLabel(item.budget_stage, item.is_illustrative, item.is_user_provided)}: ${numberFormat.format(item.amount)} ${item.currency_code} · ${amountUnitLabel(item.amount_unit)}`
+            ).join(" · ")}`
+          : "No source-backed or illustrative figure totals for this selection.";
+        sourceNote.textContent = result.source_note;
+      }
+      search.addEventListener("input", () => {
+        window.clearTimeout(tableSearchTimer);
+        tableSearchTimer = window.setTimeout(async () => {
+          const requestId = ++budgetRequestId;
+          if (activeBudgetController) activeBudgetController.abort();
+          activeBudgetController = new AbortController();
+          try {
+            const result = await fetchBudgetData(
+              document.querySelector("#budget-fiscal-year").value,
+              selectedDistrict,
+              search.value.trim(),
+              activeBudgetController.signal
+            );
+            if (requestId === budgetRequestId) {
+              searchError.textContent = "";
+              updateTable(result);
+            }
+          } catch (error) {
+            if (error.name !== "AbortError" && requestId === budgetRequestId) {
+              searchError.textContent = `Search failed: ${error.message}`;
+            }
+          }
+        }, 180);
+      });
+      table.append(thead, tbody);
+      const wrapper = document.createElement("div");
+      wrapper.className = "inventory-table-scroll";
+      wrapper.append(table);
+      inventoryResults.append(toolbar, searchError, wrapper, total, sourceNote);
+      updateTable(data);
+    }
+
+    function renderComparisonChart(rows, fiscalYears) {
+      const chart = document.createElement("section");
+      chart.className = "comparison-chart";
+      chart.setAttribute("aria-label", "Budget comparison pie charts");
+      const intro = document.createElement("p");
+      intro.className = "comparison-chart-intro";
+      intro.textContent = "Each pie shows Amount shares by state/UT; the bars below show reported Spent amounts against Amount. Separate panels keep budget stage, currency, unit, and data provenance distinct.";
+      chart.append(intro);
+
+      // Keep unlike sectors, stages, units, currencies, and provenance in separate chart panels.
+      const groups = new Map();
+      rows.forEach((row) => {
+        const key = JSON.stringify([
+          row.sector_slug || "",
+          row.budget_stage,
+          row.currency_code,
+          row.amount_unit,
+          Boolean(row.is_illustrative),
+          Boolean(row.is_user_provided),
+        ]);
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(row);
+      });
+
+      const colors = [
+        "#a84b18", "#245c9f", "#27835d", "#8655a5", "#c18a00", "#168c9a",
+        "#bd4561", "#63733b", "#5264ad", "#a05a36", "#327b83", "#805d3d",
+      ];
+      const amountFormat = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2 });
+      const svgNamespace = "http://www.w3.org/2000/svg";
+      const orderedYears = [...fiscalYears].sort((left, right) => Number(left.slice(0, 4)) - Number(right.slice(0, 4)));
+      const createSvgElement = (name, attributes = {}) => {
+        const element = document.createElementNS(svgNamespace, name);
+        Object.entries(attributes).forEach(([attribute, value]) => element.setAttribute(attribute, value));
+        return element;
+      };
+
+      Array.from(groups.values()).forEach((groupRows, panelIndex) => {
+        const first = groupRows[0];
+        const panel = document.createElement("div");
+        panel.className = "comparison-chart-panel";
+        const panelHeading = document.createElement("h3");
+        panelHeading.textContent = `${first.sector} · ${budgetStageLabel(first.budget_stage, first.is_illustrative, first.is_user_provided)} · ${first.currency_code} · ${amountUnitLabel(first.amount_unit)}`;
+        panel.append(panelHeading);
+        const jurisdictions = Array.from(new Map(
+          groupRows.map((row) => [row.jurisdiction_code, row.jurisdiction])
+        )).sort((left, right) => left[1].localeCompare(right[1]));
+        const colorByCode = new Map(
+          jurisdictions.map(([code], index) => [code, colors[index % colors.length]])
+        );
+        const pieGrid = document.createElement("div");
+        pieGrid.className = "comparison-pie-grid";
+
+        orderedYears.forEach((year, yearIndex) => {
+          const yearRows = groupRows.filter((row) => row.fiscal_year === year);
+          const positiveRows = yearRows.filter((row) => Number(row.amount) > 0);
+          const total = positiveRows.reduce((sum, row) => sum + Number(row.amount), 0);
+          const yearCard = document.createElement("section");
+          yearCard.className = "comparison-pie-card";
+          const yearHeading = document.createElement("h4");
+          yearHeading.textContent = year.replace("-", "–");
+          yearCard.append(yearHeading);
+
+          if (total <= 0) {
+            const empty = document.createElement("p");
+            empty.className = "comparison-pie-empty";
+            empty.textContent = "No positive amounts are available for this year.";
+            yearCard.append(empty);
+            pieGrid.append(yearCard);
+            return;
+          }
+
+          const svg = createSvgElement("svg", {
+            class: "comparison-pie-chart",
+            viewBox: "0 0 240 220",
+            role: "img",
+            "aria-labelledby": `comparison-pie-title-${panelIndex}-${yearIndex} comparison-pie-description-${panelIndex}-${yearIndex}`,
+          });
+          const accessibleTitle = createSvgElement("title", { id: `comparison-pie-title-${panelIndex}-${yearIndex}` });
+          accessibleTitle.textContent = `${panelHeading.textContent}, ${year} budget shares`;
+          const accessibleDescription = createSvgElement("desc", { id: `comparison-pie-description-${panelIndex}-${yearIndex}` });
+          accessibleDescription.textContent = `Reported amounts for ${positiveRows.map((row) => row.jurisdiction).join(", ")} make up the pie. Total: ${amountFormat.format(total)} ${first.currency_code} ${amountUnitLabel(first.amount_unit)}.`;
+          svg.append(accessibleTitle, accessibleDescription);
+
+          let angle = -Math.PI / 2;
+          positiveRows.forEach((row) => {
+            const amount = Number(row.amount);
+            const share = amount / total;
+            const nextAngle = angle + share * Math.PI * 2;
+            const color = colorByCode.get(row.jurisdiction_code);
+            if (share >= 0.999999) {
+              svg.append(createSvgElement("circle", {
+                cx: 120,
+                cy: 106,
+                r: 86,
+                fill: color,
+                stroke: "white",
+                "stroke-width": 1.5,
+              }));
+            } else {
+              const startX = 120 + 86 * Math.cos(angle);
+              const startY = 106 + 86 * Math.sin(angle);
+              const endX = 120 + 86 * Math.cos(nextAngle);
+              const endY = 106 + 86 * Math.sin(nextAngle);
+              const largeArc = share > 0.5 ? 1 : 0;
+              const path = createSvgElement("path", {
+                d: `M 120 106 L ${startX} ${startY} A 86 86 0 ${largeArc} 1 ${endX} ${endY} Z`,
+                fill: color,
+                stroke: "white",
+                "stroke-width": 1.5,
+              });
+              const sliceTitle = createSvgElement("title");
+              sliceTitle.textContent = `${row.jurisdiction}: ${amountFormat.format(amount)} (${numberFormat.format(share * 100)}%)`;
+              path.append(sliceTitle);
+              svg.append(path);
+            }
+            if (share >= 0.08) {
+              const midpoint = angle + (nextAngle - angle) / 2;
+              const label = createSvgElement("text", {
+                x: 120 + 57 * Math.cos(midpoint),
+                y: 106 + 57 * Math.sin(midpoint) + 3,
+                "text-anchor": "middle",
+                fill: "white",
+                "font-weight": "700",
+              });
+              label.textContent = `${numberFormat.format(share * 100)}%`;
+              svg.append(label);
+            }
+            angle = nextAngle;
+          });
+          yearCard.append(svg);
+
+          const legend = document.createElement("div");
+          legend.className = "comparison-chart-legend";
+          legend.setAttribute("aria-label", `${year} pie legend`);
+          positiveRows.forEach((row) => {
+            const share = Number(row.amount) / total;
+            const legendItem = document.createElement("span");
+            legendItem.className = "comparison-chart-legend-item";
+            const swatch = document.createElement("span");
+            swatch.className = "comparison-chart-legend-swatch";
+            swatch.style.backgroundColor = colorByCode.get(row.jurisdiction_code);
+            swatch.setAttribute("aria-hidden", "true");
+            const label = document.createElement("span");
+            label.textContent = `${row.jurisdiction}: ${amountFormat.format(Number(row.amount))} (${numberFormat.format(share * 100)}%)`;
+            legendItem.append(swatch, label);
+            legend.append(legendItem);
+          });
+          yearCard.append(legend);
+          const spentRows = yearRows.filter((row) => row.spent_amount !== null && row.spent_amount !== undefined);
+          if (spentRows.length) {
+            const spentChart = document.createElement("div");
+            spentChart.className = "comparison-spent-chart";
+            const spentHeading = document.createElement("h5");
+            spentHeading.textContent = "Spent amount (relative to Amount)";
+            spentChart.append(spentHeading);
+            const spentScale = Math.max(
+              ...spentRows.map((row) => Math.max(Number(row.amount), Number(row.spent_amount))),
+              1
+            );
+            spentRows.forEach((row) => {
+              const spentRow = document.createElement("div");
+              spentRow.className = "comparison-spent-row";
+              const jurisdictionLabel = document.createElement("span");
+              jurisdictionLabel.className = "comparison-spent-row-label";
+              jurisdictionLabel.textContent = row.jurisdiction;
+              const track = document.createElement("span");
+              track.className = "comparison-spent-track";
+              track.setAttribute("aria-hidden", "true");
+              const spentBar = document.createElement("span");
+              spentBar.className = "comparison-spent-bar";
+              spentBar.style.display = "block";
+              spentBar.style.width = `${Math.min(Number(row.spent_amount) / spentScale * 100, 100)}%`;
+              track.append(spentBar);
+              const spentValue = document.createElement("span");
+              spentValue.className = "comparison-spent-value";
+              spentValue.textContent =
+                `${amountFormat.format(Number(row.spent_amount))} / ${amountFormat.format(Number(row.amount))}`;
+              spentRow.append(jurisdictionLabel, track, spentValue);
+              spentChart.append(spentRow);
+            });
+            yearCard.append(spentChart);
+          } else {
+            const noSpent = document.createElement("p");
+            noSpent.className = "comparison-pie-empty";
+            noSpent.textContent = "Spent amounts are not reported for these figures.";
+            yearCard.append(noSpent);
+          }
+          pieGrid.append(yearCard);
+        });
+        const caption = document.createElement("p");
+        caption.className = "comparison-chart-caption";
+        caption.textContent = "Each pie includes only selected jurisdictions with reported positive amounts for that year. Shares compare the displayed totals, not budget performance.";
+        panel.append(pieGrid, caption);
+        chart.append(panel);
+      });
+      return chart;
+    }
+
+    async function runBudgetComparison() {
+      const resultContainer = document.querySelector("#comparison-results");
+      document.querySelectorAll(".comparison-multi-select[open]").forEach((dropdown) => {
+        dropdown.open = false;
+      });
+      const selectedValues = (dropdownId) => Array.from(
+        document.querySelectorAll(`#${dropdownId} input[type="checkbox"]:checked`),
+        (checkbox) => checkbox.value
+      );
+      const jurisdictionCodes = selectedValues("compare-jurisdictions");
+      const fiscalYears = selectedValues("compare-years");
+      const sectors = selectedValues("compare-sectors");
+      if (jurisdictionCodes.length === 0 || fiscalYears.length === 0 || sectors.length === 0) {
+        resultContainer.textContent = "Select at least one state/UT, fiscal year, and sector.";
+        return;
+      }
+      if (jurisdictionCodes.length > 12) {
+        resultContainer.textContent = "Select no more than 12 states or Union Territories per comparison.";
+        return;
+      }
+      const parameters = new URLSearchParams({
+        jurisdiction_codes: jurisdictionCodes.join(","),
+        fiscal_years: fiscalYears.join(","),
+        budget_stage: document.querySelector("#budget-stage").value,
+        sectors: sectors.join(","),
+        department: document.querySelector("#budget-department").value.trim(),
+      });
+      resultContainer.textContent = "Comparing selected budgets…";
+      try {
+        const response = await fetch(`/api/compare?${parameters}`, {
+          headers: { Accept: "application/json" },
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || `Request failed (${response.status}).`);
+        resultContainer.replaceChildren();
+        if (result.rows.length === 0) {
+          const empty = document.createElement("p");
+          empty.className = "inventory-empty";
+          empty.textContent = "No figures match the selected states, years, and filters.";
+          resultContainer.append(empty);
+          return;
+        }
+        const download = document.createElement("button");
+        download.type = "button";
+        download.className = "comparison-download";
+        download.textContent = "Download comparison CSV";
+        download.style.margin = "0 14px 10px";
+        download.addEventListener("click", () => downloadCsv(
+          "budget-comparison.csv",
+          [
+            "jurisdiction", "fiscal_year", "sector", "budget_stage", "amount", "spent_amount",
+            "currency_code", "amount_unit", "figure_count", "is_illustrative",
+            "is_user_provided",
+          ],
+          result.rows.map((row) => [
+            row.jurisdiction,
+            row.fiscal_year,
+            row.sector,
+            row.budget_stage,
+            row.amount,
+            row.spent_amount ?? "",
+            row.currency_code,
+            row.amount_unit,
+            row.figure_count,
+            row.is_illustrative,
+            row.is_user_provided,
+          ])
+        ));
+        const table = document.createElement("table");
+        table.className = "comparison-table";
+        const headings = ["State / UT", "Fiscal Year", "Sector", "Budget Stage", "Amount", "Spent", "Unit", "Figures", "Data type"];
+        const header = document.createElement("tr");
+        headings.forEach((heading) => {
+          const cell = document.createElement("th");
+          cell.textContent = heading;
+          header.append(cell);
+        });
+        const thead = document.createElement("thead");
+        thead.append(header);
+        const tbody = document.createElement("tbody");
+        result.rows.forEach((row) => {
+          const tr = document.createElement("tr");
+          const dataType = row.is_illustrative
+            ? "Illustrative demo · not official"
+            : row.is_user_provided
+              ? "User-provided · unverified"
+              : "Sourced";
+          const values = [
+            row.jurisdiction,
+            row.fiscal_year,
+            row.sector,
+            budgetStageLabel(row.budget_stage, row.is_illustrative, row.is_user_provided),
+            `${numberFormat.format(row.amount)} ${row.currency_code}`,
+            row.spent_amount == null
+              ? "—"
+              : `${numberFormat.format(row.spent_amount)} ${row.currency_code}`,
+            amountUnitLabel(row.amount_unit),
+            row.figure_count,
+            dataType,
+          ];
+          values.forEach((value, index) => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            if (index === 4 || index === 5) cell.className = "numeric";
+            tr.append(cell);
+          });
+          tbody.append(tr);
+        });
+        table.append(thead, tbody);
+        const wrapper = document.createElement("div");
+        wrapper.className = "comparison-table-wrap";
+        wrapper.append(table);
+        const note = document.createElement("p");
+        note.className = "comparison-note";
+        note.textContent = result.note;
+        resultContainer.append(download, renderComparisonChart(result.rows, result.fiscal_years), wrapper, note);
+      } catch (error) {
+        const failure = document.createElement("p");
+        failure.className = "inventory-empty";
+        failure.setAttribute("role", "alert");
+        failure.textContent = `Budget comparison failed: ${error.message}`;
+        resultContainer.replaceChildren(failure);
+      }
+    }
+
+    async function renderInventoryResults() {
+      const areaName = selectedDistrict || coverageByCode.get(selectedJurisdictionCode)?.name || "Maharashtra";
+      const fiscalYear = document.querySelector("#budget-fiscal-year").value;
+      const viewName = inventoryView === "stock" ? "Budget Ledger" : inventoryView === "sales" ? "Sale to Farmer" : inventoryView === "activity" ? "Activity" : "Form D";
+      const stage = document.querySelector("#budget-stage").value;
+      inventoryResultsHeading.textContent =
+        `${viewName} · ${areaName} · ${fiscalYear}${stage ? ` · ${budgetStageLabel(stage)}` : ""}`;
+      const requestId = ++budgetRequestId;
+      window.clearTimeout(tableSearchTimer);
+      if (activeBudgetController) activeBudgetController.abort();
+      activeBudgetController = new AbortController();
+      if (inventoryView === "sales" || inventoryView === "formd") {
+        const empty = document.createElement("p");
+        empty.className = "inventory-empty";
+        empty.textContent = `The supplied presentation contains no ${inventoryView === "sales" ? "farmer-sale" : "Form D"} records for ${areaName}.`;
+        inventoryResults.replaceChildren(empty);
+        return;
+      }
+      const loading = document.createElement("p");
+      loading.className = "inventory-empty";
+      loading.setAttribute("role", "status");
+      loading.textContent = "Loading budget data…";
+      inventoryResults.replaceChildren(loading);
+      try {
+        const result = await fetchBudgetData(fiscalYear, selectedDistrict, "", activeBudgetController.signal);
+        if (requestId !== budgetRequestId) return;
+        if (inventoryView === "activity") {
+          if (result.figure_count === 0) {
+            const empty = document.createElement("p");
+            empty.className = "inventory-empty";
+            empty.textContent = result.message;
+            inventoryResults.replaceChildren(empty);
+            return;
+          }
+          const chartPanel = document.createElement("div");
+          const legend = document.createElement("div");
+          legend.className = "inventory-chart-legend";
+          legend.setAttribute("aria-label", "Chart colors by sector and measure");
+          const sectorsInChart = new Set(
+            result.records.map((record) => record.sector_category_slug || "unclassified")
+          );
+          const sectorLabels = {
+            education: "Education",
+            agriculture: "Agriculture",
+            roadways_transport: "Roadways & Transport",
+            healthcare: "Healthcare",
+            unclassified: "Unclassified source aggregate",
+          };
+          Object.entries(sectorLabels).forEach(([slug, label]) => {
+            if (!sectorsInChart.has(slug)) return;
+            const item = document.createElement("span");
+            item.className = "inventory-chart-legend-item";
+            const swatch = document.createElement("span");
+            swatch.className = "inventory-chart-legend-swatch";
+            swatch.style.backgroundColor = sectorColors[slug];
+            swatch.setAttribute("aria-hidden", "true");
+            item.append(swatch, document.createTextNode(label));
+            legend.append(item);
+          });
+          const spentLegend = document.createElement("span");
+          spentLegend.className = "inventory-chart-legend-item";
+          const spentSwatch = document.createElement("span");
+          spentSwatch.className = "inventory-chart-legend-swatch spent";
+          spentSwatch.setAttribute("aria-hidden", "true");
+          spentLegend.append(spentSwatch, document.createTextNode("Spent amount"));
+          legend.append(spentLegend);
+          const chart = document.createElement("div");
+          chart.className = "inventory-chart";
+          chart.setAttribute("role", "group");
+          chart.setAttribute("aria-label", "Activity chart; scroll horizontally to view all columns");
+          chart.tabIndex = 0;
+          const maximumAmount = Math.max(
+            ...result.records.flatMap((record) => [
+              Number(record.amount),
+              ...(record.spent_amount == null ? [] : [Number(record.spent_amount)]),
+            ]),
+            1
+          );
+          result.records.forEach((record) => {
+            const column = document.createElement("div");
+            column.className = "inventory-chart-column";
+            const title = document.createElement("strong");
+            title.textContent =
+              `${record.jurisdiction} · ${record.sector_name_original || "Unclassified source aggregate"}`;
+            column.append(title);
+            const value = document.createElement("span");
+            const spentDescription = record.spent_amount == null
+              ? "Spent not reported"
+              : `Spent: ${numberFormat.format(record.spent_amount)} ${record.currency_code}`;
+            value.textContent =
+              `${budgetStageLabel(record.budget_stage)} · Amount: ${numberFormat.format(record.amount)} ${record.currency_code} · ${spentDescription} · ${amountUnitLabel(record.amount_unit)}`;
+            const bars = document.createElement("div");
+            bars.className = "inventory-chart-bar-group";
+            const amountBar = document.createElement("div");
+            amountBar.className = "inventory-chart-bar";
+            amountBar.style.height = `${Math.max(5, Number(record.amount) / maximumAmount * 160)}px`;
+            amountBar.style.backgroundColor = sectorColors[record.sector_category_slug] || sectorColors.unclassified;
+            amountBar.title = `Amount: ${numberFormat.format(record.amount)} ${record.currency_code}`;
+            bars.append(amountBar);
+            if (record.spent_amount != null) {
+              const spentBar = document.createElement("div");
+              spentBar.className = "inventory-chart-bar spent";
+              spentBar.style.height = `${Math.max(5, Number(record.spent_amount) / maximumAmount * 160)}px`;
+              spentBar.title = `Spent: ${numberFormat.format(record.spent_amount)} ${record.currency_code}`;
+              bars.append(spentBar);
+            }
+            column.append(value, bars);
+            chart.append(column);
+          });
+          chartPanel.append(legend, chart);
+          inventoryResults.replaceChildren(chartPanel);
+          return;
+        }
+        if (result.figure_count === 0) {
+          const empty = document.createElement("p");
+          empty.className = "inventory-empty";
+          empty.textContent = result.message;
+          inventoryResults.replaceChildren(empty);
+          return;
+        }
+        renderInventoryTable(result);
+      } catch (error) {
+        if (error.name !== "AbortError" && requestId === budgetRequestId) {
+          renderBudgetError(inventoryResults, error, renderInventoryResults);
+        }
+      }
+    }
+
+    function updateDistrictMap() {
+      const selected = coverageByCode.get(selectedJurisdictionCode);
+      const mapCode = selected?.type === "district" ? selected.parent_code : selectedJurisdictionCode;
+      const jurisdiction = coverageByCode.get(mapCode);
+      const isUnionView = jurisdiction?.type === "union";
+      const hasDistrictMap = jurisdiction?.type === "state" || jurisdiction?.type === "union_territory";
+      const hasMap = isUnionView || hasDistrictMap;
+      document.querySelector(".inventory-map-card").hidden = !hasMap;
+      document.querySelector(".inventory-map-and-results").classList.toggle("is-no-map", !hasMap);
+      if (isUnionView) {
+        selectedDistrictLabel.textContent = "Select a state or Union Territory to explore";
+        document.querySelector("#district-map-instruction").textContent =
+          "Select a state or Union Territory to view its budget.";
+        renderIndiaMap();
+        return;
+      }
+      document.querySelector("#district-map-instruction").textContent =
+        "Select a district to filter the table.";
+      if (!hasDistrictMap) {
+        selectedDistrictLabel.textContent = jurisdiction?.name || "All jurisdictions";
+        return;
+      }
+      renderDistrictMap(mapCode);
+      selectedDistrictLabel.textContent =
+        selectedDistrict || `All ${jurisdiction.name} districts`;
+    }
+
+    function renderIndiaMap() {
+      if (!Array.isArray(window.indiaDistrictGeometry)) {
+        throw new Error("India state and district map data did not load.");
+      }
+      const colors = ["#d1d5f0", "#eaf2bd", "#f2bfd0", "#c2dfbd", "#d8cae7", "#f1eaa4", "#c5dbe6"];
+      districtMapHeading.textContent = "India · Click a state or Union Territory to explore";
+      districtMap.setAttribute("aria-label", "Clickable map of Indian states and Union Territories");
+      // District paths are combined by state code to make one accessible clickable region per state/UT.
+      const stateGroups = new Map();
+      const stateOrder = [];
+      window.indiaDistrictGeometry.forEach((district) => {
+        const state = coverageByCode.get(district.stateCode);
+        if (!state) return;
+        if (!stateGroups.has(district.stateCode)) {
+          const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+          group.classList.add("district-shape", "india-state-map-region");
+          group.dataset.stateCode = district.stateCode;
+          group.setAttribute("tabindex", "0");
+          group.setAttribute("role", "button");
+          group.setAttribute("aria-label", `Open ${state.name} budget`);
+          const index = stateOrder.length;
+          const color = colors[index % colors.length];
+          group.setAttribute("fill", color);
+          group.style.setProperty("--state-map-color", color);
+          const tooltip = document.createElementNS("http://www.w3.org/2000/svg", "title");
+          tooltip.textContent = `${state.name} · Open state budget`;
+          group.append(tooltip);
+          const openState = () => selectDistrict("", district.stateCode);
+          group.addEventListener("click", openState);
+          group.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openState();
+            }
+          });
+          stateGroups.set(district.stateCode, group);
+          stateOrder.push(district.stateCode);
+        }
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", district.path);
+        path.setAttribute("fill-rule", "evenodd");
+        path.setAttribute("pointer-events", "none");
+        stateGroups.get(district.stateCode).append(path);
+      });
+      districtMap.replaceChildren(...stateOrder.map((stateCode) => stateGroups.get(stateCode)));
+    }
+
+    function selectDistrict(name, stateCode) {
+      selectedDistrict = name;
+      selectedJurisdictionCode = stateCode;
+      persistDashboardJurisdiction(stateCode);
+      updateDistrictMap();
+      document.querySelectorAll(".coverage-jurisdiction").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.code === stateCode));
+      });
+      renderInventoryResults();
+      renderStockSold();
+    }
+
+    function renderDistrictMap(stateCode) {
+      if (!Array.isArray(window.indiaDistrictGeometry)) {
+        throw new Error("India state and district map data did not load.");
+      }
+      const jurisdiction = coverageByCode.get(stateCode);
+      // Reuse the shared India geometry and select only the paths belonging to this jurisdiction.
+      const districts = window.indiaDistrictGeometry.filter((district) => district.stateCode === stateCode);
+      districtMapHeading.textContent = `${jurisdiction?.name || "State"} Districts`;
+      districtMap.setAttribute("aria-label", `Clickable map of ${jurisdiction?.name || "state"} districts`);
+      if (districts.length === 0) {
+        const message = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        message.setAttribute("x", "250");
+        message.setAttribute("y", "215");
+        message.setAttribute("text-anchor", "middle");
+        message.textContent = `District boundary data is unavailable for ${jurisdiction?.name || "this jurisdiction"}.`;
+        districtMap.replaceChildren(message);
+        return;
+      }
+      const districtPaths = districts.map((district) => {
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.classList.add("district-shape");
+        path.dataset.district = district.name;
+        path.setAttribute("d", district.path);
+        path.setAttribute("fill", ["#d1d5f0", "#eaf2bd", "#f2bfd0", "#c2dfbd", "#d8cae7", "#f1eaa4", "#c5dbe6"][district.color]);
+        path.setAttribute("fill-rule", "evenodd");
+        path.setAttribute("tabindex", "0");
+        path.setAttribute("role", "button");
+        path.setAttribute("aria-label", `Show budget records for ${district.name}`);
+        path.setAttribute("aria-pressed", String(selectedDistrict === district.name));
+        if (selectedDistrict === district.name) path.classList.add("is-selected");
+        const tooltip = document.createElementNS("http://www.w3.org/2000/svg", "title");
+        tooltip.textContent = district.name;
+        path.append(tooltip);
+        path.addEventListener("click", () => selectDistrict(district.name, stateCode));
+        path.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            selectDistrict(district.name, stateCode);
+          }
+        });
+        return path;
+      });
+      districtMap.replaceChildren(...districtPaths);
+    }
+
+    async function renderStockSold() {
+      const grid = document.querySelector("#stock-crop-grid");
+      const requestId = ++stockRequestId;
+      if (activeStockController) activeStockController.abort();
+      activeStockController = new AbortController();
+      grid.textContent = "Loading sector totals…";
+      try {
+        const result = await fetchBudgetData(stockPeriod, selectedDistrict, "", activeStockController.signal);
+        if (requestId !== stockRequestId) return;
+        const items = result.sectors.map((sector) => {
+          const tile = document.createElement("div");
+          tile.className = "stock-crop-tile";
+          tile.style.background = sectorColors[sector.slug] || sectorColors.unclassified;
+          const name = document.createElement("strong");
+          name.textContent = sector.slug;
+          const amounts = document.createElement("span");
+          amounts.textContent = sector.stage_totals.length
+            ? sector.stage_totals.map((stage) =>
+                `${budgetStageLabel(stage.budget_stage)} ${numberFormat.format(stage.amount)} ${stage.currency_code} · ${amountUnitLabel(stage.amount_unit)}`
+              ).join(" · ")
+            : `${sector.name} · No source-backed sector figures`;
+          tile.append(name, amounts);
+          return tile;
+        });
+        if (result.unclassified_figure_count > 0) {
+          const note = document.createElement("p");
+          note.className = "budget-source-note";
+          note.textContent = result.illustrative_figure_count > 0
+            ? "These synthetic district examples are not official and are not broken down by sector."
+            : `${result.unclassified_figure_count} source figures are district aggregates; the report does not break them down by sector. Values keep the source unit, which the report does not state.`;
+          grid.replaceChildren(note, ...items);
+        } else {
+          grid.replaceChildren(...items);
+        }
+      } catch (error) {
+        if (error.name !== "AbortError" && requestId === stockRequestId) {
+          const failure = document.createElement("p");
+          failure.className = "inventory-empty";
+          failure.setAttribute("role", "alert");
+          failure.textContent = `Sector totals could not be loaded: ${error.message}`;
+          grid.replaceChildren(failure);
+        }
+      }
+    }
+
+    function openInventoryDashboard(jurisdictionCode = "IN-MH") {
+      document.body.classList.add("dashboard-mode");
+      inventoryDashboard.hidden = false;
+      selectedJurisdictionCode = jurisdictionCode;
+      const selectedJurisdiction = coverageByCode.get(jurisdictionCode);
+      persistDashboardJurisdiction(
+        selectedJurisdiction?.type === "district" ? selectedJurisdiction.parent_code : jurisdictionCode
+      );
+      selectedDistrict = "";
+      browseParentCode = selectedJurisdiction?.type === "district"
+        ? selectedJurisdiction.parent_code
+        : selectedJurisdiction?.type === "state" || selectedJurisdiction?.type === "union_territory"
+          ? jurisdictionCode
+          : "IN-UNION";
+      renderCoverageDirectory();
+      inventoryView = "stock";
+      stockPeriod = "2026-27";
+      document.querySelector("#budget-fiscal-year").value = stockPeriod;
+      document.querySelector("#budget-stage").value = "";
+      updateDistrictMap();
+      document.querySelectorAll(".inventory-tab").forEach((tab) => {
+        tab.setAttribute("aria-selected", String(tab.dataset.view === inventoryView));
+      });
+      document.querySelectorAll(".stock-period").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.period === stockPeriod));
+      });
+      const selected = coverageByCode.get(jurisdictionCode);
+      document.querySelector("#state-admin-label").textContent = authenticatedUser
+        ? `${authenticatedUser.role.replaceAll("_", " ").toUpperCase()} · ${authenticatedUser.username}`
+        : `${selected?.type === "union" ? "UNION ADMIN" : selected?.type === "union_territory" ? "UT ADMIN" : selected?.type === "district" ? "DISTRICT VIEW" : "STATE ADMIN"} · ${selected?.name || jurisdictionCode}`;
+      document.querySelector("#change-dashboard-state").hidden = authenticatedUser?.role === "state_auditor";
+      document.querySelectorAll(".coverage-jurisdiction").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.code === jurisdictionCode));
+      });
+      updateImportToolsVisibility();
+      renderInventoryResults();
+      renderStockSold();
+    }
+
+    function persistDashboardJurisdiction(jurisdictionCode) {
+      const url = new URL(window.location.href);
+      if (jurisdictionCode) url.searchParams.set("jurisdiction_code", jurisdictionCode);
+      else url.searchParams.delete("jurisdiction_code");
+      window.history.replaceState(null, "", url);
+    }
+
+    function closeInventoryDashboard() {
+      inventoryDashboard.hidden = true;
+      document.body.classList.remove("dashboard-mode");
+      document.querySelector("#username").focus();
+    }
+
+    async function logoutDashboard() {
+      try {
+        const response = await fetch("/api/auth/logout", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          credentials: "same-origin",
+          body: "{}",
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || `Sign-out failed (${response.status}).`);
+        authenticatedUser = null;
+        updateImportToolsVisibility();
+        document.querySelector("#change-dashboard-state").hidden = false;
+        document.querySelectorAll(".inventory-page").forEach((page) => {
+          page.hidden = page.id !== "budget-explorer-page";
+        });
+        document.querySelectorAll(".inventory-nav-item[aria-controls]").forEach((navButton) => {
+          const isActive = navButton.id === "nav-budget-explorer";
+          navButton.classList.toggle("active", isActive);
+          if (isActive) navButton.setAttribute("aria-current", "page");
+          else navButton.removeAttribute("aria-current");
+        });
+        const jurisdictions = document.querySelector("#compare-jurisdictions");
+        jurisdictions.removeAttribute("aria-label");
+        jurisdictions.removeAttribute("data-locked");
+        jurisdictions.querySelector(".comparison-dropdown-options").removeAttribute("aria-disabled");
+        jurisdictions.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+          checkbox.disabled = false;
+        });
+        document.querySelector("#compare-selection-help").textContent =
+          "Open the States / Union Territories dropdown and check every state to include (up to 12). You can select multiple states; account role does not limit this public-data comparison. Choose fiscal years and sectors the same way.";
+        persistDashboardJurisdiction("");
+        closeInventoryDashboard();
+        showFormMessage("You have signed out.");
+      } catch (error) {
+        showFormMessage(`Could not sign out: ${error.message}`, true);
+      }
+    }
+
+    document.querySelector("#open-state-picker").addEventListener("click", openStatePicker);
+    document.querySelector("#close-state-picker").addEventListener("click", closeStatePicker);
+    stateBackdrop.addEventListener("click", (event) => {
+      if (event.target === stateBackdrop) closeStatePicker();
+    });
+    stateSearch.addEventListener("input", () => {
+      statePage = 0;
+      renderStates();
+    });
+    document.querySelector("#previous-states").addEventListener("click", () => {
+      statePage = Math.max(0, statePage - 1);
+      renderStates();
+    });
+    document.querySelector("#next-states").addEventListener("click", () => {
+      statePage = Math.min(statePages.length - 1, statePage + 1);
+      renderStates();
+    });
+    document.querySelector("#select-central-authority").addEventListener("click", () => selectPortal("Central Authority"));
+    document.querySelector("#change-dashboard-state").addEventListener("click", openStatePicker);
+    document.querySelector("#logout-dashboard").addEventListener("click", logoutDashboard);
+    document.querySelector("#browse-india").addEventListener("click", () => {
+      browseParentCode = "IN-UNION";
+      document.querySelector("#coverage-search").value = "";
+      renderCoverageDirectory();
+    });
+    document.querySelector("#coverage-search").addEventListener("input", renderCoverageDirectory);
+    document.querySelector("#reset-district").addEventListener("click", () => {
+      const selected = coverageByCode.get(selectedJurisdictionCode);
+      const stateCode = selected?.type === "district" ? selected.parent_code : selectedJurisdictionCode;
+      selectedJurisdictionCode = stateCode;
+      selectDistrict("", stateCode);
+    });
+    document.querySelector("#budget-fiscal-year").addEventListener("change", (event) => {
+      stockPeriod = event.currentTarget.value;
+      document.querySelectorAll(".stock-period").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.period === stockPeriod));
+      });
+      renderInventoryResults();
+      renderStockSold();
+    });
+    document.querySelector("#budget-stage").addEventListener("change", () => {
+      renderInventoryResults();
+      renderStockSold();
+    });
+    document.querySelector("#budget-sector").addEventListener("change", () => {
+      renderInventoryResults();
+      renderStockSold();
+    });
+    let departmentFilterTimer = 0;
+    document.querySelector("#budget-department").addEventListener("input", () => {
+      window.clearTimeout(departmentFilterTimer);
+      departmentFilterTimer = window.setTimeout(() => {
+        renderInventoryResults();
+        renderStockSold();
+      }, 220);
+    });
+    document.querySelectorAll(".comparison-multi-select").forEach((dropdown) => {
+      dropdown.addEventListener("change", () => {
+        updateComparisonDropdownSummary(dropdown, dropdown.dataset.placeholder);
+      });
+    });
+    document.querySelector("#run-comparison").addEventListener("click", runBudgetComparison);
+    document.querySelectorAll(".inventory-nav-item[aria-controls]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button.disabled) return;
+        const selectedPageId = button.getAttribute("aria-controls");
+        document.querySelectorAll(".inventory-page").forEach((page) => {
+          page.hidden = page.id !== selectedPageId;
+        });
+        document.querySelectorAll(".inventory-nav-item[aria-controls]").forEach((navButton) => {
+          const isActive = navButton === button;
+          navButton.classList.toggle("active", isActive);
+          if (isActive) navButton.setAttribute("aria-current", "page");
+          else navButton.removeAttribute("aria-current");
+        });
+        document.querySelector(".inventory-main").scrollTop = 0;
+        document.getElementById(selectedPageId).focus({ preventScroll: true });
+        if (selectedPageId === "import-budget-page") loadImportBatches();
+      });
+    });
+    document.querySelectorAll(".inventory-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        inventoryView = tab.dataset.view;
+        document.querySelectorAll(".inventory-tab").forEach((item) => {
+          item.setAttribute("aria-selected", String(item === tab));
+        });
+        renderInventoryResults();
+      });
+    });
+    document.querySelectorAll(".stock-period").forEach((button) => {
+      button.addEventListener("click", () => {
+        stockPeriod = button.dataset.period;
+        document.querySelector("#budget-fiscal-year").value = stockPeriod;
+        document.querySelectorAll(".stock-period").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        renderInventoryResults();
+        renderStockSold();
+      });
+    });
+    document.addEventListener("keydown", (event) => {
+      if (stateBackdrop.hidden) return;
+      if (event.key === "Escape") {
+        closeStatePicker();
+        return;
+      }
+      if (event.key === "Tab") {
+        const focusable = Array.from(stateBackdrop.querySelectorAll("button:not(:disabled), input"))
+          .filter((element) => element.offsetParent !== null);
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+    renderStates();
+    loadBudgetCoverage().catch((error) => {
+      document.querySelector("#budget-coverage-note").textContent =
+        `Coverage catalogue could not be loaded: ${error.message}`;
+      document.querySelector("#retry-coverage").hidden = false;
+    });
+    document.querySelector("#retry-coverage").addEventListener("click", () => {
+      loadBudgetCoverage().catch((error) => {
+        document.querySelector("#budget-coverage-note").textContent =
+          `Coverage catalogue could not be loaded: ${error.message}`;
+        document.querySelector("#retry-coverage").hidden = false;
+      });
+    });
+  </script>
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</body>
+</html>
