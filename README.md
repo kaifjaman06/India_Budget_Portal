@@ -24,9 +24,12 @@ If the Python launcher is unavailable, run `python app.py` with Python 3.10 or
 newer, or double-click `run.bat` on Windows. Open <http://127.0.0.1:8000> in a
 browser. Stop the server with `Ctrl+C`.
 
-The app creates `data/budget.db` on first run and idempotently imports
-`data/budget_seed.csv`. Set `PORT` to change the port, or `BUDGET_DB_PATH` to
-store the SQLite database elsewhere.
+The app creates `data/budget.db` on first run and idempotently imports the
+bundled public starter dataset in `data/budget_seed.csv`. Keep this CSV in the
+project's `data` folder when downloading or copying the project; without it, a
+fresh database cannot be populated and the budget tables will be empty. Set
+`PORT` to change the port, or `BUDGET_DB_PATH` to store the SQLite database
+elsewhere.
 Backups are written to `data/backups` by default; set `BUDGET_BACKUP_DIR` to
 change that location. A validated backup is created when the server starts and
 once every 24 hours while it remains running. The automatic rotation retains
